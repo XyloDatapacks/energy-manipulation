@@ -1,0 +1,14 @@
+{
+    "structures": [
+        {
+            "structure": "energy_manipulation:sun_ruin",
+            "weight": 1
+        }
+    ],
+    "placement": {
+        "type": "minecraft:random_spread",
+        "spacing": 18,
+        "separation": 6,
+        "salt": 1240822748
+    }
+}

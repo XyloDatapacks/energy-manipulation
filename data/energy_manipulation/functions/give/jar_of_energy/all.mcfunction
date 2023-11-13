@@ -1,0 +1,5 @@
+function energy_manipulation:give/jar_of_energy/sun
+function energy_manipulation:give/jar_of_energy/ground
+function energy_manipulation:give/jar_of_energy/soul
+function energy_manipulation:give/jar_of_energy/dark
+function energy_manipulation:give/jar_of_energy/void

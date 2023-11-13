@@ -1,0 +1,17 @@
+{
+  "parent": "energy_manipulation:revoke",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": "{Tags:[\"xem.jar_of_energy.block\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "energy_manipulation:jar_of_energy/block/left_click"
+  }
+}

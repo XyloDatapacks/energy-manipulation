@@ -1,0 +1,23 @@
+{
+  "parent": "energy_manipulation:revoke",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "energy_manipulation:jar_of_energy/craft/holding_bottle"
+          }
+        ],
+        "entity": {
+          "type": "minecraft:vex",
+          "nbt": "{Tags:[\"xem.energy_globe.void\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "energy_manipulation:jar_of_energy/craft/void"
+  }
+}

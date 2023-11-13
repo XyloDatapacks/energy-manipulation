@@ -1,0 +1,2 @@
+execute store result storage energy_manipulation:op update_book_slot.Slot int 1 run scoreboard players remove #xem.spell.book.update_book.update_book_slot xem.op 9
+function energy_manipulation:spell/book/update_book/update_inv_2 with storage energy_manipulation:op update_book_slot

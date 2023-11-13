@@ -1,0 +1,1 @@
+data modify storage energy_manipulation:op target.selector set value "@e[type=minecraft:marker,tag=xem.spell.run"

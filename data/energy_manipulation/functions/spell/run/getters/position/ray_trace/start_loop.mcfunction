@@ -1,0 +1,1 @@
+$execute in $(dimension) positioned $(initial_position_x) $(initial_position_y) $(initial_position_z) rotated $(initial_rotation_yawn) $(initial_rotation_pitch) run function energy_manipulation:spell/run/getters/position/ray_trace/start_loop2

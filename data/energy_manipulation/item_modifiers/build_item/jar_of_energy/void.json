@@ -1,0 +1,32 @@
+[
+  {
+    "function": "minecraft:reference",
+    "name": "energy_manipulation:build_item/jar_of_energy/_base"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "item.energy_manipulation.jar_of_energy.void.name",
+      "color": "light_purple",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "jar_of_energy.void.custom_model_data",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{xylo:{id:\"energy_manipulation:jar_of_void_energy\"}}"
+  }
+]

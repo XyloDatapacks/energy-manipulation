@@ -1,0 +1,2 @@
+scoreboard players operation #xem.jar_of_energy.display_energy_count xem.op = @s xem.jar_of_energy.energy_count
+execute on passengers run data modify entity @s[type=minecraft:text_display] text set value '{"score":{"objective":"xem.op","name":"#xem.jar_of_energy.display_energy_count"}}'

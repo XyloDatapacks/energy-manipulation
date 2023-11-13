@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:jigsaw",
+    "biomes": "#energy_manipulation:soul_ruin",
+    "step": "underground_decoration",
+    "spawn_overrides": {},
+    "terrain_adaptation": "beard_thin",
+    "start_pool": "energy_manipulation:soul_ruin",
+    "size": 7,
+    "start_height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+            "absolute": 32
+        },
+        "max_inclusive": {
+            "below_top": 15
+        }
+    },
+    "max_distance_from_center": 80,
+    "use_expansion_hack": true
+}

@@ -1,0 +1,1 @@
+function energy_manipulation:spell/display/content/set_from_score

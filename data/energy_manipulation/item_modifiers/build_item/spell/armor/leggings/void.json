@@ -1,0 +1,71 @@
+[
+  {
+    "function": "minecraft:reference",
+    "name": "energy_manipulation:build_item/spell/armor/leggings/_base"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "item.energy_manipulation.spell.armor.leggings.void.name",
+      "color": "yellow",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text":""
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.spell.armor.leggings.generic.lore1",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.spell.armor.generic.void.lore2",
+          "color": "blue",
+          "italic": false
+        }
+      ]
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "caster_armor.leggings.void.custom_model_data.base",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "caster_armor.leggings.void.color.base",
+        "target": "display.color",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{xylo:{id:\"energy_manipulation:void_caster_armor_leggings\"},energy_manipulation:{mastery:{energy_type:\"void\"}}}"
+  }
+]

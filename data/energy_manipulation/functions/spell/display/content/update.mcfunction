@@ -1,0 +1,3 @@
+execute on origin run scoreboard players operation #xem.spell.display.showing_value xem.op = @s xem.spell.display.showing_value
+execute unless score #xem.spell.display.showing_value xem.op matches 1 run function energy_manipulation:spell/display/content/update_standard with storage energy_manipulation:op spell_display_data
+execute if score #xem.spell.display.showing_value xem.op matches 1 run function energy_manipulation:spell/display/content/update_values with storage energy_manipulation:op spell_display_data

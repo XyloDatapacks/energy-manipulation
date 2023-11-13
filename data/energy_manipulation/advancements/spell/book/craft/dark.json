@@ -1,0 +1,23 @@
+{
+  "parent": "energy_manipulation:revoke",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "energy_manipulation:spell/book/craft/holding_book"
+          }
+        ],
+        "entity": {
+          "type": "minecraft:vex",
+          "nbt": "{Tags:[\"xem.energy_globe.dark\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "energy_manipulation:spell/book/craft/dark"
+  }
+}

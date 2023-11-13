@@ -1,0 +1,1 @@
+data modify storage energy_manipulation:op target.selector set value "@e[type=!minecraft:player,type=!#xylo_library:non_mob"

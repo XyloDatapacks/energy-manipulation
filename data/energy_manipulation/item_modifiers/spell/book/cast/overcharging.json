@@ -1,0 +1,131 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{energy_manipulation:{casting:1b,casting_stage:3}}"
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "spell_book.sun.custom_model_data.overcharging",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "xem.spell.book.casting_book_type"
+        },
+        "range": 1
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "spell_book.ground.custom_model_data.overcharging",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "xem.spell.book.casting_book_type"
+        },
+        "range": 2
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "spell_book.soul.custom_model_data.overcharging",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "xem.spell.book.casting_book_type"
+        },
+        "range": 3
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "spell_book.dark.custom_model_data.overcharging",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "xem.spell.book.casting_book_type"
+        },
+        "range": 4
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "spell_book.void.custom_model_data.overcharging",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "xem.spell.book.casting_book_type"
+        },
+        "range": 5
+      }
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+$data modify storage energy_manipulation:op display_content_node_parent set from storage energy_manipulation:op spell_build[{path:"$(path)",key:"$(key)"}]

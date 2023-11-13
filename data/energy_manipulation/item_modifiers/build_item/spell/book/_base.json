@@ -1,0 +1,44 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{Unbreakable:1b,HideFlags:6,smithed:{ignore:{functionality:1b,crafting:1b}},xylo:{id_tags:[\"energy_manipulation:spell_book\"]},energy_manipulation:{opened:0b,spell_book:{max_concatenates:10,max_instructions:5}},xylo_items:{}}"
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "translate": "item.energy_manipulation.spell.book.generic.lore1",
+          "with": [
+            {
+              "keybind": "key.swapOffhand"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.spell.book.generic.lore2",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.attack_speed",
+        "name": "minecraft:generic.attack_speed",
+        "amount": -1.6,
+        "operation": "addition",
+        "id": "b5531bfb-c412-492b-8195-46cc28ed3517",
+        "slot": "mainhand"
+      }
+    ]
+  }
+]

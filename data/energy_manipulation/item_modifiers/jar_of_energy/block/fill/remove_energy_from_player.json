@@ -1,0 +1,13 @@
+{
+  "function": "minecraft:set_count",
+  "count": {
+    "type": "minecraft:score",
+    "target": {
+      "type": "minecraft:fixed",
+      "name": "#xem.jar_of_energy.block.fill.count"
+    },
+    "score": "xem.op",
+    "scale": -1
+  },
+  "add": true
+}

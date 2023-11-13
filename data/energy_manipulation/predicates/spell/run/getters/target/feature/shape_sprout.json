@@ -1,0 +1,7 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "nbt": "{Tags:[\"xem.spell.shape_marker\"],data:{energy_manipulation:{shape:{value:\"sprout\"}}}}"
+  }
+}

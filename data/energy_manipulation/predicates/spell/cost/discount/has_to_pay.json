@@ -1,0 +1,17 @@
+{
+  "condition": "minecraft:value_check",
+  "value": {
+    "type": "minecraft:binomial",
+    "n": 1,
+    "p": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "#xem.spell.cost.discount.mastery_prob"
+      },
+      "score": "xem.op",
+      "scale": 0.01
+    }
+  },
+  "range": 1
+}

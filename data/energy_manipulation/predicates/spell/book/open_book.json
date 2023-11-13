@@ -1,0 +1,23 @@
+[
+  {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "xem.spell.book.open_books_count": 0
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "mainhand": {
+          "items": [
+            "minecraft:shield"
+          ],
+          "nbt": "{xylo:{id_tags:[\"energy_manipulation:spell_book\"]},energy_manipulation:{opened:0b}}"
+        }
+      }
+    }
+  }
+]

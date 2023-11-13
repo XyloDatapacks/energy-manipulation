@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:charcoal",
+      "nbt": "{CustomModelData:12341004}"
+    },
+    "title": {
+      "translate": "item.energy_manipulation.energy.dark.name"
+    },
+    "description": [
+      {
+        "translate": "advancements.energy_manipulation.energy.generic_description",
+        "with": [
+          {
+            "translate": "item.energy_manipulation.energy.dark.name"
+          },
+          {
+            "translate": "item.energy_manipulation.energy.dark.name"
+          }
+        ]
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "energy_manipulation:tutorial/ruin/dark",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:vex",
+          "nbt": "{Tags:[\"xem.energy_globe.dark\"]}"
+        }
+      }
+    }
+  }
+}

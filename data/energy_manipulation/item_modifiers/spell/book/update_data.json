@@ -1,0 +1,46 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:op"
+    },
+    "ops": [
+      {
+        "source": "spell_display_index.2",
+        "target": "energy_manipulation.show_index",
+        "op": "replace"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "xem.spell.display.showing_value": 1
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:op"
+    },
+    "ops": [
+      {
+        "source": "spell_build",
+        "target": "energy_manipulation.spell_build",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{energy_manipulation:{spell:0}}"
+  }
+]

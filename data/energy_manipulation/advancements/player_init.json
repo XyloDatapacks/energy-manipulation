@@ -1,0 +1,11 @@
+{
+  "parent": "energy_manipulation:revoke",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "energy_manipulation:player_init"
+  }
+}

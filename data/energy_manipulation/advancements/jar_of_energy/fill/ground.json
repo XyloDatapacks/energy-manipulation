@@ -1,0 +1,23 @@
+{
+  "parent": "energy_manipulation:revoke",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "energy_manipulation:jar_of_energy/holding/ground_energy_mh"
+          }
+        ],
+        "entity": {
+          "type": "minecraft:vex",
+          "nbt": "{Tags:[\"xem.energy_globe.ground\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "energy_manipulation:jar_of_energy/fill/ground"
+  }
+}

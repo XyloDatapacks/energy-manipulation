@@ -1,0 +1,15 @@
+{
+    "name": "energy_manipulation:dark_ruin",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "element": {
+                "element_type": "minecraft:single_pool_element",
+                "projection": "rigid",
+                "processors": "minecraft:empty",
+                "location": "energy_manipulation:dark_ruin"
+            },
+            "weight": 1
+        }
+    ]
+}

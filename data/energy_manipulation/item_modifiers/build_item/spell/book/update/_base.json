@@ -1,0 +1,27 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "translate": "item.energy_manipulation.spell.book.generic.lore1",
+          "with": [
+            {
+              "keybind": "key.swapOffhand"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.spell.book.generic.lore2",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    ]
+  }
+]

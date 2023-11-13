@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:charcoal",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "#xem.jar_of_energy.block.withdraw.count"
+                },
+                "score": "xem.op"
+              }
+            },
+            {
+              "function": "minecraft:reference",
+              "name": "energy_manipulation:build_item/energy/soul"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

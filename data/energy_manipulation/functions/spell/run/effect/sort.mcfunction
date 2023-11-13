@@ -1,0 +1,1 @@
+$function energy_manipulation:spell/run/effect/$(value)/start

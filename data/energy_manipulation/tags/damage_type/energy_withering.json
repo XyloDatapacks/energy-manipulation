@@ -1,0 +1,15 @@
+{
+  "values": [
+    "energy_manipulation:spell/cost/withering/saturation_0",
+    "energy_manipulation:spell/cost/withering/saturation_1",
+    "energy_manipulation:spell/cost/withering/saturation_2",
+    "energy_manipulation:spell/cost/withering/saturation_3",
+    "energy_manipulation:spell/cost/withering/saturation_4",
+    "energy_manipulation:spell/cost/withering/saturation_5",
+    "energy_manipulation:spell/cost/withering/saturation_6",
+    "energy_manipulation:spell/cost/withering/saturation_7",
+    "energy_manipulation:spell/cost/withering/saturation_8",
+    "energy_manipulation:spell/cost/withering/saturation_9",
+    "energy_manipulation:spell/cost/withering/saturation_10"
+  ]
+}

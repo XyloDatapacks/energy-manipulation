@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:leather_helmet",
+      "nbt": "{display:{color:2451326},CustomModelData:12341003}"
+    },
+    "title": {
+      "translate": "advancements.energy_manipulation.spell.armor.soul.name"
+    },
+    "description": [
+      {
+        "translate": "advancements.energy_manipulation.spell.armor.generic_description",
+        "with": [
+          {
+            "translate": "item.energy_manipulation.energy.soul.name"
+          },
+          {
+            "translate": "advancements.energy_manipulation.spell.armor.soul.name"
+          }
+        ]
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "energy_manipulation:tutorial/jar_of_energy/craft/soul",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible",
+      "conditions": {}
+    }
+  }
+}

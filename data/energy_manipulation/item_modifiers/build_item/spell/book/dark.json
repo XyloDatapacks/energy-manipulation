@@ -1,0 +1,32 @@
+[
+  {
+    "function": "minecraft:reference",
+    "name": "energy_manipulation:build_item/spell/book/_base"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "item.energy_manipulation.spell.book.dark.name",
+      "color": "yellow",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "spell_book.dark.custom_model_data.base",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{xylo:{id:\"energy_manipulation:dark_spell_book\"},energy_manipulation:{spell_book:{energy_type_id:4}}}"
+  }
+]

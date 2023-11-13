@@ -1,0 +1,71 @@
+[
+  {
+    "function": "minecraft:reference",
+    "name": "energy_manipulation:build_item/spell/armor/helmet/_base"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "item.energy_manipulation.spell.armor.helmet.soul.name",
+      "color": "yellow",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text":""
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.spell.armor.helmet.generic.lore1",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.spell.armor.generic.soul.lore2",
+          "color": "blue",
+          "italic": false
+        }
+      ]
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "caster_armor.helmet.soul.custom_model_data.base",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "caster_armor.helmet.soul.color.base",
+        "target": "display.color",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{xylo:{id:\"energy_manipulation:soul_caster_armor_helmet\"},energy_manipulation:{mastery:{energy_type:\"soul\"}}}"
+  }
+]

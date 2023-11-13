@@ -1,0 +1,23 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "xem.spell.cost.withering.total_saturation_to_pay": {
+          "min": 1
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "xem.spell.cost.withering.total_damage_to_pay": {
+          "min": 1
+        }
+      }
+    }
+  ]
+}

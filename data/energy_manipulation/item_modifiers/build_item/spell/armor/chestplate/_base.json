@@ -1,0 +1,19 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{Unbreakable:1b,HideFlags:70,smithed:{ignore:{functionality:1b,crafting:1b}},xylo:{id_tags:[\"energy_manipulation:caster_chestplate\"]},energy_manipulation:{mastery:{amount:1}},xylo_items:{}}"
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor",
+        "name": "minecraft:generic.armor",
+        "amount": 0,
+        "operation": "addition",
+        "id": "28baa7a5-8394-4832-97b7-cdc1c7064c9b",
+        "slot": "chest"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "parent": "energy_manipulation:revoke",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {}
+    }
+  },
+  "rewards": {
+    "function": "energy_manipulation:inventory_changed"
+  }
+}

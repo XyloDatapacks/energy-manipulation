@@ -1,0 +1,23 @@
+[
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "energy_manipulation:spell/book/cast/casting_mh"
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "offhand": {
+          "items": [
+            "minecraft:shield"
+          ],
+          "nbt": "{xylo:{id_tags:[\"energy_manipulation:spell_book\"]},energy_manipulation:{opened:0b}}"
+        }
+      }
+    }
+  }
+]

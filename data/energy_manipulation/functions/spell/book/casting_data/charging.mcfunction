@@ -1,0 +1,2 @@
+item modify entity @s[scores={xem.spell.book.casting_book_slot=-106}] weapon.offhand energy_manipulation:spell/book/cast/charging
+item modify entity @s[scores={xem.spell.book.casting_book_slot=0..}] weapon.mainhand energy_manipulation:spell/book/cast/charging

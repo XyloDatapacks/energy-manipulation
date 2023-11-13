@@ -1,0 +1,1 @@
+execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~-0.5 ~ unless entity @e[type=minecraft:area_effect_cloud,distance=..0.001,tag=xem.spell.display] run function energy_manipulation:spell/book/close_books/start

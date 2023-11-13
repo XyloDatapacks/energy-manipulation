@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:op"
+    },
+    "ops": [
+      {
+        "source": "spell",
+        "target": "energy_manipulation.spell",
+        "op": "replace"
+      }
+    ]
+  }
+]

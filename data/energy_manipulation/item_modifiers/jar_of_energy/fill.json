@@ -1,0 +1,60 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:op"
+    },
+    "ops": [
+      {
+        "source": "temp_data",
+        "target": "energy_manipulation.energy_count",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_damage",
+    "damage": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "#xem.jar_of_energy.fill.percentage"
+      },
+      "score": "xem.op",
+      "scale": 0.01
+    },
+    "add": false
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        [
+          {
+            "translate": "item.energy_manipulation.jar_of_energy.lore",
+            "italic": false,
+            "color": "gray"
+          },
+          {
+            "score": {
+              "name": "#xem.jar_of_energy.fill.last_count",
+              "objective": "xem.op"
+            }
+          },
+          {
+            "text": "/"
+          },
+          {
+            "score": {
+              "name": "#xem.const.jar_of_energy.fill.limit",
+              "objective": "xem.op"
+            }
+          }
+        ]
+      ]
+    ],
+    "replace": true
+  }  
+]

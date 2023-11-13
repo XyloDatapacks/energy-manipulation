@@ -1,0 +1,4 @@
+kill @e[type=minecraft:block_display]
+summon minecraft:block_display ~ ~ ~ {block_state:{Name:"minecraft:stone"},Tags:["disp"],transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[1.0f,1.0f,1.0f],translation:[-0.5f,-0.5f,-0.5f]}}
+data modify entity @e[type=minecraft:block_display,limit=1,tag=disp] {} merge value {interpolation_duration:100,start_interpolation:2,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[10.0f,10.0f,10.0f],translation:[-5.0f,-5.0f,-5.0f]}}
+tag @e[type=minecraft:block_display] remove disp

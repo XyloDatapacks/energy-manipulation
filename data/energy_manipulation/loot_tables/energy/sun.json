@@ -1,0 +1,59 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:charcoal",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "type": "minecraft:uniform",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            },
+            {
+              "function": "minecraft:looting_enchant",
+              "type": "minecraft:uniform",
+              "count": {
+                "min": 0,
+                "max": 3
+              }
+            },
+            {
+              "function": "minecraft:reference",
+              "name": "energy_manipulation:build_item/energy/sun"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:any_of",
+                "terms": [
+                  {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "killer",
+                    "predicate": {
+                      "equipment": {
+                        "mainhand": {
+                          "items": [
+                            "minecraft:warped_fungus_on_a_stick"
+                          ],
+                          "nbt": "{xylo:{id:\"energy_manipulation:jar_of_sun_energy\"}}"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

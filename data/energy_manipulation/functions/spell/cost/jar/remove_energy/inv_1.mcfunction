@@ -1,0 +1,2 @@
+execute store result storage energy_manipulation:op jar_slot.Slot int 1 run scoreboard players remove #xem.spell.cost.jar.slot xem.op 9
+function energy_manipulation:spell/cost/jar/remove_energy/inv_2 with storage energy_manipulation:op jar_slot

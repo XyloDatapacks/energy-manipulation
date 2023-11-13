@@ -1,0 +1,71 @@
+[
+  {
+    "function": "minecraft:reference",
+    "name": "energy_manipulation:build_item/spell/armor/chestplate/_base"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "item.energy_manipulation.spell.armor.chestplate.dark.name",
+      "color": "yellow",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text":""
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.spell.armor.chestplate.generic.lore1",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.spell.armor.generic.dark.lore2",
+          "color": "blue",
+          "italic": false
+        }
+      ]
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "caster_armor.chestplate.dark.custom_model_data.base",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "caster_armor.chestplate.dark.color.base",
+        "target": "display.color",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{xylo:{id:\"energy_manipulation:dark_caster_armor_chestplate\"},energy_manipulation:{mastery:{energy_type:\"dark\"}}}"
+  }
+]
