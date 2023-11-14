@@ -38,4 +38,4 @@ scoreboard players add @s xem.spell.shape.activation_time 1
 
 
 #shape sound
-playsound energy_manipulation:spell.run.shape_creation player @a ^ ^ ^0.3 3.0 1
+playsound energy_manipulation:spell.run.shape_creation player @a ~ ~-0.5 ~ 3.0 1

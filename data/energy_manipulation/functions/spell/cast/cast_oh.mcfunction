@@ -8,4 +8,4 @@ execute unless data storage energy_manipulation:op spell[0] run return 0
 function energy_manipulation:spell/run/new
 
 execute rotated ~ 0 positioned ^0.3 ^ ^0.45 run function energy_manipulation:spell/cast/particles
-playsound energy_manipulation:spell.cast player @a ^ ^ ^0.3 3.0 1
+playsound energy_manipulation:spell.cast player @a ~ ~-1 ~ 3.0 1

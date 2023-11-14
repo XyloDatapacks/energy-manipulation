@@ -8,4 +8,4 @@ function energy_manipulation:spell/run/shape/_model/start
 function energy_manipulation:spell/run/shape/_projectile_type/start
 
 #shape sound
-playsound energy_manipulation:spell.run.shape_creation player @a ^ ^ ^0.3 3.0 1
+playsound energy_manipulation:spell.run.shape_creation player @a ~ ~-0.5 ~ 3.0 1
