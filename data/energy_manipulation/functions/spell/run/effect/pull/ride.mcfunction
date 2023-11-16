@@ -10,6 +10,7 @@ $execute if score xem.spell.run.effect.has_target_entity xem.op matches 1 at $(u
 # validate target
 $execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem.op run function energy_manipulation:spell/run/effect/validate_target
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0
+execute if score #xem.spell.run.effect.validate_target xem.op matches -1 run return 0
 
 scoreboard players set #xem.spell.run.effect.pull.was_riding xem.op 0
 $execute as $(uuid) if predicate xylo_library:riding store success score #xem.spell.run.effect.pull.was_riding xem.op run ride @s dismount

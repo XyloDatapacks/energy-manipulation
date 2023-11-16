@@ -4,6 +4,7 @@
 $execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem.op run function energy_manipulation:spell/run/effect/validate_target
 $execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. at $(uuid) run playsound energy_manipulation:spell.effect.translocation player @a ~ ~ ~
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0
+execute if score #xem.spell.run.effect.validate_target xem.op matches -1 run return 0
 
 #check dimension tp
 $execute unless score #xem.spell.run.effect.translocation.inter_dimensional_tp xem.op matches 1 at $(uuid) store success score #xem.spell.run.effect.translocation.is_inter_dimensional_tp xem.op unless dimension $(dimension)
