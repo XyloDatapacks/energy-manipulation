@@ -1,3 +1,7 @@
+# function tag function
+execute if score $energy_manipulation xvc.load_status matches 0 run return 0
+#---------------------------
+
 # get open books count
 execute store result score @s xem.spell.book.open_books_count run clear @s minecraft:shield{xylo:{id_tags:["energy_manipulation:spell_book"]},energy_manipulation:{opened:1b}} 0
 

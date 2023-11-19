@@ -1,5 +1,6 @@
 {
     "values": [
+        "energy_manipulation:spell/book/inventory_changed",
         "energy_manipulation:spell/armor/mastery/get_mastery"
     ]
 }
