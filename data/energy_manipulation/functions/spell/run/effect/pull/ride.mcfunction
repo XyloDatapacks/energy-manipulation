@@ -1,16 +1,20 @@
 # -> {uuid, position_x, position_y, position_z, dimension}
 
+#==<Validate Target>==#
+$execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem.op run function energy_manipulation:spell/run/effect/validate_target
+#=====================#
+
 #particles
 $particle minecraft:sonic_boom $(position_x) $(position_y) $(position_z) 0.1 0.1 0.1 1 0 force
 execute unless score xem.spell.run.effect.has_target_entity xem.op matches 1 run playsound energy_manipulation:spell.effect.pull player @a ~ ~ ~
 execute unless score xem.spell.run.effect.has_target_entity xem.op matches 1 run return 0
 
-$execute if score xem.spell.run.effect.has_target_entity xem.op matches 1 at $(uuid) run playsound energy_manipulation:spell.effect.pull player @a ~ ~ ~ 
+$execute at $(uuid) run playsound energy_manipulation:spell.effect.pull player @a ~ ~ ~ 
 
-# validate target
-$execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem.op run function energy_manipulation:spell/run/effect/validate_target
+#==<Validation Exit>==#
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0
 execute if score #xem.spell.run.effect.validate_target xem.op matches -1 run return 0
+#=====================#
 
 scoreboard players set #xem.spell.run.effect.pull.was_riding xem.op 0
 $execute as $(uuid) if predicate xylo_library:riding store success score #xem.spell.run.effect.pull.was_riding xem.op run ride @s dismount

@@ -1,4 +1,5 @@
 #out: "#xem.spell.run.effect.translocation.distance xem.op"
+# <@> temp marker
 
 execute store result score #xem.spell.run.effect.translocation.dx xem.op run data get storage energy_manipulation:op position_x[0]
 execute store result score #xem.spell.run.effect.translocation.dy xem.op run data get storage energy_manipulation:op position_y[1]
@@ -16,3 +17,5 @@ execute store result storage energy_manipulation:op translocation_distance.z flo
 function xylo_library:utilities/distance/distance with storage energy_manipulation:op translocation_distance
 
 execute store result score #xem.spell.run.effect.translocation.distance xem.op run data get storage xylo_library:op distance_out
+
+kill @s

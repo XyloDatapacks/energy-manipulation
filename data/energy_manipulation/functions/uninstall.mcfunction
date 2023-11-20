@@ -12,8 +12,8 @@ scoreboard objectives remove xem.spell.book.open_books_count
 scoreboard objectives remove xem.spell.run.elaborate.concatenate_index 
 scoreboard objectives remove xem.spell.run.elaborate.concatenate_index_max 
 
-scoreboard objectives add xem.spell.spells_per_sec dummy
-scoreboard objectives add xem.spell.last_spell_time dummy
+scoreboard objectives remove xem.spell.spells_per_sec 
+scoreboard objectives remove xem.spell.last_spell_time 
 
 scoreboard objectives remove xem.spell.book.open_book_max_instructions 
 scoreboard objectives remove xem.spell.book.open_book_max_concatenates 
@@ -23,6 +23,7 @@ scoreboard objectives remove xem.spell.book.casting_book_type
 scoreboard objectives remove xem.spell.book.casting_time 
 scoreboard objectives remove xem.spell.book.move_book_running 
 
+scoreboard objectives remove xem.spell.armor.mastery.generic
 scoreboard objectives remove xem.spell.armor.mastery.sun 
 scoreboard objectives remove xem.spell.armor.mastery.ground 
 scoreboard objectives remove xem.spell.armor.mastery.soul 
@@ -56,3 +57,11 @@ scoreboard objectives remove xem.spell.run.effect.pull.entity.expire_time
 scoreboard objectives remove xem.sort_raycast.jar_of_energy.place 
 scoreboard objectives remove xem.jar_of_energy.energy_count 
 
+scoreboard objectives remove xem.meditation.end_time
+
+data remove storage energy_manipulation:spell nodes_values
+data remove storage energy_manipulation:spell energy
+data remove storage energy_manipulation:spell caster_armor
+data remove storage energy_manipulation:spell shapes
+
+data remove storage energy_manipulation:data players

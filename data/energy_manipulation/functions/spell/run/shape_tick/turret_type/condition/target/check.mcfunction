@@ -13,8 +13,9 @@ execute unless score xem.spell.run.getters.condition.passed xem.op matches 1 run
 execute unless score xem.spell.run.getters.condition.passed xem.op matches 1 run return 0
 
 # setup spell to run
-data modify entity @s data.energy_manipulation.spell_data.objects set from storage energy_manipulation:op condition_out.objects
+scoreboard players set #xem.spell.run.shape_tick.turret_type.condition.target.passed xem.op 1
 execute at @s run function energy_manipulation:spell/run/shape_tick/turret_type/run_spell
+scoreboard players set #xem.spell.run.shape_tick.turret_type.condition.target.passed xem.op 0
 
 # set new activation time
 execute if entity @s[tag=xem.spell.turret_type.fm.once] run scoreboard players operation @s xem.spell.shape.expire_time = #xlib.time xlib.op

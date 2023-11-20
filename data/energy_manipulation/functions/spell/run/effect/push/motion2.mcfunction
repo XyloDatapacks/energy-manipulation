@@ -1,13 +1,17 @@
 # -> {uuid, rot_x, rot_y}
 
+#==<Validate Target>==#
+$execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem.op run function energy_manipulation:spell/run/effect/validate_target
+#=====================#
+
 # sound
 $execute at $(uuid) run playsound energy_manipulation:spell.effect.push player @a ~ ~ ~ 1 1
 $execute at $(uuid) run particle minecraft:sonic_boom ~ ~ ~ 0.1 0.1 0.1 1 0 force
 
-# validate target
-$execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem.op run function energy_manipulation:spell/run/effect/validate_target
+#==<Validation Exit>==#
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0
 execute if score #xem.spell.run.effect.validate_target xem.op matches -1 run return 0
+#=====================#
 
 #dismount
 $execute as $(uuid) if predicate xylo_library:riding run ride @s dismount
