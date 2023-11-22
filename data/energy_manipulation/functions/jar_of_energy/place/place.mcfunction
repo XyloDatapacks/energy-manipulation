@@ -1,3 +1,5 @@
+execute align xyz if entity @e[type=minecraft:interaction,dy=0,tag=xem.jar_of_energy.block] run return 0
+
 data remove storage energy_manipulation:op jar 
 data modify storage energy_manipulation:op jar set from entity @s SelectedItem
 

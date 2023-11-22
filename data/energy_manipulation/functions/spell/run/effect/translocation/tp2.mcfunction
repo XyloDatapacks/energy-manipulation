@@ -28,4 +28,4 @@ $execute as $(uuid) if predicate xylo_library:riding run ride @s dismount
 $execute at $(uuid) summon minecraft:marker run function energy_manipulation:spell/run/effect/translocation/scoarch/init
 
 # tp
-$execute in $(dimension) as $(uuid) positioned $(position_x) $(position_y) $(position_z) run function energy_manipulation:spell/run/effect/translocation/tp_execute
+$execute in $(dimension) as $(uuid) positioned 0.0 0.0 0.0 positioned ~$(position_x) ~$(position_y) ~$(position_z) run function energy_manipulation:spell/run/effect/translocation/tp_execute
