@@ -4,7 +4,7 @@ execute if score @s xem.spell.shape.expire_time > #xlib.time xlib.op run particl
 execute if score @s xem.spell.shape.expire_time > #xlib.time xlib.op run particle minecraft:reverse_portal ~ ~1 ~ 0.1 0.1 0.1 0.1 2 force
 
 # tp players
-execute if score @s xem.spell.shape.expire_time > #xlib.time xlib.op run execute positioned ~-0.5 ~ ~-0.5 if entity @a[dy=1,dx=0,dz=0] run function energy_manipulation:spell/run/effect/translocation/scoarch/prepare_tp
+execute if score @s xem.spell.shape.expire_time > #xlib.time xlib.op positioned ~-0.5 ~ ~-0.5 if entity @a[dy=1,dx=0,dz=0] run function energy_manipulation:spell/run/effect/translocation/scoarch/prepare_tp
 
 # kill
 execute unless score @s xem.spell.shape.expire_time > #xlib.time xlib.op run kill @s

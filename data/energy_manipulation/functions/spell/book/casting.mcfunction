@@ -10,7 +10,7 @@ execute unless score @s xem.spell.book.casting_time matches 1.. if predicate ene
 execute if score @s xem.spell.book.casting_time matches 5 if score @s xem.spell.book.casting_book_slot matches 0.. run function energy_manipulation:spell/book/casting_data/activation_mh
 
 # sound
-execute if score @s xem.spell.book.casting_time matches 5 run execute at @s run playsound energy_manipulation:spell.prepare_cast player @a ~ ~ ~ 3.0 1
+execute if score @s xem.spell.book.casting_time matches 5 at @s run playsound energy_manipulation:spell.prepare_cast player @a ~ ~ ~ 3.0 1
 
 # manage casting
 scoreboard players add @s xem.spell.book.casting_time 1

@@ -1,3 +1,0 @@
-execute if score #xem.spell.run.getters.position.ray_trace.entities xem.op matches 1 run tag @e[type=!#xylo_library:non_interactive,distance=..2] add xem.spell.run.getters.position.ray_trace.ignore
-function energy_manipulation:spell/run/getters/position/ray_trace/loop
-execute if score #xem.spell.run.getters.position.ray_trace.entities xem.op matches 1 run tag @e[type=!#xylo_library:non_interactive,distance=..2] remove xem.spell.run.getters.position.ray_trace.ignore

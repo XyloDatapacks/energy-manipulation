@@ -1,0 +1,1 @@
+$execute in $(dimension) positioned 0.0 0.0 0.0 positioned ~$(initial_position_x) ~$(initial_position_y) ~$(initial_position_z) rotated $(initial_rotation_yawn) $(initial_rotation_pitch) run function energy_manipulation:spell/run/getters/position/ray_trace/find_point2 {max_distance_int:$(max_distance_int)}
