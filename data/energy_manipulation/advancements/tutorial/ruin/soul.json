@@ -4,7 +4,12 @@
       "item": "minecraft:soul_sand"
     },
     "title": {
-      "translate": "advancements.energy_manipulation.ruin.soul.name"
+      "translate": "advancements.energy_manipulation.ruin.soul.name",
+      "extra": [
+        {
+          "text": "      "
+        }
+      ]
     },
     "description": [
       {
@@ -15,6 +20,9 @@
           },
           {
             "translate": "advancements.energy_manipulation.ruin.soul.place"
+          },
+          {
+            "translate": "item.energy_manipulation.energy.soul.name"
           }
         ]
       }

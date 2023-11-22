@@ -4,7 +4,12 @@
       "item": "minecraft:chiseled_deepslate"
     },
     "title": {
-      "translate": "advancements.energy_manipulation.ruin.dark.name"
+      "translate": "advancements.energy_manipulation.ruin.dark.name",
+      "extra": [
+        {
+          "text": "      "
+        }
+      ]
     },
     "description": [
       {
@@ -15,6 +20,9 @@
           },
           {
             "translate": "advancements.energy_manipulation.ruin.dark.place"
+          },
+          {
+            "translate": "item.energy_manipulation.energy.dark.name"
           }
         ]
       }

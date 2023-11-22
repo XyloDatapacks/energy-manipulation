@@ -4,7 +4,12 @@
       "item": "minecraft:end_stone_bricks"
     },
     "title": {
-      "translate": "advancements.energy_manipulation.ruin.void.name"
+      "translate": "advancements.energy_manipulation.ruin.void.name",
+      "extra": [
+        {
+          "text": "      "
+        }
+      ]
     },
     "description": [
       {
@@ -15,6 +20,9 @@
           },
           {
             "translate": "advancements.energy_manipulation.ruin.void.place"
+          },
+          {
+            "translate": "item.energy_manipulation.energy.void.name"
           }
         ]
       }

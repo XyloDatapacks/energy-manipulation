@@ -1,2 +1,2 @@
 loot give @s loot energy_manipulation:give/spell/book/dark
-advancement grant @s only energy_manipulation:tutorial/spell/book/craft/dark
+advancement grant @s only energy_manipulation:spell/display/content/get_node_values/effect/dark

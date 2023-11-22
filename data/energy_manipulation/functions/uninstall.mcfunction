@@ -57,6 +57,8 @@ scoreboard objectives remove xem.spell.run.effect.pull.entity.expire_time
 scoreboard objectives remove xem.sort_raycast.jar_of_energy.place 
 scoreboard objectives remove xem.jar_of_energy.energy_count 
 
+scoreboard objectives remove xem.mind.is_concealed
+scoreboard objectives remove xem.mind.focus
 scoreboard objectives remove xem.meditation.end_time
 
 data remove storage energy_manipulation:spell nodes_values
