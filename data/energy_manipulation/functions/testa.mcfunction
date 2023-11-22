@@ -1,1 +1,1 @@
-data modify entity @s Invisible set value 1b
+$summon minecraft:armor_stand $(x) $(y) $(z) {NoGravity:1b}
