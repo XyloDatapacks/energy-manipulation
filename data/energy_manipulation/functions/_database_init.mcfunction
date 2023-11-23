@@ -40,7 +40,7 @@ data modify storage energy_manipulation:spell nodes_values.distance[] merge valu
 data modify storage energy_manipulation:spell nodes_values.condition set value [{value:"none"},{value:"cooldown",incompatible_parent:["skip_to"]},{value:"target"}]
 data modify storage energy_manipulation:spell nodes_values.condition[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.feature set value [{value:"none"},{value:"sneaking",incompatible_parent:["spell","projectile"]},{value:"swimming",incompatible_parent:["spell","projectile"]},{value:"on_fire",incompatible_parent:["spell"]},{value:"shape_projectile",compatible_parent:["","spell"]},{value:"shape_sprout",compatible_parent:["","spell"]},{value:"shape_turret",compatible_parent:["","spell"]}]
+data modify storage energy_manipulation:spell nodes_values.feature set value [{value:"none"},{value:"sneaking",incompatible_parent:["spell","projectile"]},{value:"swimming",incompatible_parent:["spell","projectile"]},{value:"on_fire",incompatible_parent:["spell"]},{value:"on_ground",incompatible_parent:["spell","projectile"]},{value:"in_air",incompatible_parent:["spell","projectile"]},{value:"shape_projectile",compatible_parent:["","spell"]},{value:"shape_sprout",compatible_parent:["","spell"]},{value:"shape_turret",compatible_parent:["","spell"]}]
 data modify storage energy_manipulation:spell nodes_values.feature[] merge value {final:1b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.target_count set value [{value:"any"},{value:"max"},{value:"min"},{value:"min-max"}]

@@ -1,4 +1,7 @@
-data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:50,TargetEntities:true}
+scoreboard players set #xem.spell.run.getters.target._is_in_sight xem.op 0
+execute unless entity @s[distance=..64] run return 0
+
+data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:100,TargetEntities:true,MaxTravelDistance:64}
 
 scoreboard players set #xem.spell.run.getters.target._is_in_sight xem.op 1
 execute facing entity @s eyes run function xylo_retina:traverse/setup

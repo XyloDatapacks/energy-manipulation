@@ -2,7 +2,9 @@ $execute if score #xem.spell.run.getters.position.ray_trace.blocks xem.op matche
 
 #retina cast
 data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:50,TargetEntities:true}
-data modify storage xylo_retina:input MaxRecursionDepth set from storage energy_manipulation:op position_in.max_distance_int
+execute if score #xem.spell.run.getters.position.ray_trace.entities xem.op matches 0 run data modify storage xylo_retina:input TargetEntities set value false
+execute if score #xem.spell.run.getters.position.ray_trace.blocks xem.op matches 0 run scoreboard players set $ignore_blocks retina.__variable__ 1
+data modify storage xylo_retina:input MaxTravelDistance set from storage energy_manipulation:op position_in.max_distance_int
 scoreboard players set $expand_entity_check retina.__variable__ 96
 function xylo_retina:traverse/setup
 

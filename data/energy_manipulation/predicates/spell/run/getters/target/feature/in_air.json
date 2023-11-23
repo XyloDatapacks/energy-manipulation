@@ -1,0 +1,7 @@
+{
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:reference",
+    "name": "energy_manipulation:spell/run/getters/target/feature/on_ground"
+  }
+}

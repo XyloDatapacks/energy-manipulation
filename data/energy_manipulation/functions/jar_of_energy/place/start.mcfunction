@@ -1,4 +1,4 @@
-data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:50,TargetEntities:true,MaxRecursionDepth:8}
+data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:50,TargetEntities:true,MaxTravelDistance:8}
 scoreboard players set $override_executing retina.__variable__ 1
 tag @s add retina.executing
 execute at @s anchored eyes positioned ^ ^ ^ run function xylo_retina:traverse/setup
