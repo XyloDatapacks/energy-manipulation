@@ -1,11 +1,9 @@
 #-> {uuid}
 
 #retina cast
-data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:60,TargetEntities:true,MaxTravelDistance:50}
-scoreboard players set $override_executing retina.__variable__ 1
-scoreboard players set $expand_entity_check retina.__variable__ 96
+data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:50,TargetEntities:true,OverrideExecutingEntity:true,ExpandEntityHitboxes:0.2}
 $execute as $(uuid) run tag @s add retina.executing
-$execute as $(uuid) at @s anchored eyes positioned ^ ^ ^ run function xylo_retina:traverse/setup
+$execute as $(uuid) at @s anchored eyes positioned ^ ^ ^ run function xylo_retina:traverse/setup_no_entity
 $execute as $(uuid) run tag @s remove retina.executing
 $execute as $(uuid) run say hi
 
