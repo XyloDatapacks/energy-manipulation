@@ -67,6 +67,7 @@ scoreboard objectives add xem.sort_raycast.jar_of_energy.place dummy
 scoreboard objectives add xem.jar_of_energy.energy_count dummy
 
 scoreboard objectives add xem.mind.is_concealed dummy
+scoreboard objectives add xem.mind.is_vulnerable dummy
 scoreboard objectives add xem.mind.focus dummy
 scoreboard objectives add xem.meditation.end_time dummy
 
