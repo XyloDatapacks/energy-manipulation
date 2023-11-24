@@ -70,6 +70,7 @@ scoreboard objectives add xem.mind.is_concealed dummy
 scoreboard objectives add xem.mind.is_vulnerable dummy
 scoreboard objectives add xem.mind.focus dummy
 scoreboard objectives add xem.meditation.end_time dummy
+scoreboard objectives add xem.meditation.previous_gamemode dummy
 
 # init
 execute unless score #xem.const.jar_of_energy.fill.limit xem.op = #xem.const.jar_of_energy.fill.limit xem.op run scoreboard players set #xem.const.jar_of_energy.fill.limit xem.op 1000

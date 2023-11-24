@@ -61,6 +61,7 @@ scoreboard objectives remove xem.mind.is_concealed
 scoreboard objectives remove xem.mind.is_vulnerable
 scoreboard objectives remove xem.mind.focus
 scoreboard objectives remove xem.meditation.end_time
+scoreboard objectives remove xem.meditation.previous_gamemode
 
 data remove storage energy_manipulation:spell nodes_values
 data remove storage energy_manipulation:spell energy
