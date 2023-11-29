@@ -1,5 +1,7 @@
 execute store result score #xem.mind.mind_room.id xem.op run data get storage energy_manipulation:data mind_plane.last_room.id
 
+#https://math.stackexchange.com/questions/3157030/parametrizing-the-square-spiral
+
 scoreboard players operation #xlib.utilities.math.sqrt.input xlib.op = #xem.mind.mind_room.id xem.op
 scoreboard players operation #xlib.utilities.math.sqrt.input xlib.op *= #100 xconst
 function xylo_library:utilities/math/sqrt/sqrt
