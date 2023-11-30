@@ -1,5 +1,5 @@
 # summon
-summon minecraft:item_display ~ ~ ~ {brightness:{block:15,sky:15},billboard:"fixed",transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.6f,0.6f,0.6f],translation:[0.0f,0.0f,0.0f]},Tags:["smithed.entity","smithed.strict","xem.spell.shape_display","xem.spell.shape_display_new"],item_display:fixed,item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}}}
+summon minecraft:item_display ~ ~ ~ {brightness:{block:15,sky:15},teleport_duration:3,billboard:"fixed",transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.6f,0.6f,0.6f],translation:[0.0f,0.0f,0.0f]},Tags:["smithed.entity","smithed.strict","xem.spell.shape_display","xem.spell.shape_display_new"],item_display:fixed,item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}}}
 ride @s mount @e[type=minecraft:item_display,distance=..0.001,tag=xem.spell.shape_display_new,limit=1]
 # get cmd
 data modify storage energy_manipulation:op macro_data set value {shape:"turret"}

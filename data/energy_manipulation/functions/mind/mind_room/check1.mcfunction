@@ -5,4 +5,3 @@ scoreboard players operation #xem.mind.mind_room.x xem.op = #xem.mind.mind_room.
 scoreboard players operation #xem.mind.mind_room.x xem.op -= #xem.mind.mind_room.n^2 xem.op
 scoreboard players operation #xem.mind.mind_room.x xem.op -= #xem.mind.mind_room.y xem.op
 
-say check 1 

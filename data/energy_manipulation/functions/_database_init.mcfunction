@@ -20,7 +20,7 @@ data modify storage energy_manipulation:spell nodes_values.shape[].final set val
 data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
 data modify storage energy_manipulation:spell nodes_values.effect[].final set value 0b
 
-data modify storage energy_manipulation:spell nodes_values.movement set value [{value:"none",cost:0},{value:"parabolic",cost:2,incompatible_shapes:["turret"]},{value:"straight",cost:2.5,incompatible_shapes:["turret"]}]
+data modify storage energy_manipulation:spell nodes_values.movement set value [{value:"none",cost:0},{value:"parabolic",cost:2,incompatible_shapes:["turret"]},{value:"straight",cost:2.5,incompatible_shapes:["turret"]},{value:"follow",cost:2,compatible_shapes:["","turret"]}]
 data modify storage energy_manipulation:spell nodes_values.movement[].final set value 0b
 
 
@@ -90,7 +90,7 @@ data modify storage energy_manipulation:spell nodes_values.radius set value [{va
 data modify storage energy_manipulation:spell nodes_values.radius[] merge value {final:1b,cost:0}
 
 
-data modify storage energy_manipulation:spell nodes_values.index set value [{value:"all"},{value:-1},{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]
+data modify storage energy_manipulation:spell nodes_values.index set value [{value:"all"},{value:-1},{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9}]
 data modify storage energy_manipulation:spell nodes_values.index[] merge value {final:1b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.concatenate_index set value [{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]

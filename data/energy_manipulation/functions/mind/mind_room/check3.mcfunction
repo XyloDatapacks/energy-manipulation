@@ -10,6 +10,5 @@ scoreboard players operation #xem.mind.mind_room.x xem.op += #xem.mind.mind_room
 scoreboard players operation #xem.mind.mind_room.x xem.op += #xem.mind.mind_room.n xem.op
 
 
-say check 3
 
 

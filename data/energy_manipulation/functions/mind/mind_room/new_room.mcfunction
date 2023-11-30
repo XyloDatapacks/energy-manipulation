@@ -13,9 +13,6 @@ scoreboard players operation #xem.mind.mind_room.is_odd xem.op = #xem.mind.mind_
 scoreboard players operation #xem.mind.mind_room.is_odd xem.op %= #2 xconst
 execute if score #xem.mind.mind_room.is_odd xem.op matches 1 run scoreboard players remove #xem.mind.mind_room.n xem.op 1
 
-tellraw @a ["id: ",{"score":{"objective":"xem.op","name":"#xem.mind.mind_room.id"}}]
-tellraw @a ["n: ",{"score":{"objective":"xem.op","name":"#xem.mind.mind_room.n"}}]
-
 #check 1
 scoreboard players operation #xem.mind.mind_room.n^2 xem.op = #xem.mind.mind_room.n xem.op
 scoreboard players operation #xem.mind.mind_room.n^2 xem.op *= #xem.mind.mind_room.n xem.op

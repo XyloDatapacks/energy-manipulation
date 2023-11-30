@@ -13,4 +13,4 @@ data modify entity @s item.tag.CustomModelData set from storage energy_manipulat
 # set movement and movement tags to projectile
 data remove storage energy_manipulation:op macro_data
 data modify storage energy_manipulation:op macro_data.value set from storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.value
-execute on vehicle run function energy_manipulation:spell/run/shape/_movement/sort with storage energy_manipulation:op macro_data
+function energy_manipulation:spell/run/shape/_movement/sort with storage energy_manipulation:op macro_data

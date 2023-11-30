@@ -15,4 +15,4 @@ execute store success score @s xem.mind.is_vulnerable if score @s[tag=!xem.mind.
 
 scoreboard players operation #xem.mind.focus.display xem.op = @s xem.mind.focus
 scoreboard players operation #xem.mind.focus.display xem.op /= #20 xconst
-title @s actionbar [{"score":{"objective":"xem.op","name":"#xem.mind.focus.display"}},"/100"]
+#title @s actionbar [{"score":{"objective":"xem.op","name":"#xem.mind.focus.display"}},"/100"]

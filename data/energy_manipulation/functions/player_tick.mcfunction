@@ -17,5 +17,5 @@ scoreboard players reset @s[scores={xem.spell.cost.died=1..}] xem.spell.cost.wit
 scoreboard players reset @s[scores={xem.spell.cost.died=1..}] xem.spell.cost.withering.total_damage_to_pay
 execute unless score @s[predicate=energy_manipulation:spell/cost/pay_cost] xem.spell.cost.withering.withering_async_time > #xlib.time xlib.op run function energy_manipulation:spell/cost/withering/calc_async
 
-#mind
+#==<Focus>==#
 function energy_manipulation:mind/focus/player_tick

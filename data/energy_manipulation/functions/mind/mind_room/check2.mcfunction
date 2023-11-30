@@ -6,5 +6,4 @@ scoreboard players operation #xem.mind.mind_room.y xem.op -= #xem.mind.mind_room
 scoreboard players operation #xem.mind.mind_room.y xem.op += #xem.mind.mind_room.n^2+n xem.op
 
 
-say check 2
 
