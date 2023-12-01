@@ -28,4 +28,4 @@ function energy_manipulation:spell/run/effect/start
 
 # run elaborate
 tp @s ^ ^ ^-0.3 ~ ~
-execute at @s run function energy_manipulation:spell/run/elaborate/start 
+function energy_manipulation:spell/run/elaborate/start 
