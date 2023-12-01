@@ -20,7 +20,7 @@ scoreboard objectives add xem.spell.run.elaborate.concatenate_index_max dummy
 
 scoreboard objectives add xem.spell.spells_per_sec dummy
 scoreboard objectives add xem.spell.last_spell_time dummy
-execute unless score #xem.spell.spells_per_sec.max xem.op = #xem.spell.spells_per_sec.max xem.op run scoreboard players set #xem.spell.spells_per_sec.max xem.op 2000
+execute unless score #xem.spell.spells_per_sec.max xem.op = #xem.spell.spells_per_sec.max xem.op run scoreboard players set #xem.spell.spells_per_sec.max xem.op 100
 
 scoreboard objectives add xem.spell.book.open_book_max_instructions dummy
 scoreboard objectives add xem.spell.book.open_book_max_concatenates dummy

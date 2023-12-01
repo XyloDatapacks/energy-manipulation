@@ -8,7 +8,7 @@ scoreboard players operation @s xem.spell.spells_per_sec -= #xem.spell.run._chec
 scoreboard players operation @s xem.spell.spells_per_sec > #0 xconst
 
 #add
-scoreboard players set #xem.spell.run.spells_per_sec xem.op 20
+scoreboard players set #xem.spell.run.spells_per_sec xem.op 1
 execute if score #xem.spell.run.spells_per_sec.mult xem.op matches 2.. run scoreboard players operation #xem.spell.run.spells_per_sec xem.op *= #xem.spell.run.spells_per_sec.mult xem.op
 scoreboard players operation @s xem.spell.spells_per_sec += #xem.spell.run.spells_per_sec xem.op
 scoreboard players reset #xem.spell.run.spells_per_sec.mult xem.op
