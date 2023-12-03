@@ -3,9 +3,10 @@
 #return = 3 must terminate function instantly
 #return <= 1 handled case by case
 
-#internal
+#internal (-2: projectile entity for projectile like shapes)
 execute if entity @s[tag=xem.spell.shape_marker] run return -1
 execute if entity @s[tag=xem.spell.projectile_type] run return -2
+execute if entity @s[tag=xem.spell.run] run return -3
 #external
 execute if entity @s[type=#energy_manipulation:boss] run return 1
 execute if entity @s[tag=smithed.strict] run return 2

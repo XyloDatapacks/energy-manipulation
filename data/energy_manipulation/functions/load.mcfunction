@@ -74,6 +74,9 @@ scoreboard objectives add xem.meditation.previous_gamemode dummy
 
 # init
 execute unless score #xem.const.jar_of_energy.fill.limit xem.op = #xem.const.jar_of_energy.fill.limit xem.op run scoreboard players set #xem.const.jar_of_energy.fill.limit xem.op 1000
+execute store result score #xem.maxCommandChainLength xem.op run gamerule maxCommandChainLength
+execute if score #xem.maxCommandChainLength xem.op matches ..100000 run gamerule maxCommandChainLength 100000
+
 
 # functions
 function energy_manipulation:_database_init
