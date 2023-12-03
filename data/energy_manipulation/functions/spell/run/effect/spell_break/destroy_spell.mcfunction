@@ -9,7 +9,7 @@ $execute at $(uuid) run playsound energy_manipulation:spell.effect.spell_break p
 $execute at $(uuid) run particle minecraft:glow ~ ~ ~ 0.1 0.1 0.1 1 5 force
 
 #==<Validation Exit>==#
-execute unless score #xem.spell.run.effect.validate_target xem.op matches -3 run return 0
+execute unless score #xem.spell.run.effect.validate_target xem.op matches -1 unless score #xem.spell.run.effect.validate_target xem.op matches -3 run return 0
 #=====================#
 
 #make spell/shape fail
