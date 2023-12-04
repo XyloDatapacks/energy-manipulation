@@ -7,4 +7,4 @@ execute if score xem.spell.run.effect.has_target_entity xem.op matches 1 run fun
 
 # sound
 execute unless score xem.spell.run.effect.has_target_entity xem.op matches 1 run playsound energy_manipulation:spell.effect.spell_break player @a ~ ~ ~ 1 1
-execute unless score xem.spell.run.effect.has_target_entity xem.op matches 1 run particle minecraft:glow ~ ~ ~ 0.1 0.1 0.1 1 5 force
+execute unless score xem.spell.run.effect.has_target_entity xem.op matches 1 run particle minecraft:glow ~ ~ ~ 0.1 0.1 0.1 1 20 force

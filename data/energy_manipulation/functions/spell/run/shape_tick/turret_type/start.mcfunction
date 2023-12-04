@@ -1,6 +1,10 @@
 # confirm run tick
 scoreboard players set #xem.spell.run.shape_tick.tick_run xem.op 1
 
+#dead caster stop
+execute if score #xem.spell.run.caster_still_alive xem.op matches 0 run function energy_manipulation:spell/run/shape_tick/turret_type/spell_fail
+execute if score #xem.spell.run.caster_still_alive xem.op matches 0 run return 0
+
 # movement mode
 execute on vehicle if entity @s[tag=xem.spell.run.shape._movement.follow] run function energy_manipulation:spell/run/shape/_movement/follow/tick 
 

@@ -14,6 +14,12 @@ scoreboard objectives remove xem.spell.run.elaborate.concatenate_index_max
 
 scoreboard objectives remove xem.spell.spells_per_sec 
 scoreboard objectives remove xem.spell.last_spell_time 
+scoreboard objectives remove xem.spell.turrets_in_shape_tick 
+scoreboard objectives remove xem.spell.turrets_casted_in_tick 
+scoreboard objectives remove xem.spell.turrets_in_shape_tick_old 
+scoreboard objectives remove xem.spell.turrets_casted_in_tick_old
+scoreboard objectives remove xem.spell.casting_fatigue.spell_per_sec
+scoreboard objectives remove xem.spell.casting_fatigue.percentage
 
 scoreboard objectives remove xem.spell.book.open_book_max_instructions 
 scoreboard objectives remove xem.spell.book.open_book_max_concatenates 

@@ -1,6 +1,9 @@
-# hit 
 # confirm run tick
 scoreboard players set #xem.spell.run.shape_tick.tick_run xem.op 1
+
+#dead caster stop
+execute if score #xem.spell.run.caster_still_alive xem.op matches 0 at @s on vehicle run function energy_manipulation:spell/run/shape_tick/projectile_type/spell_fail
+execute if score #xem.spell.run.caster_still_alive xem.op matches 0 run return 0
 
 # conditions and expire time
 scoreboard players set #xem.spell.run.shape_tick.projectile_type.hit xem.op 0

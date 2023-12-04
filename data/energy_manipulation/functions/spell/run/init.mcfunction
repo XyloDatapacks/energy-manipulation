@@ -9,7 +9,6 @@ scoreboard players operation @s xem.spell.caster_last_death_time = #xem.spell.ru
 # get indexes
 execute store result score @s xem.spell.run.elaborate.concatenate_index_max run data get storage energy_manipulation:op spell
 execute if score #xem.spell.run.override_concatenate_index xem.op = #xem.spell.run.override_concatenate_index xem.op run scoreboard players operation @s xem.spell.run.elaborate.concatenate_index = #xem.spell.run.override_concatenate_index xem.op
-scoreboard players reset #xem.spell.run.override_concatenate_index xem.op
 
 # add name
 data modify storage energy_manipulation:op new_spell_data set value {CustomName:'{"text":"xem.spell_marker"}'}
@@ -22,13 +21,15 @@ execute unless score #xem.spell.run.override_spell_data xem.op matches 1 run fun
 execute unless score #xem.spell.run.override_spell_data xem.op matches 1 run data modify storage energy_manipulation:op new_spell_data.data.energy_manipulation.spell_data.dimension set from storage xylo_library:op get_dimension_id.dimension
 execute unless score #xem.spell.run.override_spell_data xem.op matches 1 run data modify storage energy_manipulation:op new_spell_data.data.energy_manipulation.spell_data.spell_book.energy_type_id set from storage energy_manipulation:op spell_book.tag.energy_manipulation.spell_book.energy_type_id
 execute unless score #xem.spell.run.override_spell_data xem.op matches 1 store result storage energy_manipulation:op new_spell_data.data.energy_manipulation.spell_data.spell_power int 1 run scoreboard players get #xem.spell.book.casting_power xem.op
-scoreboard players reset #xem.spell.book.casting_power xem.op
 # override spell data?
 execute if score #xem.spell.run.override_spell_data xem.op matches 1 run data modify storage energy_manipulation:op new_spell_data.data.energy_manipulation.spell_data set from storage energy_manipulation:op spell_data
-scoreboard players reset #xem.spell.run.override_spell_data xem.op
 # copy data
 data modify entity @s {} merge from storage energy_manipulation:op new_spell_data
+
+#reset overrides
+function energy_manipulation:spell/run/reset_overrides
 
 # run
 scoreboard players set #xem.spell.run.caster_still_alive xem.op 1
 function energy_manipulation:spell/run/elaborate/start 
+
