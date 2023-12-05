@@ -30,7 +30,7 @@ data modify storage energy_manipulation:spell nodes_values.offset[] merge value 
 data modify storage energy_manipulation:spell nodes_values.angle set value [{value:"yawn-pitch"},{value:"yawn"},{value:"pitch"}]
 data modify storage energy_manipulation:spell nodes_values.angle[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.target set value [{value:"none"},{value:"caster"},{value:"subject"},{value:"objects"},{value:"marked_entity"},{value:"player"},{value:"mob"},{value:"enemy"},{value:"ally"},{value:"animal"},{value:"item"},{value:"projectile"},{value:"spell"}]
+data modify storage energy_manipulation:spell nodes_values.target set value [{value:"none"},{value:"caster"},{value:"subject"},{value:"objects"},{value:"marked_entity"},{value:"player"},{value:"mob"},{value:"player_and_mob"},{value:"enemy"},{value:"ally"},{value:"animal"},{value:"item"},{value:"projectile"},{value:"spell"}]
 data modify storage energy_manipulation:spell nodes_values.target[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.distance set value [{value:"none"},{value:"max"},{value:"min"},{value:"min-max"}]
@@ -42,6 +42,9 @@ data modify storage energy_manipulation:spell nodes_values.condition[] merge val
 
 data modify storage energy_manipulation:spell nodes_values.feature set value [{value:"none"},{value:"sneaking",incompatible_parent:["spell","projectile"]},{value:"swimming",incompatible_parent:["spell","projectile"]},{value:"on_fire",incompatible_parent:["spell"]},{value:"on_ground",incompatible_parent:["spell","projectile"]},{value:"in_air",incompatible_parent:["spell","projectile"]},{value:"shape_projectile",compatible_parent:["","spell"]},{value:"shape_sprout",compatible_parent:["","spell"]},{value:"shape_turret",compatible_parent:["","spell"]}]
 data modify storage energy_manipulation:spell nodes_values.feature[] merge value {final:1b,cost:0}
+
+data modify storage energy_manipulation:spell nodes_values.ignore set value [{value:"none"},{value:"caster"}]
+data modify storage energy_manipulation:spell nodes_values.ignore[] merge value {final:1b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.target_count set value [{value:"any"},{value:"max"},{value:"min"},{value:"min-max"}]
 data modify storage energy_manipulation:spell nodes_values.target_count[] merge value {final:0b,cost:0}
@@ -79,7 +82,8 @@ data modify storage energy_manipulation:spell nodes_values.anchor[] merge value 
 data modify storage energy_manipulation:spell nodes_values.sort set value [{value:"arbitrary"},{value:"nearest"},{value:"furthest"},{value:"random"}]
 data modify storage energy_manipulation:spell nodes_values.sort[] merge value {final:1b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.selection set value [{value:"single"},{value:"multiple"}]
+#data modify storage energy_manipulation:spell nodes_values.selection set value [{value:"single"},{value:"multiple"}]
+data modify storage energy_manipulation:spell nodes_values.selection set value [{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]
 data modify storage energy_manipulation:spell nodes_values.selection[] merge value {final:1b,cost:0}
 
 
