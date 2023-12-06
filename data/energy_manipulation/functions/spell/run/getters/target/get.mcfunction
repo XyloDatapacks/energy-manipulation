@@ -29,11 +29,6 @@ data modify storage energy_manipulation:op macro_data.value set from storage ene
 function energy_manipulation:spell/run/getters/target/selector with storage energy_manipulation:op macro_data
 #set feature
 data modify storage energy_manipulation:op target.feature set from storage energy_manipulation:op target_in.feature
-# set distance
-data remove storage energy_manipulation:op target.distance
-data modify storage energy_manipulation:op target merge value {min_distance:"0",max_distance:""}
-data modify storage energy_manipulation:op target.min_distance set from storage energy_manipulation:op target_in.distance.min_distance
-data modify storage energy_manipulation:op target.max_distance set from storage energy_manipulation:op target_in.distance.max_distance
 #set sort
 data modify storage energy_manipulation:op target.sort set from storage energy_manipulation:op target_in.sort
 # selection
@@ -46,13 +41,19 @@ execute if score #xem.spell.run.getters.target.get.numeric_selection xem.op matc
 #ignore
 execute if data storage energy_manipulation:op target_in{ignore:"caster"} run function energy_manipulation:spell/run/getters/target/ignore/caster with storage energy_manipulation:op running_spell_data
 
+#sphere or square check
+execute store success score #xem.spell.run.getters.target.cube_check xem.op if data storage energy_manipulation:op target_in{volume_check:"cube"}
+execute unless score #xem.spell.run.getters.target.cube_check xem.op matches 1 run function energy_manipulation:spell/run/getters/target/volume_check/prepare_sphere
+execute if score #xem.spell.run.getters.target.cube_check xem.op matches 1 run function energy_manipulation:spell/run/getters/target/volume_check/prepare_cube
+
 #==<Get Target>==#
 # get target
 data remove storage energy_manipulation:op macro_data
 function energy_manipulation:spell/run/getters/macro_input/initial_position
 data modify storage energy_manipulation:op macro_data.dimension set from storage energy_manipulation:op running_spell_data.dimension
 data modify storage energy_manipulation:op target merge from storage energy_manipulation:op macro_data
-function energy_manipulation:spell/run/getters/target/uuid with storage energy_manipulation:op target
+execute unless score #xem.spell.run.getters.target.cube_check xem.op matches 1 run function energy_manipulation:spell/run/getters/target/volume_check/find_sphere with storage energy_manipulation:op target
+execute if score #xem.spell.run.getters.target.cube_check xem.op matches 1 run function energy_manipulation:spell/run/getters/target/volume_check/find_cube with storage energy_manipulation:op target
 
 
 #==<Remove Ignore Tags>==#

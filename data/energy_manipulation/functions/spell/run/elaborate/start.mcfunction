@@ -1,5 +1,6 @@
-# "energy_manipulation:op running_spell_marker" read only
-# "energy_manipulation:op selected_concatenate" read only
+# in: <@> spell marker
+# out: "energy_manipulation:op running_spell_marker" read only
+# out: "energy_manipulation:op selected_concatenate" read only
 
 # kill and return + particles for cost not paid if caster died
 execute if score #xem.spell.run.caster_still_alive xem.op matches 0 at @s run function energy_manipulation:spell/cost/fx_spell_cost_not_paid

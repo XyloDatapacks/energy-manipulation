@@ -14,7 +14,7 @@ data modify storage energy_manipulation:spell nodes_values.direction set value [
 data modify storage energy_manipulation:spell nodes_values.direction[] merge value {final:0b,cost:0}
 
 
-data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1},{value:"projectile",cost:2.5},{value:"sprout",cost:2},{value:"turret",cost:5.5}]
+data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1},{value:"projectile",cost:2.5},{value:"sprout",cost:2},{value:"turret",cost:5.5},{value:"aoe",cost:10}]
 data modify storage energy_manipulation:spell nodes_values.shape[].final set value 0b
 
 data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"spell_break",cost:8,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
@@ -32,6 +32,9 @@ data modify storage energy_manipulation:spell nodes_values.angle[] merge value {
 
 data modify storage energy_manipulation:spell nodes_values.target set value [{value:"none"},{value:"caster"},{value:"subject"},{value:"objects"},{value:"marked_entity"},{value:"player"},{value:"mob"},{value:"player_and_mob"},{value:"enemy"},{value:"ally"},{value:"animal"},{value:"item"},{value:"projectile"},{value:"spell"}]
 data modify storage energy_manipulation:spell nodes_values.target[] merge value {final:0b,cost:0}
+
+data modify storage energy_manipulation:spell nodes_values.target_aoe set value [{value:"none"},{value:"player"},{value:"mob"},{value:"player_and_mob"},{value:"enemy"},{value:"ally"},{value:"animal"},{value:"item"},{value:"projectile"},{value:"spell"}]
+data modify storage energy_manipulation:spell nodes_values.target_aoe[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.distance set value [{value:"none"},{value:"max"},{value:"min"},{value:"min-max"}]
 data modify storage energy_manipulation:spell nodes_values.distance[] merge value {final:0b,cost:0}
@@ -130,6 +133,10 @@ data modify storage energy_manipulation:spell nodes_values.max_distance[] merge 
 
 data modify storage energy_manipulation:spell nodes_values.max_distance_int set value [{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30}]
 data modify storage energy_manipulation:spell nodes_values.max_distance_int[] merge value {final:1b,cost:0}
+
+
+data modify storage energy_manipulation:spell nodes_values.size set value [{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30}]
+data modify storage energy_manipulation:spell nodes_values.size[] merge value {final:1b,cost:0}
 
 
 data modify storage energy_manipulation:spell nodes_values.yawn set value [{value:-180},{value:-175},{value:-170},{value:-165},{value:-160},{value:-155},{value:-150},{value:-145},{value:-140},{value:-135},{value:-130},{value:-125},{value:-120},{value:-115},{value:-110},{value:-105},{value:-100},{value:-95},{value:-90},{value:-85},{value:-80},{value:-75},{value:-70},{value:-65},{value:-60},{value:-55},{value:-50},{value:-45},{value:-40},{value:-35},{value:-30},{value:-25},{value:-20},{value:-15},{value:-10},{value:-5},{value:0},{value:5},{value:10},{value:15},{value:20},{value:25},{value:30},{value:35},{value:40},{value:45},{value:50},{value:55},{value:60},{value:65},{value:70},{value:75},{value:80},{value:85},{value:90},{value:95},{value:100},{value:105},{value:110},{value:115},{value:120},{value:125},{value:130},{value:135},{value:140},{value:145},{value:150},{value:155},{value:160},{value:165},{value:170},{value:175},{value:180}]
@@ -246,5 +253,6 @@ data remove storage energy_manipulation:spell shapes
 data modify storage energy_manipulation:spell shapes.projectile.custom_model_data set value {generic:12341110,sun:12341111,ground:12341112,soul:12341113,dark:12341114,void:12341115}
 data modify storage energy_manipulation:spell shapes.sprout.custom_model_data set value {generic:12341120,sun:12341121,ground:12341122,soul:12341123,dark:12341124,void:12341125}
 data modify storage energy_manipulation:spell shapes.turret.custom_model_data set value {generic:12341130,sun:12341131,ground:12341132,soul:12341133,dark:12341134,void:12341135}
+data modify storage energy_manipulation:spell shapes.aoe.custom_model_data set value {generic:12341130,sun:12341131,ground:12341132,soul:12341133,dark:12341134,void:12341135}
 
 # tellraw @a {"text":"Energy Manipulation Database Loaded","color":"green"}

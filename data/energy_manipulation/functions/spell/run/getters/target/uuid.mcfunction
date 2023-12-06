@@ -1,4 +1,11 @@
-# -> {sort, min_distance, max_distance, selection, selector}
+#extra check for concealed targets
+scoreboard players set #xem.spell.run.getters.target._is_in_sight xem.op 1
+execute if score @s xem.mind.is_concealed matches 1 run function energy_manipulation:spell/run/getters/target/_is_in_sight
+execute if score #xem.spell.run.getters.target._is_in_sight xem.op matches 0 run return 0
 
-# $tellraw @a[tag=xem.debug] "execute in $(dimension) positioned 0.0 0.0 0.0 positioned ~$(initial_position_x) ~$(initial_position_y) ~$(initial_position_z) as $(selector)] ,distance=$(min_distance)..$(max_distance),sort=$(sort)$(selection)]"
-$execute in $(dimension) positioned 0.0 0.0 0.0 positioned ~$(initial_position_x) ~$(initial_position_y) ~$(initial_position_z) as $(selector),tag=!smithed.block,tag=!xlib.non_interactive,tag=!xem.spell.run.getters.target.ignore,tag=!xem.spell.non_selectable,distance=$(min_distance)..$(max_distance),predicate=!energy_manipulation:spell/run/getters/target/spectator_player,predicate=!energy_manipulation:spell/run/getters/target/undetectable,predicate=energy_manipulation:spell/run/getters/target/feature/$(feature),sort=$(sort)$(selection)] run function energy_manipulation:spell/run/getters/target/uuid2
+function xylo_library:utilities/uuid/generate
+data modify storage energy_manipulation:op target_out append value {}
+data modify storage energy_manipulation:op target_out[-1].uuid set from storage gu:main out
+
+# confirm entity found
+scoreboard players set xem.spell.run.getters.target.found xem.op 1
