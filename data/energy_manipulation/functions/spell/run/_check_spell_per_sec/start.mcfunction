@@ -18,11 +18,20 @@ scoreboard players operation @s xem.spell.last_spell_time = #xlib.time xlib.op
 
 #get real spell_per_sec value
 scoreboard players operation #xem.spell.spells_per_sec.check xem.op = @s xem.spell.spells_per_sec
+
+#turret extra
 scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op = @s xem.spell.turrets_in_shape_tick_old
 scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op += @s xem.spell.turrets_casted_in_tick_old 
 scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op += @s xem.spell.turrets_casted_in_tick
 scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op *= #5 xconst
 scoreboard players operation #xem.spell.spells_per_sec.check xem.op += #xem.spell.spells_per_sec.turret_extra xem.op
+
+#aoe extra
+scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op = @s xem.spell.aoes_in_shape_tick_old
+scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op += @s xem.spell.aoes_casted_in_tick_old 
+scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op += @s xem.spell.aoes_casted_in_tick
+scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op *= #2 xconst
+scoreboard players operation #xem.spell.spells_per_sec.check xem.op += #xem.spell.spells_per_sec.aoe_extra xem.op
 
 #copy value for fatigue objective and calc percentage again
 scoreboard players operation @s xem.spell.casting_fatigue.spell_per_sec = @s xem.spell.spells_per_sec

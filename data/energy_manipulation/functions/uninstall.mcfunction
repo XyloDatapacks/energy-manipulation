@@ -18,6 +18,10 @@ scoreboard objectives remove xem.spell.turrets_in_shape_tick
 scoreboard objectives remove xem.spell.turrets_casted_in_tick 
 scoreboard objectives remove xem.spell.turrets_in_shape_tick_old 
 scoreboard objectives remove xem.spell.turrets_casted_in_tick_old
+scoreboard objectives remove xem.spell.aoes_in_shape_tick 
+scoreboard objectives remove xem.spell.aoes_casted_in_tick 
+scoreboard objectives remove xem.spell.aoes_in_shape_tick_old 
+scoreboard objectives remove xem.spell.aoes_casted_in_tick_old 
 scoreboard objectives remove xem.spell.casting_fatigue.spell_per_sec
 scoreboard objectives remove xem.spell.casting_fatigue.percentage
 
@@ -49,6 +53,9 @@ scoreboard objectives remove xem.spell.shape.expire_time
 scoreboard objectives remove xem.spell.shape.activation_time 
 scoreboard objectives remove xem.spell.shape.cooldown_time 
 scoreboard objectives remove xem.spell.shape.fire_rate 
+
+scoreboard objectives remove xem.spell.run.shape.aoe.size
+scoreboard objectives remove xem.spell.run.shape.aoe.expand_time
 
 scoreboard objectives remove xem.spell.run.effect.translocation.scoarch_cooldown 
 scoreboard objectives remove xem.spell.run.effect.pull.ride.end_point.x 

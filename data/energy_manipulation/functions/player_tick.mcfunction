@@ -23,15 +23,30 @@ scoreboard players operation @s xem.spell.turrets_casted_in_tick_old = @s xem.sp
 scoreboard players set @s xem.spell.turrets_in_shape_tick 0
 scoreboard players set @s xem.spell.turrets_casted_in_tick 0
 
+#aoe counters
+scoreboard players operation @s xem.spell.aoes_in_shape_tick_old = @s xem.spell.aoes_in_shape_tick
+scoreboard players operation @s xem.spell.aoes_casted_in_tick_old = @s xem.spell.aoes_casted_in_tick
+scoreboard players set @s xem.spell.aoes_in_shape_tick 0
+scoreboard players set @s xem.spell.aoes_casted_in_tick 0
+
 #==<Casting Fatigue>==#
 scoreboard players remove @s[scores={xem.spell.casting_fatigue.spell_per_sec=1..}] xem.spell.casting_fatigue.spell_per_sec 1
 scoreboard players operation @s xem.spell.casting_fatigue.percentage = @s xem.spell.casting_fatigue.spell_per_sec
+
 scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op = @s xem.spell.turrets_in_shape_tick_old
 scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op += @s xem.spell.turrets_casted_in_tick_old 
 scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op *= #5 xconst
 scoreboard players operation @s xem.spell.casting_fatigue.percentage += #xem.spell.spells_per_sec.turret_extra xem.op
+
+scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op = @s xem.spell.aoes_in_shape_tick_old
+scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op += @s xem.spell.aoes_casted_in_tick_old 
+scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op *= #2 xconst
+scoreboard players operation @s xem.spell.casting_fatigue.percentage += #xem.spell.spells_per_sec.aoe_extra xem.op
+
 scoreboard players operation @s xem.spell.casting_fatigue.percentage *= #100 xconst
 scoreboard players operation @s xem.spell.casting_fatigue.percentage /= #xem.spell.spells_per_sec.max xem.op
+
+title @s[tag=xem.show_casting_fatigue] actionbar [{"score":{"objective":"xem.spell.casting_fatigue.percentage","name":"@s"}},"/100"]
 
 #==<Focus>==#
 function energy_manipulation:mind/focus/player_tick

@@ -7,3 +7,5 @@ $execute as $(caster) store success score #xem.spell.run.caster_still_alive xem.
 
 #turrets count
 $execute if entity @s[tag=xem.spell.turret_type] as $(caster) run scoreboard players add @s xem.spell.turrets_in_shape_tick 1
+#aoes count
+$execute if entity @s[tag=xem.spell.aoe_type] as $(caster) run scoreboard players add @s xem.spell.aoes_in_shape_tick 1

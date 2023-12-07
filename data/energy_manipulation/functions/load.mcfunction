@@ -25,6 +25,10 @@ scoreboard objectives add xem.spell.turrets_in_shape_tick dummy
 scoreboard objectives add xem.spell.turrets_casted_in_tick dummy
 scoreboard objectives add xem.spell.turrets_in_shape_tick_old dummy
 scoreboard objectives add xem.spell.turrets_casted_in_tick_old dummy
+scoreboard objectives add xem.spell.aoes_in_shape_tick dummy
+scoreboard objectives add xem.spell.aoes_casted_in_tick dummy
+scoreboard objectives add xem.spell.aoes_in_shape_tick_old dummy
+scoreboard objectives add xem.spell.aoes_casted_in_tick_old dummy
 scoreboard objectives add xem.spell.casting_fatigue.spell_per_sec dummy
 scoreboard objectives add xem.spell.casting_fatigue.percentage dummy
 
@@ -56,6 +60,9 @@ scoreboard objectives add xem.spell.shape.expire_time dummy
 scoreboard objectives add xem.spell.shape.activation_time dummy
 scoreboard objectives add xem.spell.shape.cooldown_time dummy
 scoreboard objectives add xem.spell.shape.fire_rate dummy
+
+scoreboard objectives add xem.spell.run.shape.aoe.size dummy
+scoreboard objectives add xem.spell.run.shape.aoe.expand_time dummy
 
 scoreboard objectives add xem.spell.run.effect.translocation.scoarch_cooldown dummy
 execute unless score #xem.spell.run.effect.translocation.max_range xem.op = #xem.spell.run.effect.translocation.max_range xem.op run scoreboard players set #xem.spell.run.effect.translocation.max_range xem.op -1
