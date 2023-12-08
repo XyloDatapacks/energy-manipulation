@@ -1,6 +1,6 @@
 # summon
 summon minecraft:item_display ~ ~ ~ {brightness:{block:15,sky:15},teleport_duration:3,billboard:"fixed",transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.6f,0.6f,0.6f],translation:[0.0f,0.0f,0.0f]},Tags:["smithed.entity","smithed.strict","xem.spell.shape_display","xem.spell.shape_display_new"],item_display:fixed,item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}},Passengers:[\
-{id:"minecraft:item_display",brightness:{block:15,sky:15},teleport_duration:3,billboard:"fixed",interpolation_duration:20,start_interpolation:0,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.6f,0.6f,0.6f],translation:[0.0f,0.0f,0.0f]},Tags:["smithed.entity","smithed.strict","xem.spell.shape_display","xem.spell.shape_display.aoe.big"],item_display:fixed,item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}}}\
+{id:"minecraft:item_display",brightness:{block:15,sky:15},teleport_duration:3,billboard:"fixed",interpolation_duration:7,start_interpolation:0,transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.6f,0.6f,0.6f],translation:[0.0f,0.0f,0.0f]},Tags:["smithed.entity","smithed.strict","xem.spell.shape_display","xem.spell.shape_display.aoe.big"],item_display:fixed,item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}}}\
 ]}
 
 ride @s mount @e[type=minecraft:item_display,distance=..0.001,tag=xem.spell.shape_display_new,limit=1]
@@ -21,13 +21,14 @@ data modify storage energy_manipulation:op running_spell_marker_update.Tags appe
 
 # expire_time (+1 tick cause shape tick always executes on the next tick)
 execute store result score #xem.spell.run.shape.expire_time xem.op run data get storage energy_manipulation:op selected_concatenate.concatenate.shape.duration 20
+scoreboard players operation #xem.spell.run.shape.expire_time xem.op > #10 xconst
 scoreboard players operation #xem.spell.run.shape.expire_time xem.op += #xlib.time xlib.op
 scoreboard players add #xem.spell.run.shape.expire_time xem.op 1
 scoreboard players operation @s xem.spell.shape.expire_time = #xem.spell.run.shape.expire_time xem.op
 
 #activation time
 scoreboard players operation @s xem.spell.shape.activation_time = #xlib.time xlib.op
-scoreboard players add @s xem.spell.shape.activation_time 1
+scoreboard players add @s xem.spell.shape.activation_time 11
 
 # fire rate
 execute if data storage energy_manipulation:op selected_concatenate.concatenate.shape{fire_rate:"really_slow"} run scoreboard players set @s xem.spell.shape.fire_rate 60

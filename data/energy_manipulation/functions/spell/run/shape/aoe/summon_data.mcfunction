@@ -19,5 +19,5 @@ function energy_manipulation:spell/run/shape/_movement/sort with storage energy_
 execute on passengers if entity @s[tag=xem.spell.shape_display.aoe.big] store result score @s xem.spell.run.shape.aoe.size run data get storage energy_manipulation:op selected_concatenate.concatenate.shape.size
 execute on passengers run data modify entity @s[tag=xem.spell.shape_display.aoe.big] item.tag.CustomModelData set from storage energy_manipulation:op shape_data.custom_model_data
 scoreboard players operation #xem.spell.run.shape.aoe.expand_time xem.op = #xlib.time xlib.op
-scoreboard players add #xem.spell.run.shape.aoe.expand_time xem.op 5
+scoreboard players add #xem.spell.run.shape.aoe.expand_time xem.op 3
 #score gets applied to marker

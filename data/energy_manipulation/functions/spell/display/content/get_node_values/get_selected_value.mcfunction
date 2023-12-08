@@ -1,4 +1,4 @@
-# call get_node_values first
+# call get_node_values/get_values first
 # -> {index} : @s xem.spell.display.node_index_input
 # out : energy_manipulation:op node_value
 

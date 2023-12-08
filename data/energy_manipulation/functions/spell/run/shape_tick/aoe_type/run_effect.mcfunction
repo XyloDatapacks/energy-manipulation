@@ -9,7 +9,7 @@ data modify storage energy_manipulation:op running_spell_data set from storage e
 
 #get targets
 data modify storage energy_manipulation:op target_in set from storage energy_manipulation:op aoe_type_activation_data.data.energy_manipulation.shape.target_aoe
-data modify storage energy_manipulation:op target_in.volume_check set value "cube"
+data modify storage energy_manipulation:op target_in merge value {volume_check:"cube",selection:"multiple"}
 data modify storage energy_manipulation:op target_in.size set from storage energy_manipulation:op aoe_type_activation_data.data.energy_manipulation.shape.size
 function energy_manipulation:spell/run/getters/target/get
 
