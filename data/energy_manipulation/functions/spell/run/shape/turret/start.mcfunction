@@ -36,7 +36,7 @@ execute if data storage energy_manipulation:op selected_concatenate.concatenate.
 # (+1 tick cause shape tick always executes on the next tick)
 scoreboard players add @s xem.spell.shape.activation_time 1
 
-#increase "xem.spell.turrets_casted_in_tick" for caster
+#increase "xem.spell.casting_fatigue.turrets_casted_in_tick" for caster
 function energy_manipulation:spell/run/shape/turret/increase_turrets_counter with storage energy_manipulation:op running_spell_data
 
 #shape sound

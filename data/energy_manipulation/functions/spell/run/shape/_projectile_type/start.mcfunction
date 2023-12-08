@@ -23,3 +23,6 @@ scoreboard players operation #xem.spell.run.shape.expire_time xem.op += #xlib.ti
 scoreboard players add #xem.spell.run.shape.expire_time xem.op 1
 scoreboard players operation @s xem.spell.shape.expire_time = #xem.spell.run.shape.expire_time xem.op
 
+
+#increase "xem.spell.casting_fatigue.projectiles_casted_in_tick" for caster
+function energy_manipulation:spell/run/shape/_projectile_type/increase_projectiles_counter with storage energy_manipulation:op running_spell_data

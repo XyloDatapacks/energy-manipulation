@@ -17,35 +17,28 @@ scoreboard players reset @s[scores={xem.spell.cost.died=1..}] xem.spell.cost.wit
 scoreboard players reset @s[scores={xem.spell.cost.died=1..}] xem.spell.cost.withering.total_damage_to_pay
 execute unless score @s[predicate=energy_manipulation:spell/cost/pay_cost] xem.spell.cost.withering.withering_async_time > #xlib.time xlib.op run function energy_manipulation:spell/cost/withering/calc_async
 
-#turret counters
-scoreboard players operation @s xem.spell.turrets_in_shape_tick_old = @s xem.spell.turrets_in_shape_tick
-scoreboard players operation @s xem.spell.turrets_casted_in_tick_old = @s xem.spell.turrets_casted_in_tick
-scoreboard players set @s xem.spell.turrets_in_shape_tick 0
-scoreboard players set @s xem.spell.turrets_casted_in_tick 0
-
-#aoe counters
-scoreboard players operation @s xem.spell.aoes_in_shape_tick_old = @s xem.spell.aoes_in_shape_tick
-scoreboard players operation @s xem.spell.aoes_casted_in_tick_old = @s xem.spell.aoes_casted_in_tick
-scoreboard players set @s xem.spell.aoes_in_shape_tick 0
-scoreboard players set @s xem.spell.aoes_casted_in_tick 0
 
 #==<Casting Fatigue>==#
-scoreboard players remove @s[scores={xem.spell.casting_fatigue.spell_per_sec=1..}] xem.spell.casting_fatigue.spell_per_sec 1
-scoreboard players operation @s xem.spell.casting_fatigue.percentage = @s xem.spell.casting_fatigue.spell_per_sec
 
-scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op = @s xem.spell.turrets_in_shape_tick_old
-scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op += @s xem.spell.turrets_casted_in_tick_old 
-scoreboard players operation #xem.spell.spells_per_sec.turret_extra xem.op *= #5 xconst
-scoreboard players operation @s xem.spell.casting_fatigue.percentage += #xem.spell.spells_per_sec.turret_extra xem.op
+#projectile counters
+scoreboard players operation @s xem.spell.casting_fatigue.projectiles_in_shape_tick_old = @s xem.spell.casting_fatigue.projectiles_in_shape_tick
+scoreboard players operation @s xem.spell.casting_fatigue.projectiles_casted_in_tick_old = @s xem.spell.casting_fatigue.projectiles_casted_in_tick
+scoreboard players set @s xem.spell.casting_fatigue.projectiles_in_shape_tick 0
+scoreboard players set @s xem.spell.casting_fatigue.projectiles_casted_in_tick 0
 
-scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op = @s xem.spell.aoes_in_shape_tick_old
-scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op += @s xem.spell.aoes_casted_in_tick_old 
-scoreboard players operation #xem.spell.spells_per_sec.aoe_extra xem.op *= #2 xconst
-scoreboard players operation @s xem.spell.casting_fatigue.percentage += #xem.spell.spells_per_sec.aoe_extra xem.op
+#turret counters
+scoreboard players operation @s xem.spell.casting_fatigue.turrets_in_shape_tick_old = @s xem.spell.casting_fatigue.turrets_in_shape_tick
+scoreboard players operation @s xem.spell.casting_fatigue.turrets_casted_in_tick_old = @s xem.spell.casting_fatigue.turrets_casted_in_tick
+scoreboard players set @s xem.spell.casting_fatigue.turrets_in_shape_tick 0
+scoreboard players set @s xem.spell.casting_fatigue.turrets_casted_in_tick 0
 
-scoreboard players operation @s xem.spell.casting_fatigue.percentage *= #100 xconst
-scoreboard players operation @s xem.spell.casting_fatigue.percentage /= #xem.spell.spells_per_sec.max xem.op
+#aoe counters
+scoreboard players operation @s xem.spell.casting_fatigue.aoes_in_shape_tick_old = @s xem.spell.casting_fatigue.aoes_in_shape_tick
+scoreboard players operation @s xem.spell.casting_fatigue.aoes_casted_in_tick_old = @s xem.spell.casting_fatigue.aoes_casted_in_tick
+scoreboard players set @s xem.spell.casting_fatigue.aoes_in_shape_tick 0
+scoreboard players set @s xem.spell.casting_fatigue.aoes_casted_in_tick 0
 
+function energy_manipulation:spell/casting_fatigue/calc
 title @s[tag=xem.show_casting_fatigue] actionbar [{"score":{"objective":"xem.spell.casting_fatigue.percentage","name":"@s"}},"/100"]
 
 #==<Focus>==#

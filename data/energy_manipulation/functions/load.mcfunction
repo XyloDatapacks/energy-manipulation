@@ -18,20 +18,25 @@ scoreboard objectives add xem.spell.book.open_books_count dummy
 scoreboard objectives add xem.spell.run.elaborate.concatenate_index dummy
 scoreboard objectives add xem.spell.run.elaborate.concatenate_index_max dummy
 
-scoreboard objectives add xem.spell.spells_per_sec dummy
-scoreboard objectives add xem.spell.last_spell_time dummy
-execute unless score #xem.spell.spells_per_sec.max xem.op = #xem.spell.spells_per_sec.max xem.op run scoreboard players set #xem.spell.spells_per_sec.max xem.op 100
-scoreboard objectives add xem.spell.turrets_in_shape_tick dummy
-scoreboard objectives add xem.spell.turrets_casted_in_tick dummy
-scoreboard objectives add xem.spell.turrets_in_shape_tick_old dummy
-scoreboard objectives add xem.spell.turrets_casted_in_tick_old dummy
-scoreboard objectives add xem.spell.aoes_in_shape_tick dummy
-scoreboard objectives add xem.spell.aoes_casted_in_tick dummy
-scoreboard objectives add xem.spell.aoes_in_shape_tick_old dummy
-scoreboard objectives add xem.spell.aoes_casted_in_tick_old dummy
-scoreboard objectives add xem.spell.casting_fatigue.spell_per_sec dummy
+#casting fatigue 
+scoreboard objectives add xem.spell.casting_fatigue.spell_rate dummy
+scoreboard objectives add xem.spell.casting_fatigue.last_spell_time dummy
 scoreboard objectives add xem.spell.casting_fatigue.percentage dummy
+execute unless score #xem.spell.casting_fatigue.max xem.op = #xem.spell.casting_fatigue.max xem.op run scoreboard players set #xem.spell.casting_fatigue.max xem.op 100
+scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick dummy
+scoreboard objectives add xem.spell.casting_fatigue.projectiles_casted_in_tick dummy
+scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick_old dummy
+scoreboard objectives add xem.spell.casting_fatigue.projectiles_casted_in_tick_old dummy
+scoreboard objectives add xem.spell.casting_fatigue.turrets_in_shape_tick dummy
+scoreboard objectives add xem.spell.casting_fatigue.turrets_casted_in_tick dummy
+scoreboard objectives add xem.spell.casting_fatigue.turrets_in_shape_tick_old dummy
+scoreboard objectives add xem.spell.casting_fatigue.turrets_casted_in_tick_old dummy
+scoreboard objectives add xem.spell.casting_fatigue.aoes_in_shape_tick dummy
+scoreboard objectives add xem.spell.casting_fatigue.aoes_casted_in_tick dummy
+scoreboard objectives add xem.spell.casting_fatigue.aoes_in_shape_tick_old dummy
+scoreboard objectives add xem.spell.casting_fatigue.aoes_casted_in_tick_old dummy
 
+#book
 scoreboard objectives add xem.spell.book.open_book_max_instructions dummy
 scoreboard objectives add xem.spell.book.open_book_max_concatenates dummy
 
@@ -40,6 +45,7 @@ scoreboard objectives add xem.spell.book.casting_book_type dummy
 scoreboard objectives add xem.spell.book.casting_time dummy
 scoreboard objectives add xem.spell.book.move_book_running dummy
 
+#armor
 scoreboard objectives add xem.spell.armor.mastery.generic dummy
 scoreboard objectives add xem.spell.armor.mastery.sun dummy
 scoreboard objectives add xem.spell.armor.mastery.ground dummy
@@ -47,6 +53,7 @@ scoreboard objectives add xem.spell.armor.mastery.soul dummy
 scoreboard objectives add xem.spell.armor.mastery.dark dummy
 scoreboard objectives add xem.spell.armor.mastery.void dummy
 
+#spells
 scoreboard objectives add xem.spell.cost.withering.total_saturation_to_pay dummy
 scoreboard objectives add xem.spell.cost.withering.total_damage_to_pay dummy
 scoreboard objectives add xem.spell.cost.withering.withering_async_time dummy
@@ -79,6 +86,7 @@ scoreboard objectives add xem.spell.run.effect.pull.entity.expire_time dummy
 scoreboard objectives add xem.sort_raycast.jar_of_energy.place dummy
 scoreboard objectives add xem.jar_of_energy.energy_count dummy
 
+#mind
 scoreboard objectives add xem.mind.is_concealed dummy
 scoreboard objectives add xem.mind.is_vulnerable dummy
 scoreboard objectives add xem.mind.focus dummy

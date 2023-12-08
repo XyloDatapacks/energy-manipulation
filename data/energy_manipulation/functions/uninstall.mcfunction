@@ -12,19 +12,24 @@ scoreboard objectives remove xem.spell.book.open_books_count
 scoreboard objectives remove xem.spell.run.elaborate.concatenate_index 
 scoreboard objectives remove xem.spell.run.elaborate.concatenate_index_max 
 
-scoreboard objectives remove xem.spell.spells_per_sec 
-scoreboard objectives remove xem.spell.last_spell_time 
-scoreboard objectives remove xem.spell.turrets_in_shape_tick 
-scoreboard objectives remove xem.spell.turrets_casted_in_tick 
-scoreboard objectives remove xem.spell.turrets_in_shape_tick_old 
-scoreboard objectives remove xem.spell.turrets_casted_in_tick_old
-scoreboard objectives remove xem.spell.aoes_in_shape_tick 
-scoreboard objectives remove xem.spell.aoes_casted_in_tick 
-scoreboard objectives remove xem.spell.aoes_in_shape_tick_old 
-scoreboard objectives remove xem.spell.aoes_casted_in_tick_old 
-scoreboard objectives remove xem.spell.casting_fatigue.spell_per_sec
-scoreboard objectives remove xem.spell.casting_fatigue.percentage
+#casting fatigue
+scoreboard objectives remove xem.spell.casting_fatigue.spell_rate 
+scoreboard objectives remove xem.spell.casting_fatigue.last_spell_time 
+scoreboard objectives remove xem.spell.casting_fatigue.percentage 
+scoreboard objectives remove xem.spell.casting_fatigue.projectiles_in_shape_tick 
+scoreboard objectives remove xem.spell.casting_fatigue.projectiles_casted_in_tick 
+scoreboard objectives remove xem.spell.casting_fatigue.projectiles_in_shape_tick_old 
+scoreboard objectives remove xem.spell.casting_fatigue.projectiles_casted_in_tick_old 
+scoreboard objectives remove xem.spell.casting_fatigue.turrets_in_shape_tick 
+scoreboard objectives remove xem.spell.casting_fatigue.turrets_casted_in_tick 
+scoreboard objectives remove xem.spell.casting_fatigue.turrets_in_shape_tick_old 
+scoreboard objectives remove xem.spell.casting_fatigue.turrets_casted_in_tick_old 
+scoreboard objectives remove xem.spell.casting_fatigue.aoes_in_shape_tick 
+scoreboard objectives remove xem.spell.casting_fatigue.aoes_casted_in_tick 
+scoreboard objectives remove xem.spell.casting_fatigue.aoes_in_shape_tick_old 
+scoreboard objectives remove xem.spell.casting_fatigue.aoes_casted_in_tick_old 
 
+#book
 scoreboard objectives remove xem.spell.book.open_book_max_instructions 
 scoreboard objectives remove xem.spell.book.open_book_max_concatenates 
 
@@ -33,13 +38,15 @@ scoreboard objectives remove xem.spell.book.casting_book_type
 scoreboard objectives remove xem.spell.book.casting_time 
 scoreboard objectives remove xem.spell.book.move_book_running 
 
-scoreboard objectives remove xem.spell.armor.mastery.generic
+#armor
+scoreboard objectives remove xem.spell.armor.mastery.generic 
 scoreboard objectives remove xem.spell.armor.mastery.sun 
 scoreboard objectives remove xem.spell.armor.mastery.ground 
 scoreboard objectives remove xem.spell.armor.mastery.soul 
 scoreboard objectives remove xem.spell.armor.mastery.dark 
 scoreboard objectives remove xem.spell.armor.mastery.void 
 
+#spells
 scoreboard objectives remove xem.spell.cost.withering.total_saturation_to_pay 
 scoreboard objectives remove xem.spell.cost.withering.total_damage_to_pay 
 scoreboard objectives remove xem.spell.cost.withering.withering_async_time 
@@ -54,8 +61,8 @@ scoreboard objectives remove xem.spell.shape.activation_time
 scoreboard objectives remove xem.spell.shape.cooldown_time 
 scoreboard objectives remove xem.spell.shape.fire_rate 
 
-scoreboard objectives remove xem.spell.run.shape.aoe.size
-scoreboard objectives remove xem.spell.run.shape.aoe.expand_time
+scoreboard objectives remove xem.spell.run.shape.aoe.size 
+scoreboard objectives remove xem.spell.run.shape.aoe.expand_time 
 
 scoreboard objectives remove xem.spell.run.effect.translocation.scoarch_cooldown 
 scoreboard objectives remove xem.spell.run.effect.pull.ride.end_point.x 
@@ -70,12 +77,15 @@ scoreboard objectives remove xem.spell.run.effect.pull.entity.expire_time
 scoreboard objectives remove xem.sort_raycast.jar_of_energy.place 
 scoreboard objectives remove xem.jar_of_energy.energy_count 
 
-scoreboard objectives remove xem.mind.is_concealed
-scoreboard objectives remove xem.mind.is_vulnerable
-scoreboard objectives remove xem.mind.focus
-scoreboard objectives remove xem.meditation.end_time
-scoreboard objectives remove xem.meditation.previous_gamemode
+#mind
+scoreboard objectives remove xem.mind.is_concealed 
+scoreboard objectives remove xem.mind.is_vulnerable 
+scoreboard objectives remove xem.mind.focus 
+scoreboard objectives remove xem.meditation.end_time 
+scoreboard objectives remove xem.meditation.previous_gamemode 
 
+
+#==<Storages>==#
 data remove storage energy_manipulation:spell nodes_values
 data remove storage energy_manipulation:spell energy
 data remove storage energy_manipulation:spell caster_armor

@@ -39,7 +39,7 @@ execute if data storage energy_manipulation:op selected_concatenate.concatenate.
 
 
 
-#increase "xem.spell.aoes_casted_in_tick" for caster
+#increase "xem.spell.casting_fatigue.aoes_casted_in_tick" for caster
 function energy_manipulation:spell/run/shape/aoe/increase_aoes_counter with storage energy_manipulation:op running_spell_data
 
 #shape sound
