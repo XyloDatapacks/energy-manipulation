@@ -3,11 +3,16 @@
 #return = 3 must terminate function instantly
 #return <= 1 handled case by case
 
-#internal (-2: projectile entity for projectile like shapes)
-execute if entity @s[tag=xem.spell.shape_marker] run return -1
-execute if entity @s[tag=xem.spell.projectile_type] run return -2
-execute if entity @s[tag=xem.spell.run] run return -3
-#external
+#==<Internal>==#
+
+#spell_marker (-1: pure spell, -2: shape)
+execute if entity @s[tag=xem.spell.shape_marker] run return -2
+execute if entity @s[tag=xem.spell.run] run return -1
+
+#spell stack entities (-10: projectile type)
+execute if entity @s[tag=xem.spell.projectile_type] run return -10
+
+#==<External>==#
 execute if entity @s[type=#energy_manipulation:boss] run return 1
 execute if entity @s[tag=smithed.strict] run return 2
 execute if entity @s[gamemode=spectator] run return 3

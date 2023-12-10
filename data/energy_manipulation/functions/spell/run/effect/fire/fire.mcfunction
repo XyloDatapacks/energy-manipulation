@@ -12,7 +12,7 @@ $damage $(uuid) $(spell_power_dmg) minecraft:indirect_magic by $(caster_uuid)
 
 #==<Validation Exit>==#
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0
-execute if score #xem.spell.run.effect.validate_target xem.op matches -1 run return 0
+execute if score #xem.spell.run.effect.validate_target xem.op matches -2..-1 run return 0
 #=====================#
 
 # fire

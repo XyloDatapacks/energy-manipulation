@@ -1,6 +1,6 @@
 #extra check for concealed targets
 scoreboard players set #xem.spell.run.getters.target._is_in_sight xem.op 1
-execute if score @s xem.mind.is_concealed matches 1 run function energy_manipulation:spell/run/getters/target/_is_in_sight
+execute if score #xem.spell.run.getters.target.get.ignore_focus xem.op matches 0 if score @s xem.mind.is_concealed matches 1 run function energy_manipulation:spell/run/getters/target/_is_in_sight
 execute if score #xem.spell.run.getters.target._is_in_sight xem.op matches 0 run return 0
 
 function xylo_library:utilities/uuid/generate

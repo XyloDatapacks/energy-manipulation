@@ -7,8 +7,8 @@ $execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem
 #==<Validation Exit>==#
 $execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. at $(uuid) run playsound energy_manipulation:spell.effect.translocation player @a ~ ~ ~
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0
-$execute if score #xem.spell.run.effect.validate_target xem.op matches -1 at $(uuid) run playsound energy_manipulation:spell.effect.translocation player @a ~ ~ ~
-execute if score #xem.spell.run.effect.validate_target xem.op matches -1 run return 0
+$execute if score #xem.spell.run.effect.validate_target xem.op matches -2..-1 at $(uuid) run playsound energy_manipulation:spell.effect.translocation player @a ~ ~ ~
+execute if score #xem.spell.run.effect.validate_target xem.op matches -2..-1 run return 0
 #=====================#
 
 #check dimension tp

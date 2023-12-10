@@ -40,6 +40,8 @@ execute if score #xem.spell.run.getters.target.get.numeric_selection xem.op matc
 execute if score #xem.spell.run.getters.target.get.numeric_selection xem.op matches 1 run function energy_manipulation:spell/run/getters/target/selection with storage energy_manipulation:op macro_data
 #ignore
 execute if data storage energy_manipulation:op target_in{ignore:"caster"} run function energy_manipulation:spell/run/getters/target/ignore/caster with storage energy_manipulation:op running_spell_data
+#ignore_focus
+execute store result score #xem.spell.run.getters.target.get.ignore_focus xem.op run data get storage energy_manipulation:op target_in.ignore_focus 
 
 #sphere or square check
 execute store success score #xem.spell.run.getters.target.cube_check xem.op if data storage energy_manipulation:op target_in{volume_check:"cube"}

@@ -9,7 +9,7 @@ data modify storage energy_manipulation:op running_spell_data set from storage e
 
 #get targets
 data modify storage energy_manipulation:op target_in set from storage energy_manipulation:op aoe_type_activation_data.data.energy_manipulation.shape.target_aoe
-data modify storage energy_manipulation:op target_in merge value {volume_check:"cube",selection:"multiple"}
+data modify storage energy_manipulation:op target_in merge value {volume_check:"cube",selection:"multiple",ignore_focus:1b}
 data modify storage energy_manipulation:op target_in.size set from storage energy_manipulation:op aoe_type_activation_data.data.energy_manipulation.shape.size
 function energy_manipulation:spell/run/getters/target/get
 
@@ -17,6 +17,9 @@ function energy_manipulation:spell/run/getters/target/get
 data remove storage energy_manipulation:op aoe_shape_targets
 data modify storage energy_manipulation:op aoe_shape_targets set from storage energy_manipulation:op target_out
 execute store result score #xem.spell.run.shape_tick.aoe_type.objects_count xem.op run data get storage energy_manipulation:op aoe_shape_targets
+
+#pass objects
+execute if score #xem.spell.run.shape_tick.aoe_type.objects_count xem.op matches 1.. run data modify entity @s data.energy_manipulation.spell_data.objects set from storage energy_manipulation:op aoe_shape_targets
 
 # effect data
 data remove storage energy_manipulation:op spell_effect

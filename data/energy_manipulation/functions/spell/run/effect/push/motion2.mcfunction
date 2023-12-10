@@ -10,7 +10,7 @@ $execute at $(uuid) run particle minecraft:sonic_boom ~ ~ ~ 0.1 0.1 0.1 1 0 forc
 
 #==<Validation Exit>==#
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0
-execute if score #xem.spell.run.effect.validate_target xem.op matches -1 run return 0
+execute if score #xem.spell.run.effect.validate_target xem.op matches -2..-1 run return 0
 #=====================#
 
 #dismount

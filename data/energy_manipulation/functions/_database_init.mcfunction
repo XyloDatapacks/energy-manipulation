@@ -17,7 +17,7 @@ data modify storage energy_manipulation:spell nodes_values.direction[] merge val
 data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1},{value:"projectile",cost:2.5},{value:"sprout",cost:2},{value:"turret",cost:5.5},{value:"aoe",cost:10}]
 data modify storage energy_manipulation:spell nodes_values.shape[].final set value 0b
 
-data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"spell_break",cost:8,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
+data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"release_effect",cost:1,energy_type:"soul"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"spell_break",cost:8,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
 data modify storage energy_manipulation:spell nodes_values.effect[].final set value 0b
 
 data modify storage energy_manipulation:spell nodes_values.movement set value [{value:"none",cost:0},{value:"parabolic",cost:2,incompatible_shapes:["turret"]},{value:"straight",cost:2.5,incompatible_shapes:["turret"]},{value:"follow",cost:2,compatible_shapes:["","turret"]}]
@@ -54,6 +54,11 @@ data modify storage energy_manipulation:spell nodes_values.target_count[] merge 
 
 data modify storage energy_manipulation:spell nodes_values.fire_mode set value [{value:"once"},{value:"condition"},{value:"repeat"}]
 data modify storage energy_manipulation:spell nodes_values.fire_mode[] merge value {final:0b,cost:0}
+
+
+data modify storage energy_manipulation:spell nodes_values.slot set value [{value:"mainhand"},{value:"offhand"},{value:"hotbar"},{value:"inventory"}]
+data modify storage energy_manipulation:spell nodes_values.slot[] merge value {final:0b,cost:0}
+
 
 
 #==<FINAL VALUES>==#
@@ -117,6 +122,16 @@ data modify storage energy_manipulation:spell nodes_values.duration[] merge valu
 
 data modify storage energy_manipulation:spell nodes_values.timer set value [{value:0},{value:0.1},{value:0.2},{value:0.3},{value:0.4},{value:0.5},{value:0.6},{value:0.7},{value:0.8},{value:0.9},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30},{value:31},{value:32},{value:33},{value:34},{value:35},{value:36},{value:37},{value:38},{value:39},{value:40},{value:41},{value:42},{value:43},{value:44},{value:45},{value:46},{value:47},{value:48},{value:49},{value:50},{value:51},{value:52},{value:53},{value:54},{value:55},{value:56},{value:57},{value:58},{value:59},{value:60},{value:90},{value:120},{value:150},{value:180},{value:240},{value:300},{value:360},{value:420},{value:480},{value:520},{value:600}]
 data modify storage energy_manipulation:spell nodes_values.timer[] merge value {final:1b,cost:0}
+
+
+data modify storage energy_manipulation:spell nodes_values.potion_duration set value [{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30},{value:31},{value:32},{value:33},{value:34},{value:35},{value:36},{value:37},{value:38},{value:39},{value:40},{value:41},{value:42},{value:43},{value:44},{value:45},{value:46},{value:47},{value:48},{value:49},{value:50},{value:51},{value:52},{value:53},{value:54},{value:55},{value:56},{value:57},{value:58},{value:59},{value:60},{value:90},{value:120},{value:150},{value:180},{value:240},{value:300},{value:360},{value:420},{value:480},{value:520},{value:600}]
+data modify storage energy_manipulation:spell nodes_values.potion_duration[] merge value {final:1b,cost:0}
+
+data modify storage energy_manipulation:spell nodes_values.hotbar_index set value [{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8}]
+data modify storage energy_manipulation:spell nodes_values.hotbar_index[] merge value {final:1b,cost:0}
+
+data modify storage energy_manipulation:spell nodes_values.inv_index set value [{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26}]
+data modify storage energy_manipulation:spell nodes_values.inv_index[] merge value {final:1b,cost:0}
 
 
 data modify storage energy_manipulation:spell nodes_values.min_count set value [{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]
