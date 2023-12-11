@@ -5,15 +5,15 @@ $execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem
 #=====================#
 
 # sound
-$execute at $(uuid) run playsound energy_manipulation:spell.effect.release_effect player @a ~ ~ ~ 1 1
+$execute at $(uuid) run playsound energy_manipulation:spell.effect.release_potion player @a ~ ~ ~ 1 1
 
 #==<Validation Exit>==#
 execute unless score #xem.spell.run.effect.validate_target xem.op matches 0 run return 0
 #=====================#
 
 
-# get potion and remove duration
-$execute as $(caster_uuid) run function energy_manipulation:spell/run/effect/release_effect/get_potion/start
+# get potion and remove duration (returns "energy_manipulation:op potion_effects")
+$execute as $(caster_uuid) run function energy_manipulation:spell/run/effect/release_potion/_elaborate_potion/start
 
 #apply effect for player
 
