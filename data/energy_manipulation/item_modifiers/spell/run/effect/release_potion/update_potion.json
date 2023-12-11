@@ -1,5 +1,9 @@
 [
   {
+    "function": "minecraft:set_nbt",
+    "tag": "{Potion:\"\"}"
+  },
+  {
     "function": "minecraft:copy_nbt",
     "source": {
       "type": "minecraft:storage",
@@ -9,6 +13,20 @@
       {
         "source": "spell_effect.potion.tag.custom_potion_effects",
         "target": "custom_potion_effects",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:op"
+    },
+    "ops": [
+      {
+        "source": "spell_effect.potion.tag.CustomPotionColor",
+        "target": "CustomPotionColor",
         "op": "replace"
       }
     ]

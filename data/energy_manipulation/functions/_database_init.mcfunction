@@ -271,3 +271,11 @@ data modify storage energy_manipulation:spell shapes.turret.custom_model_data se
 data modify storage energy_manipulation:spell shapes.aoe.custom_model_data set value {generic:12341140,sun:12341141,ground:12341142,soul:12341143,dark:12341144,void:12341145}
 
 # tellraw @a {"text":"Energy Manipulation Database Loaded","color":"green"}
+
+
+#=========================
+
+
+data remove storage energy_manipulation:spell potions 
+data modify storage energy_manipulation:spell potions.Potion set value [{name:"night_vision",effects:[{id:"minecraft:night_vision"}],color:12779366},{name:"invisibility",effects:[{id:"minecraft:invisibility"}],color:16185078},{name:"leaping",effects:[{id:"minecraft:jump_boost"}],color:16646020},{name:"fire_resistance",effects:[{id:"minecraft:fire_resistance"}],color:16750848},{name:"swiftness",effects:[{id:"minecraft:speed"}],color:3402751},{name:"slowness",effects:[{id:"minecraft:slowness",duration:[90,240,20],amplifier:[0b,0b,3b]}],color:9154528},{name:"turtle_master",effects:[{id:"minecraft:slowness",duration:[20,40,20],amplifier:[3b,3b,5b]},{id:"minecraft:resistance",duration:[20,40,20],amplifier:[2b,2b,3b]}],color:9142499},{name:"water_breathing",effects:[{id:"minecraft:water_breathing"}],color:10017472},{name:"healing",effects:[{id:"minecraft:instant_health",duration:[0]}],color:16262179},{name:"harming",effects:[{id:"minecraft:instant_damage",duration:[0]}],color:11101546},{name:"poison",effects:[{id:"minecraft:poison",duration:[45,90,21]}],color:8889187},{name:"regeneration",effects:[{id:"minecraft:regeneration",duration:[45,90,22]}],color:13458603},{name:"strength",effects:[{id:"minecraft:strength"}],color:16762624},{name:"weakness",effects:[{id:"minecraft:weakness",duration:[90,240]}],color:4738376},{name:"luck",effects:[{id:"minecraft:luck",duration:[300]}],color:5882118},{name:"slow_falling",effects:[{id:"minecraft:slow_falling",duration:[90,240]}],color:15978425}]
+data modify storage energy_manipulation:spell potions merge value {duration:[180,480,90],amplifier:[0b,0b,1b]}
