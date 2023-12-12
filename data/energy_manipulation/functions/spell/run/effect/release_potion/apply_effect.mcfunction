@@ -13,8 +13,10 @@ execute unless score #xem.spell.run.effect.validate_target xem.op matches 0 run 
 
 
 # get potion and remove duration (returns "energy_manipulation:op potion_effects")
-$execute as $(caster_uuid) run function energy_manipulation:spell/run/effect/release_potion/_elaborate_potion/start
+scoreboard players set #xem.spell.run.effect.release_potion.elaborate_potion.success xem.op 0
+$execute as $(caster_uuid) run function energy_manipulation:spell/run/effect/release_potion/_elaborate_potion/start 
+execute if score #xem.spell.run.effect.release_potion.elaborate_potion.success xem.op matches 0 run return 0
 
-#apply effect for player
-
-#apply effect for mob
+#apply
+$execute as $(uuid) if entity @s[type=minecraft:player] at @s run function energy_manipulation:spell/run/effect/release_potion/apply_effect_player
+$execute as $(uuid) if entity @s[type=!minecraft:player] at @s run function energy_manipulation:spell/run/effect/release_potion/apply_effect_mob

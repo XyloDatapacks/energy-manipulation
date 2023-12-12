@@ -1,7 +1,9 @@
 #get potion data
 
-$data modify storage energy_manipulation:op spell_effect.potion.tag.custom_potion_effects set from storage energy_manipulation:spell potions.Potion[{name:$(name)}].effects
+$data modify storage energy_manipulation:op spell_effect.potion.tag.custom_potion_effects append from storage energy_manipulation:spell potions.Potion[{name:$(name)}].effects[]
 $data modify storage energy_manipulation:op spell_effect.potion.tag.CustomPotionColor set from storage energy_manipulation:spell potions.Potion[{name:$(name)}].color
+execute store success score #xem.spell.run.effect.release_potion.elaborate_potion.set_base_name xem.op unless data storage energy_manipulation:op spell_effect.potion.tag.display.Name
+$execute if score #xem.spell.run.effect.release_potion.elaborate_potion.set_base_name xem.op matches 1 run data modify storage energy_manipulation:op spell_effect.potion.tag.display.Name set value '{"translate":"item.minecraft.potion.effect.$(name)"}'
 
 #==<First Effect>==#
 

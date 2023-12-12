@@ -2,8 +2,10 @@
 
 function energy_manipulation:spell/run/effect/release_potion/_get_potion/start
 execute unless data storage energy_manipulation:op spell_effect.potion{id:"minecraft:potion"} run return 0
+execute if data storage energy_manipulation:op spell_effect.potion{id:"minecraft:potion",tag:{smithed:{ignore:{functionality:1b}}}} run return 0
 
 #convert from Potion to custom_potion_effect
+scoreboard players set #xem.spell.run.effect.release_potion.elaborate_potion.set_base_name xem.op 0
 execute if data storage energy_manipulation:op spell_effect.potion.tag.Potion unless data storage energy_manipulation:op spell_effect.potion.tag{Potion:""} run function energy_manipulation:spell/run/effect/release_potion/_elaborate_potion/convert_potion/start
 
 #decrease time and build potion effect array

@@ -30,5 +30,29 @@
         "op": "replace"
       }
     ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "nbt": "spell_effect.potion.tag.display.Name",
+      "storage": "energy_manipulation:op",
+      "interpret": true,
+      "italic": false
+    },
+    "conditions": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "#xem.spell.run.effect.release_potion.elaborate_potion.set_base_name"
+          },
+          "score": "xem.op"
+        },
+        "range": 1
+      }
+    ]
   }
 ]

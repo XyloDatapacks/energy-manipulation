@@ -1,5 +1,5 @@
 # summon UI
-$summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["smithed.entity","smithed.strict","xem.spell.display","xem.spell.display_new"],Duration:100000000,
+$summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["smithed.entity","smithed.strict","xem.spell.display","xem.spell.display_new"],Duration:100000000,\
 Passengers:[\
     {id:"minecraft:text_display",Rotation:[$(rotation_x)f,$(rotation_y)f],Tags:["smithed.entity","smithed.strict","xem.spell.display","xem.spell.display.0"],view_range:0.1,brightness:{block:15,sky:15},billboard:"fixed",transformation:{left_rotation:{angle:3.141590,axis:[0.0f,1.0f,0.0f]},right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.03f,0.03f,0.03f],translation:[0.0f,-0.01f,0.15f]},default_background:0b,background:0,text:'["",{"storage":"energy_manipulation:op","nbt":"spell_display[$(0)].concatenate_index"},"\\n",{"translate":"energy_manipulation.spell.key.$(k0)","fallback":"$(k0)","color":"white"},"\\n","\\n",{"translate":"energy_manipulation.spell.value.$(v0)","fallback":"$(v0)","color":"white"}]',\
         Passengers:[\
