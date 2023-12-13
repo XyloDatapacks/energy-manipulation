@@ -4,7 +4,7 @@ data remove storage energy_manipulation:spell nodes_values
 data modify storage energy_manipulation:spell nodes_values.concatenate set value [{value:"none"},{value:"standard"},{value:"split"}]
 data modify storage energy_manipulation:spell nodes_values.concatenate[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.instruction set value [{value:"none"},{value:"direction"},{value:"position"},{value:"save_location"},{value:"mark_entity"},{value:"skip_to"}]
+data modify storage energy_manipulation:spell nodes_values.instruction set value [{value:"none"},{value:"direction"},{value:"position"},{value:"save_location"},{value:"mark_entity"},{value:"skip_to"},{value:"counter"}]
 data modify storage energy_manipulation:spell nodes_values.instruction[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.position set value [{value:"current"},{value:"offset"},{value:"target"},{value:"ray_trace"},{value:"location"}]
@@ -40,7 +40,7 @@ data modify storage energy_manipulation:spell nodes_values.distance set value [{
 data modify storage energy_manipulation:spell nodes_values.distance[] merge value {final:0b,cost:0}
 
 
-data modify storage energy_manipulation:spell nodes_values.condition set value [{value:"none"},{value:"cooldown",incompatible_parent:["skip_to"]},{value:"target"}]
+data modify storage energy_manipulation:spell nodes_values.condition set value [{value:"none"},{value:"cooldown",incompatible_parent:["skip_to"]},{value:"target"},{value:"compare"}]
 data modify storage energy_manipulation:spell nodes_values.condition[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.feature set value [{value:"none"},{value:"sneaking",incompatible_parent:["spell","projectile"]},{value:"swimming",incompatible_parent:["spell","projectile"]},{value:"on_fire",incompatible_parent:["spell"]},{value:"on_ground",incompatible_parent:["spell","projectile"]},{value:"in_air",incompatible_parent:["spell","projectile"]},{value:"shape_projectile",compatible_parent:["","spell"]},{value:"shape_sprout",compatible_parent:["","spell"]},{value:"shape_turret",compatible_parent:["","spell"]}]
@@ -59,6 +59,16 @@ data modify storage energy_manipulation:spell nodes_values.fire_mode[] merge val
 data modify storage energy_manipulation:spell nodes_values.slot set value [{value:"mainhand"},{value:"offhand"},{value:"hotbar"},{value:"inventory"}]
 data modify storage energy_manipulation:spell nodes_values.slot[] merge value {final:0b,cost:0}
 
+
+#counter stuff
+data modify storage energy_manipulation:spell nodes_values.counter set value [{value:"set"},{value:"add"},{value:"multiply"},{value:"divide"}]
+data modify storage energy_manipulation:spell nodes_values.counter[] merge value {final:0b,cost:0}
+
+data modify storage energy_manipulation:spell nodes_values.get_value set value [{value:"number"},{value:"target_number"},{value:"counter"}]
+data modify storage energy_manipulation:spell nodes_values.get_value[] merge value {final:0b,cost:0}
+
+data modify storage energy_manipulation:spell nodes_values.get_value1 set from storage energy_manipulation:spell nodes_values.get_value
+data modify storage energy_manipulation:spell nodes_values.get_value2 set from storage energy_manipulation:spell nodes_values.get_value
 
 
 #==<FINAL VALUES>==#
@@ -98,7 +108,7 @@ data modify storage energy_manipulation:spell nodes_values.selection[] merge val
 data modify storage energy_manipulation:spell nodes_values.fire_rate set value [{value:"really_slow"},{value:"slow"},{value:"average"},{value:"fast"},{value:"really_fast"}]
 data modify storage energy_manipulation:spell nodes_values.fire_rate[] merge value {final:1b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.radius set value [{value:"small",cost:0},{value:"medium",cost:5},{value:"large",cost:10},{value:"extra_large",cost:15}]
+data modify storage energy_manipulation:spell nodes_values.radius set value [{value:"small"},{value:"medium"},{value:"large"},{value:"extra_large"}]
 data modify storage energy_manipulation:spell nodes_values.radius[] merge value {final:1b,cost:0}
 
 
@@ -122,6 +132,10 @@ data modify storage energy_manipulation:spell nodes_values.duration[] merge valu
 
 data modify storage energy_manipulation:spell nodes_values.timer set value [{value:0},{value:0.1},{value:0.2},{value:0.3},{value:0.4},{value:0.5},{value:0.6},{value:0.7},{value:0.8},{value:0.9},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30},{value:31},{value:32},{value:33},{value:34},{value:35},{value:36},{value:37},{value:38},{value:39},{value:40},{value:41},{value:42},{value:43},{value:44},{value:45},{value:46},{value:47},{value:48},{value:49},{value:50},{value:51},{value:52},{value:53},{value:54},{value:55},{value:56},{value:57},{value:58},{value:59},{value:60},{value:90},{value:120},{value:150},{value:180},{value:240},{value:300},{value:360},{value:420},{value:480},{value:520},{value:600}]
 data modify storage energy_manipulation:spell nodes_values.timer[] merge value {final:1b,cost:0}
+
+
+data modify storage energy_manipulation:spell nodes_values.compare_type set value [{value:"less_than"},{value:"less_than_or_equal_to"},{value:"equal"},{value:"greater_than_or_equal_to"},{value:"greater_than"}]
+data modify storage energy_manipulation:spell nodes_values.compare_type[] merge value {final:1b,cost:0}
 
 
 data modify storage energy_manipulation:spell nodes_values.potion_duration set value [{value:0.1},{value:0.2},{value:0.3},{value:0.4},{value:0.5},{value:0.6},{value:0.7},{value:0.8},{value:0.9},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30},{value:31},{value:32},{value:33},{value:34},{value:35},{value:36},{value:37},{value:38},{value:39},{value:40},{value:41},{value:42},{value:43},{value:44},{value:45},{value:46},{value:47},{value:48},{value:49},{value:50},{value:51},{value:52},{value:53},{value:54},{value:55},{value:56},{value:57},{value:58},{value:59},{value:60},{value:90},{value:120},{value:150},{value:180},{value:240},{value:300},{value:360},{value:420},{value:480},{value:520},{value:600}]
@@ -174,6 +188,9 @@ data modify storage energy_manipulation:spell nodes_values.y[] merge value {fina
 
 data modify storage energy_manipulation:spell nodes_values.z set value [{value:-30},{value:-29},{value:-28},{value:-27},{value:-26},{value:-25},{value:-24},{value:-23},{value:-22},{value:-21},{value:-20},{value:-19},{value:-18},{value:-17},{value:-16},{value:-15},{value:-14},{value:-13},{value:-12},{value:-11},{value:-10},{value:-9},{value:-8},{value:-7},{value:-6},{value:-5},{value:-4},{value:-3},{value:-2},{value:-1},{value:-0.75},{value:-0.5},{value:-0.25},{value:0},{value:0.25},{value:0.5},{value:0.75},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30}]
 data modify storage energy_manipulation:spell nodes_values.z[] merge value {final:1b,cost:0}
+
+data modify storage energy_manipulation:spell nodes_values.number set value [{value:-30},{value:-29},{value:-28},{value:-27},{value:-26},{value:-25},{value:-24},{value:-23},{value:-22},{value:-21},{value:-20},{value:-19},{value:-18},{value:-17},{value:-16},{value:-15},{value:-14},{value:-13},{value:-12},{value:-11},{value:-10},{value:-9},{value:-8},{value:-7},{value:-6},{value:-5},{value:-4},{value:-3},{value:-2},{value:-1},{value:-0.75},{value:-0.5},{value:-0.25},{value:0},{value:0.25},{value:0.5},{value:0.75},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30}]
+data modify storage energy_manipulation:spell nodes_values.number[] merge value {final:1b,cost:0}
 
 
 #========================
