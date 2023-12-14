@@ -2,7 +2,7 @@
 
 
 #add
-scoreboard players set #xem.spell.casting_fatigue.spells_per_sec xem.op 1
+scoreboard players set #xem.spell.casting_fatigue.spells_per_sec xem.op 20
 execute if score #xem.spell.casting_fatigue.spells_per_sec.mult xem.op matches 2.. run scoreboard players operation #xem.spell.casting_fatigue.spells_per_sec xem.op *= #xem.spell.casting_fatigue.spells_per_sec.mult xem.op
 scoreboard players operation @s xem.spell.casting_fatigue.spell_rate += #xem.spell.casting_fatigue.spells_per_sec xem.op
 scoreboard players reset #xem.spell.casting_fatigue.spells_per_sec.mult xem.op
@@ -20,6 +20,7 @@ scoreboard players operation @s xem.last_death_time = #xlib.time xlib.op
 
 scoreboard players set @s xem.spell.casting_fatigue.fatigue 0
 scoreboard players set @s xem.spell.casting_fatigue.percentage 0
+scoreboard players set @s xem.spell.casting_fatigue.spell_rate 0
 return 0
 
 

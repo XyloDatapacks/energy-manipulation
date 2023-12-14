@@ -72,7 +72,7 @@ data modify storage energy_manipulation:spell nodes_values.get_value2 set from s
 
 
 #==<FINAL VALUES>==#
-data modify storage energy_manipulation:spell nodes_values.splits set value [{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8}]
+data modify storage energy_manipulation:spell nodes_values.splits set value [{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]
 data modify storage energy_manipulation:spell nodes_values.splits[] merge value {final:1b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.program set value [{value:"none"},{value:"array"}]
@@ -112,7 +112,7 @@ data modify storage energy_manipulation:spell nodes_values.radius set value [{va
 data modify storage energy_manipulation:spell nodes_values.radius[] merge value {final:1b,cost:0}
 
 
-data modify storage energy_manipulation:spell nodes_values.index set value [{value:"all"},{value:-1},{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9}]
+data modify storage energy_manipulation:spell nodes_values.index set value [{value:"counter"},{value:"all"},{value:-1},{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9}]
 data modify storage energy_manipulation:spell nodes_values.index[] merge value {final:1b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.concatenate_index set value [{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]

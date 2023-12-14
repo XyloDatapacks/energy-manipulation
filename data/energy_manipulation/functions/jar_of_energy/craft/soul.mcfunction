@@ -11,4 +11,4 @@ loot replace entity @s weapon.mainhand loot energy_manipulation:give/jar_of_ener
 advancement grant @s only energy_manipulation:tutorial/jar_of_energy/craft/soul
 
 # particles
-execute anchored eyes rotated ~ 0 positioned ^-0.3 ^ ^0.45 run particle minecraft:dust 0.059 0.675 0.753 1 ~ ~-0.4 ~ 0.15 0.15 0.15 1 10 force
+execute anchored eyes positioned ^-0.3 ^-0.3 ^0.45 run function energy_manipulation:spell/cast/particles/soul

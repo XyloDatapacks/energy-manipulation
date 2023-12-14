@@ -9,4 +9,4 @@ loot replace entity @s weapon.mainhand loot energy_manipulation:give/spell/armor
 advancement grant @s only energy_manipulation:tutorial/spell/armor/craft/leggings/void
 
 # particles
-execute anchored eyes rotated ~ 0 positioned ^-0.3 ^ ^0.45 run particle minecraft:dust 0.678 0.102 0.741 1 ~ ~-0.4 ~ 0.15 0.15 0.15 1 10 force
+execute anchored eyes positioned ^-0.3 ^-0.3 ^0.45 run function energy_manipulation:spell/cast/particles/void

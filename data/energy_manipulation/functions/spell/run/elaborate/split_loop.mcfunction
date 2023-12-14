@@ -1,3 +1,4 @@
+data modify storage energy_manipulation:op running_spell_marker.data.energy_manipulation.spell_data.counter set from storage energy_manipulation:op running_spell_data.counter 
 execute summon minecraft:marker run function energy_manipulation:spell/run/elaborate/concatenate
 
 scoreboard players remove #xem.spell.run.elaborate.split_count xem.op 1
