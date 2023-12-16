@@ -1,0 +1,39 @@
+[
+  {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "xitm.wfoas_used": 1
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "items": [
+              "minecraft:warped_fungus_on_a_stick"
+            ]
+          }
+        }
+      }
+    }
+  },  
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "offhand": {
+          "items": [
+            "minecraft:warped_fungus_on_a_stick"
+          ],
+          "nbt": "{xylo:{id:\"energy_manipulation:scrying_ward\"}}"
+        }
+      }
+    }
+  }
+]

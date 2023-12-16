@@ -1,0 +1,52 @@
+[
+  {
+    "function": "minecraft:reference",
+    "name": "energy_manipulation:build_item/trinket/_base"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "item.energy_manipulation.trinket.translocation_ward.name",
+      "color": "light_purple",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "translate": "item.energy_manipulation.trinket.translocation_ward.lore1",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.trinket.translocation_ward.lore2",
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "trinket.translocation_ward.custom_model_data",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{xylo:{id:\"energy_manipulation:translocation_ward\"}}"
+  }
+]

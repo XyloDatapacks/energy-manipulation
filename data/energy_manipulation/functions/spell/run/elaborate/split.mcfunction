@@ -27,6 +27,8 @@ execute unless score #xem.spell.casting_fatigue.check_passed xem.op matches 1 at
 execute unless score #xem.spell.casting_fatigue.check_passed xem.op matches 1 run kill @s
 execute unless score #xem.spell.casting_fatigue.check_passed xem.op matches 1 run return 0
 
+#init split counter
+scoreboard players set #xem.spell.run.elaborate.split.split_number xem.op 0 
 # first concatenate
 function energy_manipulation:spell/run/elaborate/concatenate
 # execute concatenates 

@@ -23,6 +23,8 @@ data modify storage energy_manipulation:op running_spell_data set from storage e
 # copy running spell marker to have an editable data
 data modify storage energy_manipulation:op running_spell_marker_update set from storage energy_manipulation:op running_spell_marker
 
+# split counter
+execute if score #xem.spell.run.elaborate.is_split xem.op matches 1 store result storage energy_manipulation:op running_spell_marker.data.energy_manipulation.spell_data.split_number int 1 run scoreboard players add #xem.spell.run.elaborate.split.split_number xem.op 1 
 # rotate split
 execute if score #xem.spell.run.elaborate.is_split xem.op matches 1 run function energy_manipulation:spell/run/elaborate/rotate_split
 

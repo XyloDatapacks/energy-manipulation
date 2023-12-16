@@ -2,9 +2,6 @@
 execute if score $energy_manipulation xvc.load_status matches 0 run return 0
 #---------------------------
 
-data remove storage energy_manipulation:op equipped_caster_armor
-data modify storage energy_manipulation:op equipped_caster_armor append from storage xylo_items:op register_item_inventory[{tag:{energy_manipulation:{mastery:{}}}}]
-
 scoreboard players set @s xem.spell.armor.mastery.generic 0
 scoreboard players set @s xem.spell.armor.mastery.sun 0
 scoreboard players set @s xem.spell.armor.mastery.ground 0

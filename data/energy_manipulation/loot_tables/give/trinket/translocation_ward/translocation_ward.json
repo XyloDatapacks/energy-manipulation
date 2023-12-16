@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:reference",
+              "name": "energy_manipulation:build_item/trinket/translocation_ward/translocation_ward"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

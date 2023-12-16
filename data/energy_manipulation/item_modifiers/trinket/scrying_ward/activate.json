@@ -1,0 +1,37 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "translate": "item.energy_manipulation.trinket.scrying_ward.lore1b",
+          "with": [
+            {
+              "keybind": "key.use"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "translate": "item.energy_manipulation.trinket.scrying_ward.lore2",
+          "with": [
+            {
+              "keybind": "key.use"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        }
+      ]
+    ],
+    "replace": true
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{energy_manipulation:{active:1b}}"
+  }
+]

@@ -64,7 +64,7 @@ data modify storage energy_manipulation:spell nodes_values.slot[] merge value {f
 data modify storage energy_manipulation:spell nodes_values.counter set value [{value:"set"},{value:"add"},{value:"multiply"},{value:"divide"}]
 data modify storage energy_manipulation:spell nodes_values.counter[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.get_value set value [{value:"number"},{value:"target_number"},{value:"counter"}]
+data modify storage energy_manipulation:spell nodes_values.get_value set value [{value:"number"},{value:"target_number"},{value:"counter"},{value:"split_number"}]
 data modify storage energy_manipulation:spell nodes_values.get_value[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.get_value1 set from storage energy_manipulation:spell nodes_values.get_value
@@ -209,6 +209,9 @@ data modify storage energy_manipulation:spell jar_of_energy.soul set value {cust
 data modify storage energy_manipulation:spell jar_of_energy.dark set value {custom_model_data:12341004}
 data modify storage energy_manipulation:spell jar_of_energy.void set value {custom_model_data:12341005}
 
+data remove storage energy_manipulation:spell trinket
+data modify storage energy_manipulation:spell trinket.scrying_ward set value {custom_model_data:12341010}
+data modify storage energy_manipulation:spell trinket.translocation_ward set value {custom_model_data:12341011}
 
 #========================
 
