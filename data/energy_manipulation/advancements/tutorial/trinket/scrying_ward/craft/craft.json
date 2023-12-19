@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:warped_fungus_on_a_stick",
+      "nbt": "{CustomModelData:12341010}"
+    },
+    "title": {
+      "translate": "item.energy_manipulation.trinket.scrying_ward.name"
+    },
+    "description": [
+      {
+        "translate": "advancements.energy_manipulation.jar_of_energy.generic_description",
+        "with": [
+          {
+            "translate": "item.energy_manipulation.energy.ground.name"
+          },
+          {
+            "translate": "item.energy_manipulation.jar_of_energy.ground.name"
+          }
+        ]
+      }
+    ],
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "energy_manipulation:tutorial/spell/armor/craft/soul",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible",
+      "conditions": {}
+    }
+  }
+}
