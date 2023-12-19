@@ -5,8 +5,8 @@ $execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem
 #=====================#
 
 # sound
-$execute at $(uuid) run playsound energy_manipulation:spell.effect.push player @a ~ ~ ~ 1 1
-$execute at $(uuid) run particle minecraft:sonic_boom ~ ~ ~ 0.1 0.1 0.1 1 0 force
+playsound energy_manipulation:spell.effect.push player @a ~ ~ ~ 1 1
+particle minecraft:sonic_boom ~ ~ ~ 0.1 0.1 0.1 1 0 force
 
 #==<Validation Exit>==#
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0

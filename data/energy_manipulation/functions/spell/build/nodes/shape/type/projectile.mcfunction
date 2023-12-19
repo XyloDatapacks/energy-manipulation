@@ -2,7 +2,8 @@
 
 # movement Sub-Node
 $data modify storage energy_manipulation:op macro_data set value {key:"movement",path:"$(path)"}
-data modify storage energy_manipulation:op macro_data merge from storage energy_manipulation:spell nodes_values.movement[0] 
+scoreboard players set #xem.spell.build.nodes.set_node.set_value_index xem.op 1
+data modify storage energy_manipulation:op macro_data merge from storage energy_manipulation:spell nodes_values.movement[1] 
 function energy_manipulation:spell/build/nodes/set_node with storage energy_manipulation:op macro_data
 
 # effect Sub-Node

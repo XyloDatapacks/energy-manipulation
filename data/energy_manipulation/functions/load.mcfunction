@@ -22,7 +22,7 @@ scoreboard objectives add xem.spell.run.elaborate.concatenate_index_max dummy
 scoreboard objectives add xem.spell.casting_fatigue.spell_rate dummy
 scoreboard objectives add xem.spell.casting_fatigue.last_spell_time dummy
 scoreboard objectives add xem.spell.casting_fatigue.percentage dummy
-execute unless score #xem.spell.casting_fatigue.max xem.op = #xem.spell.casting_fatigue.max xem.op run scoreboard players set #xem.spell.casting_fatigue.max xem.op 200
+execute unless score #xem.spell.casting_fatigue.max xem.op = #xem.spell.casting_fatigue.max xem.op run scoreboard players set #xem.spell.casting_fatigue.max xem.op 2000
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_casted_in_tick dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick_old dummy

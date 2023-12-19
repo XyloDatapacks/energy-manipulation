@@ -8,7 +8,7 @@ scoreboard players operation @s xem.spell.casting_fatigue.spell_rate > #0 xconst
 scoreboard players operation @s xem.spell.casting_fatigue.last_spell_time = #xlib.time xlib.op
 
 #get fatigue value
-scoreboard players operation #xem.spell.casting_fatigue.fatigue xem.op = @s xem.spell.casting_fatigue.spell_rate
+scoreboard players set #xem.spell.casting_fatigue.fatigue xem.op 0
 #projectile extra
 scoreboard players operation #xem.spell.casting_fatigue.projectile_extra xem.op = @s xem.spell.casting_fatigue.projectiles_in_shape_tick_old
 scoreboard players operation #xem.spell.casting_fatigue.projectile_extra xem.op += @s xem.spell.casting_fatigue.projectiles_casted_in_tick_old 
@@ -27,6 +27,10 @@ scoreboard players operation #xem.spell.casting_fatigue.aoe_extra xem.op += @s x
 scoreboard players operation #xem.spell.casting_fatigue.aoe_extra xem.op += @s xem.spell.casting_fatigue.aoes_casted_in_tick
 scoreboard players operation #xem.spell.casting_fatigue.aoe_extra xem.op *= #2 xconst
 scoreboard players operation #xem.spell.casting_fatigue.fatigue xem.op += #xem.spell.casting_fatigue.aoe_extra xem.op
+#multiplier
+scoreboard players operation #xem.spell.casting_fatigue.fatigue xem.op *= #10 xconst
+#add spell rate
+scoreboard players operation #xem.spell.casting_fatigue.fatigue xem.op += @s xem.spell.casting_fatigue.spell_rate
 
 #copy value for fatigue objective and calc percentage again
 scoreboard players operation @s xem.spell.casting_fatigue.fatigue = #xem.spell.casting_fatigue.fatigue xem.op

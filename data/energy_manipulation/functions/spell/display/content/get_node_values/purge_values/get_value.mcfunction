@@ -1,0 +1,1 @@
+function energy_manipulation:spell/display/content/get_node_values/purge_values/get_value/start with storage energy_manipulation:op display_content_node

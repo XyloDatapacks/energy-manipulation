@@ -2,7 +2,7 @@
 
 
 #add
-scoreboard players set #xem.spell.casting_fatigue.spells_per_sec xem.op 20
+scoreboard players set #xem.spell.casting_fatigue.spells_per_sec xem.op 3
 execute if score #xem.spell.casting_fatigue.spells_per_sec.mult xem.op matches 2.. run scoreboard players operation #xem.spell.casting_fatigue.spells_per_sec xem.op *= #xem.spell.casting_fatigue.spells_per_sec.mult xem.op
 scoreboard players operation @s xem.spell.casting_fatigue.spell_rate += #xem.spell.casting_fatigue.spells_per_sec xem.op
 scoreboard players reset #xem.spell.casting_fatigue.spells_per_sec.mult xem.op
