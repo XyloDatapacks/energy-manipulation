@@ -1,5 +1,6 @@
 {
     "values": [
-        "energy_manipulation:spell/book/open_book_mh/check"
+        "energy_manipulation:spell/book/open_book_mh/check",
+        "energy_manipulation:trinket/scrying_ward/unmark/start"
     ]
 }

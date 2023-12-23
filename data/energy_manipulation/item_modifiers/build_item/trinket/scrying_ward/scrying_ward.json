@@ -57,6 +57,6 @@
   },
   {
     "function": "minecraft:set_nbt",
-    "tag": "{xylo:{id:\"energy_manipulation:scrying_ward\"},energy_manipulation:{active:0b}}"
+    "tag": "{xylo:{id:\"energy_manipulation:scrying_ward\"},energy_manipulation:{active:0b},xylo_items:{}}"
   }
 ]
