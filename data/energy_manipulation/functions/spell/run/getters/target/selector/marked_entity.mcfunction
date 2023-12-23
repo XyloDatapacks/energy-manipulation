@@ -14,5 +14,6 @@ execute unless data storage energy_manipulation:op target_out run return 0
 data modify storage energy_manipulation:op elements_array set from storage energy_manipulation:op target_out
 function energy_manipulation:spell/run/getters/target/validate_uuid/_array_validation
 data modify storage energy_manipulation:op target_out set from storage energy_manipulation:op elements_array
-execute store success score xem.spell.run.getters.target.found xem.op run data get storage energy_manipulation:op target_out[-1].uuid
+execute store success score xem.spell.run.getters.target.found xem.op run data get storage energy_manipulation:op elements_array[-1].uuid
+execute unless score xem.spell.run.getters.target.found xem.op matches 1 run data remove storage energy_manipulation:op target_out
 

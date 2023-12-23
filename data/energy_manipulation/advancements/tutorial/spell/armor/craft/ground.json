@@ -5,7 +5,12 @@
       "nbt": "{display:{color:2521893},CustomModelData:12341002}"
     },
     "title": {
-      "translate": "advancements.energy_manipulation.spell.armor.ground.name"
+      "translate": "advancements.energy_manipulation.spell.armor.ground.name",
+      "extra": [
+        {
+          "text": "   "
+        }
+      ]
     },
     "description": [
       {
@@ -18,6 +23,15 @@
             "translate": "advancements.energy_manipulation.spell.armor.ground.name"
           }
         ]
+      },
+      {
+        "translate": "advancements.energy_manipulation.spell.armor.generic_description2",
+        "with": [
+          {
+            "translate": "item.energy_manipulation.energy.ground.name"
+          }
+        ],
+        "color": "gray"
       }
     ],
     "frame": "task",

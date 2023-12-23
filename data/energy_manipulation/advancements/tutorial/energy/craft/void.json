@@ -5,7 +5,12 @@
       "nbt": "{CustomModelData:12341005}"
     },
     "title": {
-      "translate": "item.energy_manipulation.energy.void.name"
+      "translate": "item.energy_manipulation.energy.void.name",
+      "extra": [
+        {
+          "text": "         "
+        }
+      ]
     },
     "description": [
       {
@@ -18,6 +23,15 @@
             "translate": "item.energy_manipulation.energy.void.name"
           }
         ]
+      },
+      {
+        "translate": "advancements.energy_manipulation.energy.generic_description2",
+        "with": [
+          {
+            "translate": "item.energy_manipulation.energy.void.name"
+          }
+        ],
+        "color": "gray"
       }
     ],
     "frame": "task",

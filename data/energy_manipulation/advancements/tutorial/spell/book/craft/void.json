@@ -5,7 +5,12 @@
       "nbt": "{CustomModelData:12341025}"
     },
     "title": {
-      "translate": "item.energy_manipulation.spell.book.void.name"
+      "translate": "item.energy_manipulation.spell.book.void.name",
+      "extra": [
+        {
+          "text": "      "
+        }
+      ]
     },
     "description": [
       {

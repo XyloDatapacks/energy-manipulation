@@ -7,7 +7,7 @@
       "translate": "advancements.energy_manipulation.ruin.ground.name",
       "extra": [
         {
-          "text": "      "
+          "text": "                "
         }
       ]
     },
@@ -25,6 +25,15 @@
             "translate": "item.energy_manipulation.energy.ground.name"
           }
         ]
+      },
+      {
+        "translate": "advancements.energy_manipulation.ruin.generic_description2",
+        "with": [
+          {
+            "translate": "item.energy_manipulation.energy.ground.name"
+          }
+        ],
+        "color": "gray"
       }
     ],
     "frame": "task",

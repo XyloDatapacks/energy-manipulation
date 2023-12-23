@@ -5,19 +5,28 @@
       "nbt": "{CustomModelData:12341011}"
     },
     "title": {
-      "translate": "item.energy_manipulation.trinket.translocation_ward.name"
+      "translate": "item.energy_manipulation.trinket.translocation_ward.name",
+      "extra": [
+        {
+          "text": "                   "
+        }
+      ]
     },
     "description": [
       {
-        "translate": "advancements.energy_manipulation.jar_of_energy.generic_description",
+        "translate": "advancements.energy_manipulation.trinket.translocation_ward.generic_description",
         "with": [
           {
-            "translate": "item.energy_manipulation.energy.ground.name"
+            "translate": "item.energy_manipulation.energy.void.name"
           },
           {
-            "translate": "item.energy_manipulation.jar_of_energy.ground.name"
+            "translate": "item.energy_manipulation.trinket.translocation_ward.name"
           }
         ]
+      },
+      {
+        "translate": "advancements.energy_manipulation.trinket.translocation_ward.generic_description2",
+        "color": "gray"
       }
     ],
     "frame": "task",

@@ -20,7 +20,7 @@
           "translate": "item.energy_manipulation.trinket.scrying_ward.lore2",
           "with": [
             {
-              "keybind": "key.use"
+              "keybind": "key.swapOffhand"
             }
           ],
           "color": "gray",
@@ -29,6 +29,20 @@
       ]
     ],
     "replace": true
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "energy_manipulation:spell"
+    },
+    "ops": [
+      {
+        "source": "trinket.scrying_ward.active_cmd",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
   },
   {
     "function": "minecraft:set_nbt",

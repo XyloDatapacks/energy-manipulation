@@ -32,7 +32,7 @@
           "translate": "item.energy_manipulation.trinket.scrying_ward.lore2",
           "with": [
             {
-              "keybind": "key.use"
+              "keybind": "key.swapOffhand"
             }
           ],
           "color": "gray",

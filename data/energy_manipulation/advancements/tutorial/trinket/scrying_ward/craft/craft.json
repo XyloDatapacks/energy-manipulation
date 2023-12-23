@@ -5,19 +5,33 @@
       "nbt": "{CustomModelData:12341010}"
     },
     "title": {
-      "translate": "item.energy_manipulation.trinket.scrying_ward.name"
+      "translate": "item.energy_manipulation.trinket.scrying_ward.name",
+      "extra": [
+        {
+          "text": "                    "
+        }
+      ]
     },
     "description": [
       {
-        "translate": "advancements.energy_manipulation.jar_of_energy.generic_description",
+        "translate": "advancements.energy_manipulation.trinket.scrying_ward.generic_description",
         "with": [
           {
-            "translate": "item.energy_manipulation.energy.ground.name"
+            "translate": "item.energy_manipulation.energy.soul.name"
           },
           {
-            "translate": "item.energy_manipulation.jar_of_energy.ground.name"
+            "translate": "item.energy_manipulation.trinket.scrying_ward.name"
           }
         ]
+      },
+      {
+        "translate": "advancements.energy_manipulation.trinket.scrying_ward.generic_description2",
+        "with": [
+          {
+            "translate": "item.energy_manipulation.energy.soul.name"
+          }
+        ],
+        "color": "gray"
       }
     ],
     "frame": "task",
