@@ -7,7 +7,7 @@
         "player": [
           {
             "condition": "minecraft:reference",
-            "name": "energy_manipulation:trinket/scrying_ward/craft/holding_head"
+            "name": "energy_manipulation:trinket/scrying_ward/craft/holding_eye"
           }
         ],
         "entity": {
