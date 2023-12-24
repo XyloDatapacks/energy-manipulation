@@ -35,3 +35,9 @@ execute as @e[type=minecraft:interaction,tag=xem.jar_of_energy.block] at @s unle
 #==<MEDITATION>==#
 
 execute as @a[tag=xem.meditation.is_meditating] if score @s xem.meditation.end_time <= #xlib.time xlib.op run function energy_manipulation:mind/meditation/exit/start
+
+#==<TRINKETS>==#
+
+# translocation ward
+execute as @e[type=minecraft:item_display,tag=xem.trinket.translocation_ward.ward] run function energy_manipulation:trinket/translocation_ward/drop/check
+
