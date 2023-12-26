@@ -210,8 +210,8 @@ data modify storage energy_manipulation:spell jar_of_energy.dark set value {cust
 data modify storage energy_manipulation:spell jar_of_energy.void set value {custom_model_data:12341005}
 
 data remove storage energy_manipulation:spell trinket
-data modify storage energy_manipulation:spell trinket.scrying_ward set value {custom_model_data:12341010,active_cmd:12341010}
-data modify storage energy_manipulation:spell trinket.translocation_ward set value {custom_model_data:12341011}
+data modify storage energy_manipulation:spell trinket.scrying_ward set value {custom_model_data:12341010,active_cmd:12341011}
+data modify storage energy_manipulation:spell trinket.translocation_ward set value {custom_model_data:12341012}
 
 #========================
 
