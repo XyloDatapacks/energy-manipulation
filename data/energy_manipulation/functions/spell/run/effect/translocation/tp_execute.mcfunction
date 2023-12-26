@@ -6,6 +6,7 @@ execute at @s run function energy_manipulation:trinket/translocation_ward/check/
 # check
 scoreboard players set #xem.trinket.translocation_ward.still_in_range xem.op 1
 function energy_manipulation:trinket/translocation_ward/check/still_in_range with storage energy_manipulation:op translocation_ward_uuid
+execute if score #xem.trinket.translocation_ward.still_in_range xem.op matches 0 at @s run function energy_manipulation:trinket/translocation_ward/anchor_fx/start with storage energy_manipulation:op translocation_ward_uuid
 execute if score #xem.trinket.translocation_ward.still_in_range xem.op matches 0 run return 0
 
 #===============================#

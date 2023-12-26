@@ -47,6 +47,6 @@
   },
   {
     "function": "minecraft:set_nbt",
-    "tag": "{xylo:{id:\"energy_manipulation:translocation_ward\"},xylo_items:{item_class:\"throwable\",throw:{power:0.1,NoGravity:1b,proj_tags:[\"xem.trinket.translocation_ward.ward\"], passenger:{id:\"minecraft:frog\",NoAI:1b,Silent:1b,active_effects:[{id:\"minecraft:resistance\",duration:-1,amplifier:4b,show_particles:0b},{id:\"minecraft:invisibility\",duration:-1,show_particles:0b}]} }}}"
+    "tag": "{xylo:{id:\"energy_manipulation:translocation_ward\"},xylo_items:{item_class:\"throwable\",throw:{power:0.1,NoGravity:1b,proj_tags:[\"xem.trinket.translocation_ward.ward\"],function:\"energy_manipulation:trinket/translocation_ward/throw/thrown\", passenger:{id:\"minecraft:frog\", data:{NoAI:1b,Silent:1b,Tags:[\"smithed.entity\",\"smithed.strict\",\"xlib.non_interactive\"],active_effects:[{id:\"minecraft:resistance\",duration:-1,amplifier:4b,show_particles:0b},{id:\"minecraft:invisibility\",duration:-1,show_particles:0b}]} } }}}"
   }
 ]
