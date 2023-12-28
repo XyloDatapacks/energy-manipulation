@@ -14,7 +14,7 @@ data modify storage energy_manipulation:spell nodes_values.direction set value [
 data modify storage energy_manipulation:spell nodes_values.direction[] merge value {final:0b,cost:0}
 
 
-data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1},{value:"projectile",cost:2.5},{value:"sprout",cost:2},{value:"turret",cost:5.5},{value:"aoe",cost:10}]
+data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1},{value:"projectile",cost:2.5},{value:"sprout",cost:2},{value:"aoe",cost:10},{value:"turret",cost:5.5}]
 data modify storage energy_manipulation:spell nodes_values.shape[].final set value 0b
 
 data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"release_potion",cost:1,energy_type:"soul"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"spell_break",cost:8,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
@@ -30,7 +30,7 @@ data modify storage energy_manipulation:spell nodes_values.offset[] merge value 
 data modify storage energy_manipulation:spell nodes_values.angle set value [{value:"yawn-pitch"},{value:"yawn"},{value:"pitch"}]
 data modify storage energy_manipulation:spell nodes_values.angle[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.target set value [{value:"none"},{value:"caster"},{value:"subject"},{value:"objects"},{value:"marked_entity"},{value:"player"},{value:"mob"},{value:"player_and_mob"},{value:"enemy"},{value:"ally"},{value:"animal"},{value:"item"},{value:"projectile"},{value:"spell"}]
+data modify storage energy_manipulation:spell nodes_values.target set value [{value:"none"},{value:"caster"},{value:"subject"},{value:"objects"},{value:"marked_entity"},{value:"player",incompatible_parent:["self"]},{value:"mob",incompatible_parent:["self"]},{value:"player_and_mob",incompatible_parent:["self"]},{value:"enemy",incompatible_parent:["self"]},{value:"ally",incompatible_parent:["self"]},{value:"animal",incompatible_parent:["self"]},{value:"item",incompatible_parent:["self"]},{value:"projectile",incompatible_parent:["self"]},{value:"spell",incompatible_parent:["self"]}]
 data modify storage energy_manipulation:spell nodes_values.target[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.target_aoe set value [{value:"none"},{value:"player"},{value:"mob"},{value:"player_and_mob"},{value:"enemy"},{value:"ally"},{value:"animal"},{value:"item"},{value:"projectile"},{value:"spell"}]
@@ -43,7 +43,7 @@ data modify storage energy_manipulation:spell nodes_values.distance[] merge valu
 data modify storage energy_manipulation:spell nodes_values.condition set value [{value:"none"},{value:"cooldown",incompatible_parent:["skip_to"]},{value:"target"},{value:"compare"}]
 data modify storage energy_manipulation:spell nodes_values.condition[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.feature set value [{value:"none"},{value:"sneaking",incompatible_parent:["spell","projectile"]},{value:"swimming",incompatible_parent:["spell","projectile"]},{value:"on_fire",incompatible_parent:["spell"]},{value:"on_ground",incompatible_parent:["spell","projectile"]},{value:"in_air",incompatible_parent:["spell","projectile"]},{value:"shape_projectile",compatible_parent:["","spell"]},{value:"shape_sprout",compatible_parent:["","spell"]},{value:"shape_turret",compatible_parent:["","spell"]}]
+data modify storage energy_manipulation:spell nodes_values.feature set value [{value:"none"},{value:"sneaking",incompatible_parent:["spell","projectile"]},{value:"swimming",incompatible_parent:["spell","projectile"]},{value:"on_fire",incompatible_parent:["spell"]},{value:"on_ground",incompatible_parent:["spell","projectile"]},{value:"in_air",incompatible_parent:["spell","projectile"]},{value:"shape_projectile",compatible_parent:["","spell","objects"]},{value:"shape_sprout",compatible_parent:["","spell","objects"]},{value:"shape_turret",compatible_parent:["","spell","objects"]}]
 data modify storage energy_manipulation:spell nodes_values.feature[] merge value {final:1b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.ignore set value [{value:"none"},{value:"caster"}]

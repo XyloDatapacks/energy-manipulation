@@ -1,0 +1,2 @@
+# summon
+$summon minecraft:item_display ~ ~ ~ {Rotation:[$(initial_rotation_yawn)f,$(initial_rotation_pitch)f],brightness:{block:15,sky:15},teleport_duration:3,billboard:"fixed",transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.6f,0.6f,0.6f],translation:[0.0f,0.0f,0.0f]},Tags:["smithed.entity","smithed.strict","xem.spell.shape_display","xem.spell.shape_display_new"],item_display:fixed,item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}}}

@@ -9,3 +9,9 @@ scoreboard players operation #xem.spell.display.content.get_node_values.purge_va
 execute store result storage energy_manipulation:op macro_data.end int 1 run scoreboard players add #xem.spell.display.content.get_node_values.purge_values.target.end xem.op 6
 
 function energy_manipulation:spell/display/content/get_node_values/purge_values/target/remove_subject with storage energy_manipulation:op macro_data
+
+
+# cleare incompatible
+data remove storage energy_manipulation:op macro_data
+data modify storage energy_manipulation:op macro_data.value set from storage energy_manipulation:op display_content_node_parent.value
+function energy_manipulation:spell/display/content/get_node_values/purge_values/target/remove_incompatible with storage energy_manipulation:op macro_data
