@@ -4,6 +4,10 @@ execute unless data storage energy_manipulation:op running_spell_data.caster run
 data modify storage energy_manipulation:op target_out append value {}
 data modify storage energy_manipulation:op target_out[-1].uuid set from storage energy_manipulation:op running_spell_data.caster
 
+
+
+
+
 # confirm entity found with distance check
 scoreboard players set #xem.spell.run.getters.target.validate_uuid.skip_tags xem.op 1
 execute store success score #xem.spell.run.getters.target.validate_uuid.distance_check xem.op unless data storage energy_manipulation:op target_in.distance{value:"none"}

@@ -53,10 +53,10 @@ data modify storage energy_manipulation:op running_spell_marker_update.Pos set f
 data modify storage energy_manipulation:op running_spell_marker_update.Rotation set from storage energy_manipulation:op initial_rotation
 data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.spell_data set from storage energy_manipulation:op running_spell_data
 
-# update data
+# restore data (for split)
 scoreboard players operation @s xem.spell.run.elaborate.concatenate_index = #xem.spell.run.elaborate.concatenate_index xem.op
 scoreboard players operation @s xem.spell.run.elaborate.concatenate_index_max = #xem.spell.run.elaborate.concatenate_index_max xem.op
-scoreboard players operation @s xem.spell.caster_last_death_time = #xem.spell.run.elaborate.caster_last_death_time xem.op
+execute unless score @s xem.spell.caster_last_death_time = @s xem.spell.caster_last_death_time run scoreboard players operation @s xem.spell.caster_last_death_time = #xem.spell.run.elaborate.caster_last_death_time xem.op
 data modify entity @s {} merge from storage energy_manipulation:op running_spell_marker_update
 
 # make sure it has tag

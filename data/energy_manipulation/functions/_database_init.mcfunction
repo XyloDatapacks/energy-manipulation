@@ -30,7 +30,7 @@ data modify storage energy_manipulation:spell nodes_values.offset[] merge value 
 data modify storage energy_manipulation:spell nodes_values.angle set value [{value:"yawn-pitch"},{value:"yawn"},{value:"pitch"}]
 data modify storage energy_manipulation:spell nodes_values.angle[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.target set value [{value:"none"},{value:"caster"},{value:"subject"},{value:"objects"},{value:"marked_entity"},{value:"player",incompatible_parent:["self"]},{value:"mob",incompatible_parent:["self"]},{value:"player_and_mob",incompatible_parent:["self"]},{value:"enemy",incompatible_parent:["self"]},{value:"ally",incompatible_parent:["self"]},{value:"animal",incompatible_parent:["self"]},{value:"item",incompatible_parent:["self"]},{value:"projectile",incompatible_parent:["self"]},{value:"spell",incompatible_parent:["self"]}]
+data modify storage energy_manipulation:spell nodes_values.target set value [{value:"this"},{value:"none"},{value:"caster"},{value:"subject"},{value:"objects"},{value:"marked_entity"},{value:"player",incompatible_parent_value:["self"]},{value:"mob",incompatible_parent_value:["self"]},{value:"player_and_mob",incompatible_parent_value:["self"]},{value:"enemy",incompatible_parent_value:["self"]},{value:"ally",incompatible_parent_value:["self"]},{value:"animal",incompatible_parent_value:["self"]},{value:"item",incompatible_parent_value:["self"]},{value:"projectile",incompatible_parent_value:["self"]},{value:"spell",incompatible_parent_value:["self"]}]
 data modify storage energy_manipulation:spell nodes_values.target[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.target_aoe set value [{value:"none"},{value:"player"},{value:"mob"},{value:"player_and_mob"},{value:"enemy"},{value:"ally"},{value:"animal"},{value:"item"},{value:"projectile"},{value:"spell"}]
@@ -121,10 +121,10 @@ data modify storage energy_manipulation:spell nodes_values.concatenate_index[] m
 data modify storage energy_manipulation:spell nodes_values.location_index set value [{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]
 data modify storage energy_manipulation:spell nodes_values.location_index[] merge value {final:1b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.entity_index_save set value [{value:1},{value:2},{value:3},{value:4},{value:5}]
+data modify storage energy_manipulation:spell nodes_values.entity_index_save set value [{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]
 data modify storage energy_manipulation:spell nodes_values.entity_index_save[] merge value {final:1b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.entity_index set value [{value:"all"},{value:1},{value:2},{value:3},{value:4},{value:5}]
+data modify storage energy_manipulation:spell nodes_values.entity_index set value [{value:"all"},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10}]
 data modify storage energy_manipulation:spell nodes_values.entity_index[] merge value {final:1b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.duration set value [{value:0},{value:1},{value:2},{value:3},{value:4},{value:5},{value:6},{value:7},{value:8},{value:9},{value:10},{value:11},{value:12},{value:13},{value:14},{value:15},{value:16},{value:17},{value:18},{value:19},{value:20},{value:21},{value:22},{value:23},{value:24},{value:25},{value:26},{value:27},{value:28},{value:29},{value:30},{value:31},{value:32},{value:33},{value:34},{value:35},{value:36},{value:37},{value:38},{value:39},{value:40},{value:41},{value:42},{value:43},{value:44},{value:45},{value:46},{value:47},{value:48},{value:49},{value:50},{value:51},{value:52},{value:53},{value:54},{value:55},{value:56},{value:57},{value:58},{value:59},{value:60},{value:90},{value:120},{value:150},{value:180},{value:240},{value:300},{value:360},{value:420},{value:480},{value:520},{value:600}]

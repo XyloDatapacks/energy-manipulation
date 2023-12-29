@@ -1,4 +1,4 @@
-# <@> shape_marker or spell_marker
+# <@> spell_marker
 # in: energy_manipulation:op spell_effect{effect, caster, target_entity}
 # in: energy_manipulation:op initial_position
 # in: energy_manipulation:op initial_rotation
