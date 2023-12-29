@@ -41,3 +41,11 @@ execute as @a[tag=xem.meditation.is_meditating] if score @s xem.meditation.end_t
 # translocation ward
 execute as @e[type=minecraft:item_display,tag=xem.trinket.translocation_ward.ward] run function energy_manipulation:trinket/translocation_ward/drop/check
 
+
+
+#==<TRIGGERS>==#
+
+execute as @a[scores={xem.settings.show_shape_particles=1..}] run function energy_manipulation:trigger/shape_particles/on
+execute as @a[scores={xem.settings.show_shape_particles=0}] run function energy_manipulation:trigger/shape_particles/off
+scoreboard players enable @a xem.settings.show_shape_particles
+

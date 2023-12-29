@@ -1,1 +1,1 @@
-particle minecraft:end_rod ~ ~ ~ 0.03 0.03 0.03 0.01 2 force
+particle minecraft:end_rod ^ ^0.06 ^ 0.03 0.03 0.03 0.01 1 force @a[tag=!xem.spell.disable_particles.projectile]

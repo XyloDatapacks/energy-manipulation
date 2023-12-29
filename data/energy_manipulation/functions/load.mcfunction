@@ -93,6 +93,9 @@ scoreboard objectives add xem.mind.focus dummy
 scoreboard objectives add xem.meditation.end_time dummy
 scoreboard objectives add xem.meditation.previous_gamemode dummy
 
+#triggers
+scoreboard objectives add xem.settings.show_shape_particles trigger
+
 # init
 execute unless score #xem.const.jar_of_energy.fill.limit xem.op = #xem.const.jar_of_energy.fill.limit xem.op run scoreboard players set #xem.const.jar_of_energy.fill.limit xem.op 1000
 execute store result score #xem.maxCommandChainLength xem.op run gamerule maxCommandChainLength
