@@ -14,7 +14,7 @@ data modify storage energy_manipulation:spell nodes_values.direction set value [
 data modify storage energy_manipulation:spell nodes_values.direction[] merge value {final:0b,cost:0}
 
 
-data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1},{value:"projectile",cost:2.5},{value:"sprout",cost:2},{value:"aoe",cost:10},{value:"turret",cost:5.5}]
+data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1},{value:"projectile",cost:2.5},{value:"sprout",cost:2},{value:"aoe",cost:10},{value:"turret",cost:5}]
 data modify storage energy_manipulation:spell nodes_values.shape[].final set value 0b
 
 data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"release_potion",cost:1,energy_type:"soul"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"spell_break",cost:8,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
@@ -164,7 +164,7 @@ data modify storage energy_manipulation:spell nodes_values.max_distance_int set 
 data modify storage energy_manipulation:spell nodes_values.max_distance_int[] merge value {final:1b,cost:0}
 
 
-data modify storage energy_manipulation:spell nodes_values.size set value [{value:1,cost:0},{value:2,cost:0},{value:3,cost:0},{value:4,cost:0},{value:5,cost:0},{value:6,cost:2},{value:7,cost:2},{value:8,cost:2},{value:9,cost:2},{value:10,cost:2},{value:11,cost:4},{value:12,cost:4},{value:13,cost:4},{value:14,cost:4},{value:15,cost:4},{value:16,cost:6},{value:17,cost:6},{value:18,cost:6},{value:19,cost:6},{value:20,cost:6},{value:21,cost:8},{value:22,cost:8},{value:23,cost:8},{value:24,cost:8},{value:25,cost:8},{value:26,cost:10},{value:27,cost:10},{value:28,cost:10},{value:29,cost:10},{value:30,cost:10}]
+data modify storage energy_manipulation:spell nodes_values.size set value [{value:1,cost:0},{value:2,cost:2},{value:3,cost:2},{value:4,cost:2},{value:5,cost:2},{value:6,cost:4},{value:7,cost:4},{value:8,cost:4},{value:9,cost:4},{value:10,cost:4},{value:11,cost:8},{value:12,cost:8},{value:13,cost:8},{value:14,cost:8},{value:15,cost:8},{value:16,cost:10},{value:17,cost:10},{value:18,cost:10},{value:19,cost:10},{value:20,cost:10},{value:21,cost:12},{value:22,cost:12},{value:23,cost:12},{value:24,cost:12},{value:25,cost:12},{value:26,cost:14},{value:27,cost:14},{value:28,cost:14},{value:29,cost:14},{value:30,cost:14}]
 data modify storage energy_manipulation:spell nodes_values.size[] merge value {final:1b}
 
 
