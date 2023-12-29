@@ -4,7 +4,11 @@
       "item": "minecraft:charcoal",
       "nbt": "{CustomModelData:12341004}"
     },
-    "title": "Energy Manipulation",
+    "title": {
+      "text": "Energy Manipulation",
+      "color": "#528E7B",
+      "bold": "true"
+    },
     "description": "By Xylo Datapacks.",
     "background": "minecraft:textures/block/black_concrete.png",
     "frame": "goal"

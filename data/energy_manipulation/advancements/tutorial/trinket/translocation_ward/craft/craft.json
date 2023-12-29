@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:warped_fungus_on_a_stick",
-      "nbt": "{CustomModelData:12341011}"
+      "nbt": "{CustomModelData:12341012}"
     },
     "title": {
       "translate": "item.energy_manipulation.trinket.translocation_ward.name",
