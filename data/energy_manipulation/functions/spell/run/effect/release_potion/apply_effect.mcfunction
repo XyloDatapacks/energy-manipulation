@@ -19,4 +19,4 @@ execute if score #xem.spell.run.effect.release_potion.elaborate_potion.success x
 
 #apply
 $execute as $(uuid) if entity @s[type=minecraft:player] at @s run function energy_manipulation:spell/run/effect/release_potion/apply_effect_player
-$execute as $(uuid) if entity @s[type=!minecraft:player] at @s run function energy_manipulation:spell/run/effect/release_potion/apply_effect_mob
+$execute as $(uuid) if entity @s[type=!minecraft:player] at @s run function energy_manipulation:spell/run/effect/release_potion/_apply_effect_using_give
