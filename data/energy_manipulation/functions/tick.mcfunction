@@ -45,7 +45,7 @@ execute as @e[type=minecraft:item_display,tag=xem.trinket.translocation_ward.war
 
 #==<TRIGGERS>==#
 
-execute as @a[scores={xem.settings.show_shape_particles=1..}] run function energy_manipulation:trigger/shape_particles/on
-execute as @a[scores={xem.settings.show_shape_particles=0}] run function energy_manipulation:trigger/shape_particles/off
-scoreboard players enable @a xem.settings.show_shape_particles
+execute as @a[scores={xem.settings.shape_particles=1..}] run function energy_manipulation:trigger/shape_particles/show_menu
+execute as @a[scores={xem.settings.shape_particles=..-1}] run function energy_manipulation:trigger/shape_particles/set_values_and_refresh
+scoreboard players enable @a xem.settings.shape_particles
 

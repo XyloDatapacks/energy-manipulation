@@ -8,7 +8,5 @@ execute unless score @s xem.last_death_time = @s xem.last_death_time run scorebo
 #set focus
 scoreboard players set @s xem.mind.focus 100
 
-#triggers
-scoreboard players set @s xem.settings.show_shape_particles -1
 
 tellraw @s {"text":"Wellcome to Energy Manipulation. By Xylo_Datapacks","color":"dark_aqua"}

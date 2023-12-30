@@ -1,9 +1,14 @@
+==<CHEATS>==
+/function energy_manipulation:give/...
+to get all items
+
 ==<GENERAL SETTINGS>==
-#xem.spell.spells_per_sec.max xem.op
-Max number of spells per second (*20 cause it is in ticks).
-Default value is set to 2000, meaning the max is 100 spells per second.
-Splits and spells casted by turrets are taken into account.
-Every player has their counter
+/trigger xem.settings.shape_particles
+to toggle particles for each shape (it is a player specific setting)
+
+==<CASTING FATIGUE>==
+#xem.spell.casting_fatigue.max xem.op
+Default value is set to 2000
 
 ==<TRANSLOCATION EFFECT SETTINGS>==
 #xem.spell.run.effect.translocation.max_range xem.op
