@@ -30,7 +30,7 @@ execute store result storage energy_manipulation:op set_node_nest.nest int 1 run
 # WARNING: This function call, will end up calling set_node again. so after this line, i cant use previous temp var
 $function energy_manipulation:spell/build/nodes/$(key)/set {key:"$(key)",value:"$(value)",path:"$(path).$(key)"}
 # instuction sub-node (for instruction, except value:"none")
-$function energy_manipulation:spell/build/nodes/$(key)/_builder/build with storage energy_manipulation:op spell_build_edit[{path:"$(path)",key:"$(key)"}].parent
+$execute if data storage energy_manipulation:op spell_build_edit[{path:"$(path)",key:"$(key)"}].parent{key:"program"} run function energy_manipulation:spell/build/nodes/$(key)/_builder/build with storage energy_manipulation:op spell_build_edit[{path:"$(path)",key:"$(key)"}].parent
 
 # save parent for clean up
 $data modify storage energy_manipulation:op spell_build_edit[{path:"$(path).$(key)"}].parent set value {path:"$(path)",key:"$(key)"}

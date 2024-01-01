@@ -39,7 +39,7 @@ execute as @a[tag=xem.meditation.is_meditating] if score @s xem.meditation.end_t
 #==<TRINKETS>==#
 
 # translocation ward
-execute as @e[type=minecraft:item_display,tag=xem.trinket.translocation_ward.ward] run function energy_manipulation:trinket/translocation_ward/drop/check
+execute as @e[type=minecraft:item_display,tag=xem.trinket.translocation_ward.ward] at @s run function energy_manipulation:trinket/translocation_ward/drop/check
 
 
 

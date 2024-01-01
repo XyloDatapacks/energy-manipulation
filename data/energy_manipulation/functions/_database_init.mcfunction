@@ -4,7 +4,7 @@ data remove storage energy_manipulation:spell nodes_values
 data modify storage energy_manipulation:spell nodes_values.concatenate set value [{value:"none"},{value:"standard"},{value:"split"}]
 data modify storage energy_manipulation:spell nodes_values.concatenate[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.instruction set value [{value:"none"},{value:"direction"},{value:"position"},{value:"save_location"},{value:"mark_entity"},{value:"skip_to"},{value:"counter"}]
+data modify storage energy_manipulation:spell nodes_values.instruction set value [{value:"none"},{value:"direction",incompatible_parent:["terminate"]},{value:"position",incompatible_parent:["terminate"]},{value:"save_location"},{value:"mark_entity"},{value:"skip_to"},{value:"counter",incompatible_parent:["terminate"]}]
 data modify storage energy_manipulation:spell nodes_values.instruction[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.position set value [{value:"current"},{value:"offset"},{value:"target"},{value:"ray_trace"},{value:"location"}]
@@ -58,6 +58,10 @@ data modify storage energy_manipulation:spell nodes_values.fire_mode[] merge val
 
 data modify storage energy_manipulation:spell nodes_values.slot set value [{value:"mainhand"},{value:"offhand"},{value:"hotbar"},{value:"inventory"}]
 data modify storage energy_manipulation:spell nodes_values.slot[] merge value {final:0b,cost:0}
+
+
+data modify storage energy_manipulation:spell nodes_values.terminate set value [{value:"none"},{value:"consequence"},{value:"condition"},{value:"instruction"}]
+data modify storage energy_manipulation:spell nodes_values.terminate[] merge value {final:0b,cost:0}
 
 
 #counter stuff

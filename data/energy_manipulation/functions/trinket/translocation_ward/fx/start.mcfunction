@@ -1,0 +1,39 @@
+scoreboard players operation #xem.trinket.translocation_ward.fx xem.op = #xlib.time xlib.op
+scoreboard players operation #xem.trinket.translocation_ward.fx xem.op %= #36 xconst
+
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 0 rotated 0 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 1 rotated 10 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 2 rotated 20 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 3 rotated 30 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 4 rotated 40 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 5 rotated 50 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 6 rotated 60 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 7 rotated 70 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 8 rotated 80 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 9 rotated 90 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 10 rotated 100 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 11 rotated 110 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 12 rotated 120 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 13 rotated 130 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 14 rotated 140 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 15 rotated 150 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 16 rotated 160 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 17 rotated 170 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 18 rotated 180 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 19 rotated 190 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 20 rotated 200 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 21 rotated 210 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 22 rotated 220 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 23 rotated 230 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 24 rotated 240 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 25 rotated 250 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 26 rotated 260 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 27 rotated 270 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 28 rotated 280 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 29 rotated 290 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 30 rotated 300 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 31 rotated 310 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 32 rotated 320 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 33 rotated 330 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 34 rotated 340 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
+execute if score #xem.trinket.translocation_ward.fx xem.op matches 35 rotated 350 0 run function energy_manipulation:trinket/translocation_ward/fx/particles
