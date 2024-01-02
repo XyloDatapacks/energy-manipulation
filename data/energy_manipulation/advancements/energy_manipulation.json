@@ -7,7 +7,7 @@
     "title": {
       "text": "Energy Manipulation",
       "color": "#528E7B",
-      "bold": "true"
+      "bold": true
     },
     "description": "By Xylo Datapacks.",
     "background": "minecraft:textures/block/black_concrete.png",

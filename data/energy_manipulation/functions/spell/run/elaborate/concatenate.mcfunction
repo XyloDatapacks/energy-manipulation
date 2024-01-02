@@ -1,12 +1,17 @@
+#==<INIT>==#
 # "energy_manipulation:op running_spell_marker" read only (initial data for this tick)
 # "energy_manipulation:op selected_concatenate" read only (initial data for this tick)
 
-# "#xem.spell.run.elaborate.concatenate_index xem.op" read only (initial data for this tick)
+# "#xem.spell.run.elaborate.concatenate_index xem.op" can updata
 # "#xem.spell.run.elaborate.concatenate_index_max xem.op" read only (initial data for this tick)
+# "#xem.spell.run.elaborate.caster_last_death_time xem.op" can update
 
+#==<WORKING VARIABLES>==#
 # "energy_manipulation:op running_spell_data" can update 
 # "energy_manipulation:op initial_position" can update 
 # "energy_manipulation:op initial_rotation" can update 
+# "energy_manipulation:op running_spell_marker_update" can update 
+
 
 # pay cost
 data modify storage energy_manipulation:op energy_cost set from storage energy_manipulation:op selected_concatenate.concatenate.cost

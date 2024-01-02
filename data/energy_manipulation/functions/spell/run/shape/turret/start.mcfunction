@@ -19,8 +19,6 @@ data modify storage energy_manipulation:op running_spell_marker_update.Tags appe
 
 # expire_time (+1 tick cause shape tick always executes on the next tick) (chose lowest between expire time and cooldown terminate condition)
 execute store result score #xem.spell.run.shape.expire_time xem.op run data get storage energy_manipulation:op selected_concatenate.concatenate.shape.duration 20
-execute store result score #xem.spell.run.shape.expire_time_from_terminate xem.op run data get storage energy_manipulation:op selected_concatenate.concatenate.shape.terminate.condition{value:"cooldown"}.timer 20
-execute if data storage energy_manipulation:op selected_concatenate.concatenate.shape.terminate.condition{value:"cooldown"} run scoreboard players operation #xem.spell.run.shape.expire_time xem.op < #xem.spell.run.shape.expire_time_from_terminate xem.op
 scoreboard players operation #xem.spell.run.shape.expire_time xem.op += #xlib.time xlib.op
 scoreboard players add #xem.spell.run.shape.expire_time xem.op 1
 scoreboard players operation @s xem.spell.shape.expire_time = #xem.spell.run.shape.expire_time xem.op
