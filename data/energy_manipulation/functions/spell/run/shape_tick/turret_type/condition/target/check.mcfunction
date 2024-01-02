@@ -5,7 +5,7 @@ data modify storage energy_manipulation:op initial_rotation set from storage ene
 data modify storage energy_manipulation:op running_spell_data set from storage energy_manipulation:op turret_type_condition_data.data.energy_manipulation.spell_data
 
 # test condition
-data modify storage energy_manipulation:op condition_in set from entity @s data.energy_manipulation.shape.condition
+data modify storage energy_manipulation:op condition_in set from storage energy_manipulation:op turret_type_condition_data.data.energy_manipulation.shape.condition
 function energy_manipulation:spell/run/getters/condition/get
 execute unless score xem.spell.run.getters.condition.passed xem.op matches 1 run tag @s remove xem.spell.turret_type.cond.target_found
 execute if score xem.spell.run.getters.condition.passed xem.op matches 1 if entity @s[tag=xem.spell.turret_type.cond.target_found] run scoreboard players set xem.spell.run.getters.condition.passed xem.op 0
