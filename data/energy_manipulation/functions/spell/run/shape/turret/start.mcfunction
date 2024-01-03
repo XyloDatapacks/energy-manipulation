@@ -15,6 +15,7 @@ data modify storage energy_manipulation:op running_spell_marker_update.data.ener
 
 # deactivate spell marker and add tags
 data modify storage energy_manipulation:op temp_array set value ["xem.spell.inactive","xem.spell.shape_marker","xem.spell.turret_type"]
+execute if data storage energy_manipulation:op selected_concatenate.concatenate.shape.terminate.condition run data modify storage energy_manipulation:op temp_array append value "xem.spell.turret_type.terminate.condition"
 data modify storage energy_manipulation:op running_spell_marker_update.Tags append from storage energy_manipulation:op temp_array[]
 
 # expire_time (+1 tick cause shape tick always executes on the next tick) (chose lowest between expire time and cooldown terminate condition)

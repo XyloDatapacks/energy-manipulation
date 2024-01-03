@@ -16,4 +16,4 @@ execute if score @s xem.spell.shape.expire_time <= #xlib.time xlib.op run functi
 
 
 #terminate condition
-function energy_manipulation:spell/run/shape_tick/turret_type/terminate/check
+execute if entity @s[tag=xem.spell.turret_type.terminate.condition] run function energy_manipulation:spell/run/shape_tick/turret_type/terminate/check

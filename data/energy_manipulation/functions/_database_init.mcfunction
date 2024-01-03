@@ -63,6 +63,9 @@ data modify storage energy_manipulation:spell nodes_values.slot[] merge value {f
 data modify storage energy_manipulation:spell nodes_values.terminate set value [{value:"none"},{value:"consequence"},{value:"condition"},{value:"instruction"}]
 data modify storage energy_manipulation:spell nodes_values.terminate[] merge value {final:0b,cost:0}
 
+data modify storage energy_manipulation:spell nodes_values.follow_rotation set value [{value:"fixed"},{value:"rotated_as"},{value:"opposite_as"},{value:"toward"},{value:"away_from"}]
+data modify storage energy_manipulation:spell nodes_values.follow_rotation[] merge value {final:0b,cost:0}
+
 
 #counter stuff
 data modify storage energy_manipulation:spell nodes_values.counter set value [{value:"set"},{value:"add"},{value:"multiply"},{value:"divide"}]

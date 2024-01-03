@@ -7,6 +7,7 @@ execute on vehicle run kill @s
 tag @s remove xem.spell.inactive
 tag @s remove xem.spell.shape_marker
 tag @s remove xem.spell.turret_type
+tag @s remove xem.spell.turret_type.terminate.condition
 
 # check for terminate instruction (if none, kill and return)
 data modify storage energy_manipulation:op turret_type_instruction_data set from entity @s {}
@@ -27,7 +28,6 @@ data modify storage energy_manipulation:op running_spell_marker_update set from 
 scoreboard players set xem.spell.run.elaborate.instructions_count xem.op 1
 data modify storage energy_manipulation:op selected_program set value [{}]
 data modify storage energy_manipulation:op selected_program[0].instruction set from storage energy_manipulation:op turret_type_instruction_data.data.energy_manipulation.shape.terminate.instruction
-data modify storage test:op test set from storage energy_manipulation:op selected_program[0].instruction.value
 data remove storage energy_manipulation:op macro_data
 data modify storage energy_manipulation:op macro_data.value set from storage energy_manipulation:op selected_program[0].instruction.value
 function energy_manipulation:spell/run/elaborate/instruction with storage energy_manipulation:op macro_data
