@@ -5,7 +5,7 @@ data modify storage energy_manipulation:op target_in set from storage energy_man
 data modify storage energy_manipulation:op target_in.selection set value "single"
 function energy_manipulation:spell/run/getters/target/get
 
-data modify storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.consolidated_follow set value {target:n,position_x:0,position_y:0,position_z:0,follow_rotation:""}
+data modify storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.consolidated_follow set value {target:n,position_x:0,position_y:0,position_z:0,follow_rotation:"",follow_rotation_target:"",follow_rotation2:""}
 execute if score xem.spell.run.getters.target.found xem.op matches 1 run data modify storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.consolidated_follow.target set from storage energy_manipulation:op target_out[0].uuid
 data modify storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.consolidated_follow.anchor set from storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.anchor
 data modify storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.consolidated_follow.position_x set from storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.offset.x
