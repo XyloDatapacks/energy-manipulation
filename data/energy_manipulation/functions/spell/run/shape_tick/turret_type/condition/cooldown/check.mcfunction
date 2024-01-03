@@ -1,5 +1,5 @@
 # setup spell to run
-function energy_manipulation:spell/run/shape_tick/turret_type/run_spell
+execute at @s run function energy_manipulation:spell/run/shape_tick/turret_type/run_spell
 
 # set new activation time
 execute if entity @s[tag=xem.spell.turret_type.fm.once] run scoreboard players operation @s xem.spell.shape.expire_time = #xlib.time xlib.op
