@@ -10,7 +10,7 @@ data modify storage energy_manipulation:spell nodes_values.instruction[] merge v
 data modify storage energy_manipulation:spell nodes_values.position set value [{value:"current"},{value:"offset"},{value:"target"},{value:"ray_trace"},{value:"location"}]
 data modify storage energy_manipulation:spell nodes_values.position[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.direction set value [{value:"current"},{value:"rotated"},{value:"facing"},{value:"rotated_as"},{value:"random"},{value:"aim_point"},{value:"location"}]
+data modify storage energy_manipulation:spell nodes_values.direction set value [{value:"current"},{value:"rotated"},{value:"facing"},{value:"facing_away"},{value:"rotated_as"},{value:"opposite_as"},{value:"random"},{value:"aim_point"},{value:"location"}]
 data modify storage energy_manipulation:spell nodes_values.direction[] merge value {final:0b,cost:0}
 
 
@@ -24,7 +24,7 @@ data modify storage energy_manipulation:spell nodes_values.movement set value [{
 data modify storage energy_manipulation:spell nodes_values.movement[].final set value 0b
 
 
-data modify storage energy_manipulation:spell nodes_values.offset set value [{value:"xyz"},{value:"x"},{value:"y"},{value:"z"},{value:"xy"},{value:"xz"},{value:"yz"}]
+data modify storage energy_manipulation:spell nodes_values.offset set value [{value:"none"},{value:"xyz"},{value:"x"},{value:"y"},{value:"z"},{value:"xy"},{value:"xz"},{value:"yz"}]
 data modify storage energy_manipulation:spell nodes_values.offset[] merge value {final:0b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.angle set value [{value:"yawn-pitch"},{value:"yawn"},{value:"pitch"}]
@@ -62,10 +62,6 @@ data modify storage energy_manipulation:spell nodes_values.slot[] merge value {f
 
 data modify storage energy_manipulation:spell nodes_values.terminate set value [{value:"none"},{value:"consequence"},{value:"condition"},{value:"instruction"}]
 data modify storage energy_manipulation:spell nodes_values.terminate[] merge value {final:0b,cost:0}
-
-data modify storage energy_manipulation:spell nodes_values.follow_rotation set value [{value:"fixed"},{value:"rotated_as"},{value:"opposite_as"},{value:"toward"},{value:"away_from"}]
-data modify storage energy_manipulation:spell nodes_values.follow_rotation[] merge value {final:0b,cost:0}
-
 
 #counter stuff
 data modify storage energy_manipulation:spell nodes_values.counter set value [{value:"set"},{value:"add"},{value:"multiply"},{value:"divide"}]

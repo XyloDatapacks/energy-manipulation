@@ -1,4 +1,0 @@
-#-> {position_x, position_y, position_z}
-
-$execute if data storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.follow_rotation{value:"toward"} run data modify storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.consolidated_follow merge value {follow_rotation:"facing $(position_x) $(position_y) $(position_z) ",follow_rotation_target:"",follow_rotation2:""}
-$execute if data storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.follow_rotation{value:"away_from"} run data modify storage energy_manipulation:op selected_concatenate.concatenate.shape.movement.consolidated_follow merge value {follow_rotation:"facing $(position_x) $(position_y) $(position_z) facing ^ ^ ^-1 ",follow_rotation_target:"",follow_rotation2:""}

@@ -16,7 +16,7 @@ $data modify storage energy_manipulation:op macro_data set value {key:"offset",p
 data modify storage energy_manipulation:op macro_data merge from storage energy_manipulation:spell nodes_values.offset[0] 
 function energy_manipulation:spell/build/nodes/set_node with storage energy_manipulation:op macro_data
 
-# follow_rotation Sub-Node
-$data modify storage energy_manipulation:op macro_data set value {key:"follow_rotation",path:"$(path)"}
-data modify storage energy_manipulation:op macro_data merge from storage energy_manipulation:spell nodes_values.follow_rotation[0] 
+# direction Sub-Node
+$data modify storage energy_manipulation:op macro_data set value {key:"direction",path:"$(path)"}
+data modify storage energy_manipulation:op macro_data merge from storage energy_manipulation:spell nodes_values.direction[0] 
 function energy_manipulation:spell/build/nodes/set_node with storage energy_manipulation:op macro_data
