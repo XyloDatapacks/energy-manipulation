@@ -3,7 +3,7 @@
 # out: #xem.spell.cost.remaining_cost xem.op
 
 #get remaining cost
-$scoreboard players set #xem.spell.cost.remaining_cost xem.op $(cost)
+execute store result score #xem.spell.cost.remaining_cost xem.op run data get storage energy_manipulation:op energy_cost.cost
 
 # generic energy (if function result is -1 or 1 i return that value. 0 means that the function did not run: type=!generic)
 scoreboard players set #xem.spell.cost.energy.concatenate_cost_paid_generic xem.op 0
@@ -22,10 +22,13 @@ scoreboard players operation #xem.spell.cost.remaining_cost xem.op -= #xem.spell
 
 
 
-# if remaining cost is > 1 then i did not pay. so return 0
-#execute if score #xem.spell.cost.remaining_cost xem.op matches 1.. store result storage energy_manipulation:op energy_cost.cost int 1 run scoreboard players get #xem.spell.cost.remaining_cost xem.op
-execute if score #xem.spell.cost.remaining_cost xem.op matches 1.. run return 0
+#==<Update Cost Status>==#
 
-# if has enough energy (return value)
+# update cost in storage
+execute store result storage energy_manipulation:op energy_cost.cost int 1 run scoreboard players get #xem.spell.cost.remaining_cost xem.op
+
+# if remaining cost is > 1 then i did not pay. so return 0
+execute if score #xem.spell.cost.remaining_cost xem.op matches 1.. run return 0
+# if energy was enough return cost_payed 1 (and return 1)
 scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1
 return 1

@@ -2,8 +2,9 @@
 # out: #xem.spell.cost.energy.cost_payed xem.op
 # out: #xem.spell.cost.remaining_cost xem.op
 
-#exit
+# make sure not to pay if the cost has been paid by the previous jar
 execute if score #xem.spell.cost.energy.cost_payed xem.op matches 1 run return 1
+# make sure not to execute code on a wrong jar
 $execute unless entity @s[tag=xem.jar_of_energy.$(type)] run return 0
 
 #get remaining cost
@@ -19,17 +20,20 @@ scoreboard players operation @s xem.jar_of_energy.energy_count > #0 xconst
 #get the number of energy actually paid
 execute if score #xem.spell.cost.jar_block.overflow xem.op matches ..-1 run scoreboard players operation #xem.spell.cost.jar_block.to_pay xem.op += #xem.spell.cost.jar_block.overflow xem.op
 
-#energy count display
+#update energy count display
 function energy_manipulation:jar_of_energy/block/jar_display
 
 #remove amount paid
 scoreboard players operation #xem.spell.cost.remaining_cost xem.op -= #xem.spell.cost.jar_block.to_pay xem.op
 
-# if remaining cost is > 1 then i did not pay. so return 0
-execute if score #xem.spell.cost.remaining_cost xem.op matches 1.. store result storage energy_manipulation:op energy_cost.cost int 1 run scoreboard players get #xem.spell.cost.remaining_cost xem.op
-execute if score #xem.spell.cost.remaining_cost xem.op matches 1.. run return 0
+#==<Update Cost Status>==#
 
-# if has enough energy (return value)
+# update cost in storage
+execute store result storage energy_manipulation:op energy_cost.cost int 1 run scoreboard players get #xem.spell.cost.remaining_cost xem.op
+
+# if remaining cost is > 1 then i did not pay. so return 0
+execute if score #xem.spell.cost.remaining_cost xem.op matches 1.. run return 0
+# if energy was enough return cost_payed 1 (and return 1)
 scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1
 return 1
 

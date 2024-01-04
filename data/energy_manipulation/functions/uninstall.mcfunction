@@ -47,6 +47,8 @@ scoreboard objectives remove xem.spell.armor.mastery.dark
 scoreboard objectives remove xem.spell.armor.mastery.void 
 
 #spells
+scoreboard objectives remove xem.spell.raw_energy
+
 scoreboard objectives remove xem.spell.cost.withering.total_saturation_to_pay 
 scoreboard objectives remove xem.spell.cost.withering.total_damage_to_pay 
 scoreboard objectives remove xem.spell.cost.withering.withering_async_time 

@@ -1,5 +1,6 @@
 # in: #xem.spell.cost.remaining_cost xem.op
 
+#get data
 data modify storage energy_manipulation:op temp_player_data set from entity @s {}
 
 scoreboard players operation @s xem.spell.cost.withering.total_saturation_to_pay > #0 xconst

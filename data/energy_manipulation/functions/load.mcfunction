@@ -54,6 +54,8 @@ scoreboard objectives add xem.spell.armor.mastery.dark dummy
 scoreboard objectives add xem.spell.armor.mastery.void dummy
 
 #spells
+scoreboard objectives add xem.spell.raw_energy dummy
+
 scoreboard objectives add xem.spell.cost.withering.total_saturation_to_pay dummy
 scoreboard objectives add xem.spell.cost.withering.total_damage_to_pay dummy
 scoreboard objectives add xem.spell.cost.withering.withering_async_time dummy
