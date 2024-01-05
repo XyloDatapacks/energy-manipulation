@@ -44,7 +44,7 @@ function energy_manipulation:spell/casting_fatigue/calc
 function energy_manipulation:mind/focus/player_tick
 
 #==<Raw Energy>==#
-execute if score #xlib.timer.5tick xlib.op matches 0 unless score @s xlib.player.reapawn_status matches -1 unless score @s xem.spell.cost.withering.total_saturation_to_pay matches 1.. unless score @s xem.spell.cost.withering.total_damage_to_pay matches 1.. unless score @s xem.spell.raw_energy matches 20.. run scoreboard players add @s xem.spell.raw_energy 1
+execute if score #xlib.timer.10tick xlib.op matches 0 unless score @s xlib.player.reapawn_status matches -1 unless score @s xem.spell.cost.withering.total_saturation_to_pay matches 1.. unless score @s xem.spell.cost.withering.total_damage_to_pay matches 1.. unless score @s xem.spell.raw_energy matches 20.. run scoreboard players add @s xem.spell.raw_energy 1
 execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players set @s xem.spell.raw_energy 20
 
 #==<Trinkets>==#
