@@ -1,5 +1,8 @@
 # in: #xem.spell.cost.remaining_cost xem.op
 
+# 2 saturation point = 1 energy
+# 1 health point = 1 energy
+
 #get data
 data modify storage energy_manipulation:op temp_player_data set from entity @s {}
 

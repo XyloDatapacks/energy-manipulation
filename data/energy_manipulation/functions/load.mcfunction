@@ -56,6 +56,7 @@ scoreboard objectives add xem.spell.armor.mastery.void dummy
 
 #spells
 scoreboard objectives add xem.spell.raw_energy dummy
+execute unless score #xem.spell.raw_energy.max xem.op = #xem.spell.raw_energy.max xem.op run scoreboard players set #xem.spell.raw_energy.max xem.op 10
 
 scoreboard objectives add xem.spell.cost.withering.total_saturation_to_pay dummy
 scoreboard objectives add xem.spell.cost.withering.total_damage_to_pay dummy

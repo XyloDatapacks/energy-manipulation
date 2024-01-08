@@ -44,8 +44,8 @@ function energy_manipulation:spell/casting_fatigue/calc
 function energy_manipulation:mind/focus/player_tick
 
 #==<Raw Energy>==#
-execute if score #xlib.timer.10tick xlib.op matches 0 unless score @s xlib.player.reapawn_status matches -1 unless score @s xem.spell.cost.withering.total_saturation_to_pay matches 1.. unless score @s xem.spell.cost.withering.total_damage_to_pay matches 1.. unless score @s xem.spell.raw_energy matches 20.. run scoreboard players add @s xem.spell.raw_energy 1
-execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players set @s xem.spell.raw_energy 20
+execute if score #xlib.timer.10tick xlib.op matches 0 unless score @s xlib.player.reapawn_status matches -1 unless score @s xem.spell.cost.withering.total_saturation_to_pay matches 1.. unless score @s xem.spell.cost.withering.total_damage_to_pay matches 1.. unless score @s xem.spell.raw_energy >= #xem.spell.raw_energy.max xem.op run scoreboard players add @s xem.spell.raw_energy 1
+execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players operation @s xem.spell.raw_energy = #xem.spell.raw_energy.max xem.op
 
 #==<Trinkets>==#
 
@@ -58,5 +58,5 @@ execute if score @s xitm.wfoas_used matches 1 if data storage xylo_library:op pl
 
 #==<GUI>==#
 
-title @s[tag=xem.settings.show_gui] actionbar ["raw energy: ",{"score":{"objective":"xem.spell.raw_energy","name":"@s"}},"/20 | ","casting fatigue: ",{"score":{"objective":"xem.spell.casting_fatigue.percentage","name":"@s"}},"/100 | ","focus: ",{"score":{"objective":"xem.op","name":"#xem.mind.focus.display"}},"/100"]
+execute as @s[tag=xem.settings.show_gui] run function energy_manipulation:gui/start
 

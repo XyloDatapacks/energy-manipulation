@@ -17,7 +17,7 @@ data modify storage energy_manipulation:spell nodes_values.direction[] merge val
 data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1},{value:"projectile",cost:2.5},{value:"sprout",cost:2},{value:"aoe",cost:10},{value:"turret",cost:5}]
 data modify storage energy_manipulation:spell nodes_values.shape[].final set value 0b
 
-data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"release_potion",cost:1,energy_type:"soul"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"spell_break",cost:8,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
+data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"release_potion",cost:1,energy_type:"soul"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"spell_break",cost:5,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
 data modify storage energy_manipulation:spell nodes_values.effect[].final set value 0b
 
 data modify storage energy_manipulation:spell nodes_values.movement set value [{value:"none",cost:0},{value:"parabolic",cost:2,incompatible_shapes:["turret"]},{value:"straight",cost:2.5,incompatible_shapes:["turret"]},{value:"follow",cost:2,compatible_shapes:["","turret"]}]
