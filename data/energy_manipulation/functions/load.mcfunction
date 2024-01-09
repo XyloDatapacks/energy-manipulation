@@ -100,6 +100,7 @@ scoreboard objectives add xem.meditation.previous_gamemode dummy
 
 #triggers
 scoreboard objectives add xem.settings.shape_particles trigger
+scoreboard objectives add xem.settings.gui trigger
 
 # init
 execute store result score #xem.maxCommandChainLength xem.op run gamerule maxCommandChainLength

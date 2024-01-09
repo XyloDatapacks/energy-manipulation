@@ -49,3 +49,6 @@ execute as @a[scores={xem.settings.shape_particles=1..}] run function energy_man
 execute as @a[scores={xem.settings.shape_particles=..-1}] run function energy_manipulation:trigger/shape_particles/set_values_and_refresh
 scoreboard players enable @a xem.settings.shape_particles
 
+execute as @a[scores={xem.settings.gui=1..}] run function energy_manipulation:trigger/gui/show_menu
+execute as @a[scores={xem.settings.gui=..-1}] run function energy_manipulation:trigger/gui/set_values_and_refresh
+scoreboard players enable @a xem.settings.gui

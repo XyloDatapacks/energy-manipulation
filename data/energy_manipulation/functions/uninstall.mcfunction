@@ -88,6 +88,7 @@ scoreboard objectives remove xem.meditation.previous_gamemode
 
 #triggers
 scoreboard objectives remove xem.settings.shape_particles 
+scoreboard objectives remove xem.settings.gui
 
 #==<Storages>==#
 data remove storage energy_manipulation:spell nodes_values
