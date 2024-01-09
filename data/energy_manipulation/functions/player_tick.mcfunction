@@ -41,5 +41,5 @@ execute if score @s xitm.wfoas_used matches 1 if data storage xylo_library:op pl
 
 #==<GUI>==#
 
-execute as @s[tag=xem.settings.show_gui] run function energy_manipulation:gui/start
+execute as @s[tag=!xem.settings.hide_gui] run function energy_manipulation:gui/start
 
