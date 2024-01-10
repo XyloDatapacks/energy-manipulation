@@ -1,5 +1,4 @@
-scoreboard players set #xem.spell.run.shape.expire_time xem.op 40
-data modify storage energy_manipulation:op shape_data set value {power:0.35}
+execute store result score #xem.spell.run.shape.expire_time xem.op run data get storage energy_manipulation:op shape_data.travel_time
 
 data modify storage energy_manipulation:op macro_data set value {shape:"sprout"}
 data modify storage energy_manipulation:op macro_data.energy_type set from storage energy_manipulation:op selected_concatenate.concatenate.cost.type

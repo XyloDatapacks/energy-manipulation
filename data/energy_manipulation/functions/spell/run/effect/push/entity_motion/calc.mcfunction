@@ -1,5 +1,5 @@
 data remove storage energy_manipulation:op macro_data
-execute store result storage energy_manipulation:op macro_data.power int 0.0001 run scoreboard players get $strength delta.api.launch
+execute store result storage energy_manipulation:op macro_data.initial_speed int 0.0001 run scoreboard players get $strength delta.api.launch
 function energy_manipulation:spell/run/shape/_movement/_motion with storage energy_manipulation:op macro_data
 
 execute store result score #xem.spell.run.effect.push.mob_add_motion_x xem.op run data get storage energy_manipulation:op temp_motion[0] 1000

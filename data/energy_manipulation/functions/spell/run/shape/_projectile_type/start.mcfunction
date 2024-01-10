@@ -12,6 +12,7 @@ function energy_manipulation:spell/run/shape/_projectile_type/summon with storag
 
 # pass shape to spell_marker
 data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape set from storage energy_manipulation:op selected_concatenate.concatenate.shape
+data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape.effect.intensity set from storage energy_manipulation:op shape_data.intensity
 
 # deactivate spell marker and add tags
 data modify storage energy_manipulation:op temp_array set value ["xem.spell.inactive","xem.spell.shape_marker","xem.spell.projectile_type"]

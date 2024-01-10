@@ -1,3 +1,9 @@
+# pass shape to spell_marker
+data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape set from storage energy_manipulation:op selected_concatenate.concatenate.shape
+data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape.effect.intensity set from storage energy_manipulation:op shape_data.intensity
+
+#==<Run Effect>==#
+
 # get target
 data modify storage energy_manipulation:op target_in set from storage energy_manipulation:op selected_concatenate.concatenate.shape.target
 function energy_manipulation:spell/run/getters/target/get
@@ -10,7 +16,7 @@ data modify storage energy_manipulation:op running_spell_data.objects set from s
 
 # prepare to run effect
 data remove storage energy_manipulation:op spell_effect
-data modify storage energy_manipulation:op spell_effect.effect set from storage energy_manipulation:op selected_concatenate.concatenate.shape.effect
+data modify storage energy_manipulation:op spell_effect.effect set from storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape.effect
 data modify storage energy_manipulation:op spell_effect.caster set from storage energy_manipulation:op running_spell_data.caster
 execute store result score #xem.spell.run.shape.self.objects_count xem.op run data get storage energy_manipulation:op self_shape_targets
 

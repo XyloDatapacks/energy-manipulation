@@ -7,7 +7,7 @@ $execute as $(caster_uuid) run function energy_manipulation:spell/run/effect/rel
 execute if score #xem.spell.run.effect.release_potion.elaborate_potion.success xem.op matches 0 run return 0
 
 # summon aoe cloud
-summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["xem.spell.run.effect.release_potion_new"],CustomName:'{"translate":"energy_manipulation.spell.run.effect.release_potion.aoe"}',ReapplicationDelay:20,Radius:2.5f,Duration:100,RadiusPerTick:-0.025f,RadiusOnUse:-2.5f,WaitTime:10}
+$summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["xem.spell.run.effect.release_potion_new"],CustomName:'{"translate":"energy_manipulation.spell.run.effect.release_potion.aoe"}',ReapplicationDelay:20,Radius:$(spell_power)f,Duration:100,RadiusPerTick:-0.025f,RadiusOnUse:-$(spell_power)f,WaitTime:10}
 data remove storage energy_manipulation:op temp_compound 
 data modify storage energy_manipulation:op temp_compound.Color set from storage energy_manipulation:op spell_effect.potion.tag.CustomPotionColor
 data modify storage energy_manipulation:op temp_compound.effects set from storage energy_manipulation:op potion_effects
