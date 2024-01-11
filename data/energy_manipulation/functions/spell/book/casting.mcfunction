@@ -22,6 +22,8 @@ scoreboard players operation #xem.spell.book.casting_data.withering_timer xem.op
 scoreboard players operation #xem.spell.book.casting_data.withering_timer xem.op %= #10 xconst
 execute if score @s xem.spell.book.casting_time matches 40.. if score #xem.spell.book.casting_data.withering_timer xem.op matches 0 run function energy_manipulation:spell/book/casting_data/withering
 
+execute if score @s xem.spell.book.casting_time matches 80 at @s run playsound energy_manipulation:spell.max_charge player @s ~ ~ ~ 0.7 0.8
+
 #blocked
 execute if score @s xem.spell.book.dmg_blocked matches 1.. run function energy_manipulation:spell/book/casting_data/blocked
 

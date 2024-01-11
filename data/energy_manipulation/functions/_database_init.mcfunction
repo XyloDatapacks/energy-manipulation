@@ -14,7 +14,7 @@ data modify storage energy_manipulation:spell nodes_values.direction set value [
 data modify storage energy_manipulation:spell nodes_values.direction[] merge value {final:0b,cost:0}
 
 
-data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1,data:{intensity:1}},{value:"projectile",cost:2,data:{intensity:1,initial_speed:1,travel_time:70}},{value:"sprout",cost:2.5,data:{intensity:1.75,initial_speed:0.3,travel_time:30}},{value:"aoe",cost:5,data:{intensity:0.75}},{value:"turret",cost:3}]
+data modify storage energy_manipulation:spell nodes_values.shape set value [{value:"none",cost:0},{value:"self",cost:1,data:{intensity:1}},{value:"projectile",cost:2,data:{intensity:1,initial_speed:1,travel_time:70}},{value:"dart",cost:1,data:{intensity:0.5,initial_speed:2.0,travel_time:50}},{value:"sprout",cost:2.5,data:{intensity:1.75,initial_speed:0.3,travel_time:30}},{value:"aoe",cost:5,data:{intensity:0.75}},{value:"turret",cost:3}]
 data modify storage energy_manipulation:spell nodes_values.shape[].final set value 0b
 
 data modify storage energy_manipulation:spell nodes_values.effect set value [{value:"none",cost:0,energy_type:"generic",incompatible_shapes:[]},{value:"fire",cost:3.5,energy_type:"sun"},{value:"light",cost:2,energy_type:"sun"},{value:"break",cost:2.5,energy_type:"ground"},{value:"release_potion",cost:1,energy_type:"soul"},{value:"push",cost:3,energy_type:"dark"},{value:"pull",cost:3,energy_type:"dark"},{value:"spell_break",cost:5,energy_type:"dark"},{value:"translocation",cost:20,energy_type:"void"}]
@@ -292,6 +292,7 @@ data modify storage energy_manipulation:spell shapes.projectile.custom_model_dat
 data modify storage energy_manipulation:spell shapes.sprout.custom_model_data set value {generic:12341120,sun:12341121,ground:12341122,soul:12341123,dark:12341124,void:12341125}
 data modify storage energy_manipulation:spell shapes.turret.custom_model_data set value {generic:12341130,sun:12341131,ground:12341132,soul:12341133,dark:12341134,void:12341135}
 data modify storage energy_manipulation:spell shapes.aoe.custom_model_data set value {generic:12341140,sun:12341141,ground:12341142,soul:12341143,dark:12341144,void:12341145}
+data modify storage energy_manipulation:spell shapes.dart.custom_model_data set value {generic:12341150,sun:12341151,ground:12341152,soul:12341153,dark:12341154,void:12341155}
 
 # tellraw @a {"text":"Energy Manipulation Database Loaded","color":"green"}
 
