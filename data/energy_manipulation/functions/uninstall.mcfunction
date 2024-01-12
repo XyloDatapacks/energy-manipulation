@@ -83,8 +83,8 @@ scoreboard objectives remove xem.jar_of_energy.energy_count
 scoreboard objectives remove xem.mind.is_concealed 
 scoreboard objectives remove xem.mind.is_vulnerable 
 scoreboard objectives remove xem.mind.focus 
-scoreboard objectives remove xem.meditation.end_time 
-scoreboard objectives remove xem.meditation.previous_gamemode 
+scoreboard objectives remove xem.mind.meditation.end_time 
+scoreboard objectives remove xem.mind.meditation.previous_gamemode 
 
 #triggers
 scoreboard objectives remove xem.settings.shape_particles 

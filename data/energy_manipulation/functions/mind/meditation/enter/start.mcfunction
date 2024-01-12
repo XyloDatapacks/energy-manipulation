@@ -9,14 +9,15 @@ function energy_manipulation:mind/meditation/enter/body with storage energy_mani
 tp @s ^ ^0.5 ^-1.5
 
 #timer
-scoreboard players operation @s xem.meditation.end_time = #xlib.time xlib.op
-scoreboard players add @s xem.meditation.end_time 80
-tag @s add xem.meditation.is_meditating
+scoreboard players operation @s xem.mind.meditation.end_time = #xlib.time xlib.op
+scoreboard players operation @s xem.mind.meditation.end_time += #xem.mind.meditation.duration xem.op
+tag @s add xem.mind.meditation.is_meditating
+tag @s add xem.mind.expand.is_expanding
 
 #save prev gamemode
-execute if entity @s[gamemode=survival] run scoreboard players set @s xem.meditation.previous_gamemode 0
-execute if entity @s[gamemode=creative] run scoreboard players set @s xem.meditation.previous_gamemode 1
-execute if entity @s[gamemode=adventure] run scoreboard players set @s xem.meditation.previous_gamemode 2
-execute if entity @s[gamemode=spectator] run scoreboard players set @s xem.meditation.previous_gamemode 3
+execute if entity @s[gamemode=survival] run scoreboard players set @s xem.mind.meditation.previous_gamemode 0
+execute if entity @s[gamemode=creative] run scoreboard players set @s xem.mind.meditation.previous_gamemode 1
+execute if entity @s[gamemode=adventure] run scoreboard players set @s xem.mind.meditation.previous_gamemode 2
+execute if entity @s[gamemode=spectator] run scoreboard players set @s xem.mind.meditation.previous_gamemode 3
 #change gamemode
 gamemode spectator @s

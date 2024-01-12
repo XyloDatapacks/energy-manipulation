@@ -13,5 +13,5 @@ scoreboard players operation @s xem.mind.focus < #2000 xconst
 
 #mind status
 execute store success score @s xem.mind.is_concealed if score @s[tag=!xem.mind.expand.is_expanding] xem.mind.focus matches 66..
-execute store success score @s xem.mind.is_vulnerable if score @s[tag=!xem.mind.expand.is_expanding] xem.mind.focus matches ..33
+execute store success score @s xem.mind.is_vulnerable if score @s xem.mind.focus matches ..33
 
