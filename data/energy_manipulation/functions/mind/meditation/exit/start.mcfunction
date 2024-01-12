@@ -2,7 +2,7 @@ tag @s remove xem.meditation.is_meditating
 
 tag @s add xem.meditation.player
 execute as @e[type=minecraft:area_effect_cloud,tag=xem.meditation.entity] run function energy_manipulation:mind/meditation/exit/kill_entity
-execute at @s run tp @s ~ ~0.05 ~
+execute at @s run tp @s ~ ~0.55 ~
 tag @s remove xem.meditation.player
 
 #load from prev gamemode
