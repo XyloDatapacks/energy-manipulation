@@ -15,4 +15,4 @@ gamemode adventure @s[scores={xem.mind.meditation.previous_gamemode=2}]
 gamemode spectator @s[scores={xem.mind.meditation.previous_gamemode=3}]
 
 # give effect
-effect clear @s[predicate=energy_manipulation:mind/meditation/blindness] minecraft:blindness
+effect clear @s minecraft:blindness
