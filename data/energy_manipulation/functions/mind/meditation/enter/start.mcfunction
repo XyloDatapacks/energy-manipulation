@@ -1,6 +1,6 @@
 #body
 data remove storage energy_manipulation:op macro_data
-execute summon minecraft:marker run function energy_manipulation:mind/meditation/enter/get_rotation
+execute at @s summon minecraft:marker run function energy_manipulation:mind/meditation/enter/get_position
 function xylo_library:utilities/player_name/get_name
 data modify storage energy_manipulation:op macro_data.name set from storage xylo_library:op player_name
 function energy_manipulation:mind/meditation/enter/body with storage energy_manipulation:op macro_data
@@ -21,3 +21,6 @@ execute if entity @s[gamemode=adventure] run scoreboard players set @s xem.mind.
 execute if entity @s[gamemode=spectator] run scoreboard players set @s xem.mind.meditation.previous_gamemode 3
 #change gamemode
 gamemode spectator @s
+
+# give effect
+effect give @s minecraft:blindness infinite 245 true

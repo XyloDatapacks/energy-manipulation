@@ -6,6 +6,9 @@ execute on vehicle run data modify entity @s Owner set from storage energy_manip
 data modify storage gu:main in set from storage energy_manipulation:op temp_uuid
 function xylo_library:utilities/uuid/generate_from_storage
 execute on vehicle on passengers if entity @s[type=minecraft:marker] run data modify entity @s data.energy_manipulation.meditation.owner_uuid set from storage gu:main out
+# save position in player storage
+data remove storage energy_manipulation:op macro_data.name
+function energy_manipulation:mind/meditation/enter/save_pos_in_storage with storage gu:main {}
 
 # armor
 item replace entity @s armor.head from entity @a[tag=xem.mind.meditation.player,limit=1] armor.head
