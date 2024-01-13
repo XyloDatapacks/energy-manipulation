@@ -29,6 +29,14 @@
           }
         }
       ]
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "#xylo_library:projectile",
+        "nbt": "{inGround:1b}"
+      }
     }
   ]
 }

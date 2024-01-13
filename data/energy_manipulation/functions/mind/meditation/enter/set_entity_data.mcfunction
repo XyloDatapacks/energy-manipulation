@@ -26,3 +26,4 @@ execute on vehicle on passengers if entity @s[type=minecraft:marker] run scorebo
 scoreboard players operation #xem.mind.meditation.return_in_body xem.op = #xlib.time xlib.op
 scoreboard players operation #xem.mind.meditation.return_in_body xem.op += #xem.mind.meditation.refractory_time xem.op 
 execute on vehicle run scoreboard players operation @s xem.mind.meditation.end_time = #xem.mind.meditation.return_in_body xem.op
+
