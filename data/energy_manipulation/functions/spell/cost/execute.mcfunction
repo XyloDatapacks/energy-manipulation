@@ -9,6 +9,7 @@
 execute if score @s xem.spell.cost.died matches 1 store result score #xem.spell.cost.energy.cost_payed xem.op run return 0
 # creative
 execute if entity @s[gamemode=creative] store result score #xem.spell.cost.energy.cost_payed xem.op run return 1
+execute if entity @s[tag=xem.spell.unlimited_energy] store result score #xem.spell.cost.energy.cost_payed xem.op run return 1
 
 #==<ARMOR DISCOUNT>==#
 

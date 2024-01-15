@@ -10,10 +10,6 @@ execute unless data storage energy_manipulation:op target_in{entity_index:"all"}
 
 execute unless data storage energy_manipulation:op target_out run return 0
 
-# confirm entity found
-data modify storage energy_manipulation:op elements_array set from storage energy_manipulation:op target_out
-function energy_manipulation:spell/run/getters/target/validate_uuid/_array_validation
-data modify storage energy_manipulation:op target_out set from storage energy_manipulation:op elements_array
-execute store success score xem.spell.run.getters.target.found xem.op run data get storage energy_manipulation:op elements_array[-1].uuid
-execute unless score xem.spell.run.getters.target.found xem.op matches 1 run data remove storage energy_manipulation:op target_out
+# validate targets
+function energy_manipulation:spell/run/getters/target/validate_uuid/start
 

@@ -1,0 +1,1 @@
+$tellraw @a[tag=xem.debug.effect] [{"selector":"$(caster_uuid)"},{"text":" activated on "},{"selector":"$(uuid)"}]
