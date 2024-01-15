@@ -1,1 +1,1 @@
-data modify storage energy_manipulation:op target.selector set value "@e[type=minecraft:player"
+data modify storage energy_manipulation:op target.selector set value "@e[type=#energy_manipulation:player,predicate=energy_manipulation:spell/run/getters/target/player_or_clone"
