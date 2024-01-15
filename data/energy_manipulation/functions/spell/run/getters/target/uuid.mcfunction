@@ -18,6 +18,10 @@ data modify storage energy_manipulation:op target_out[-1].uuid set from storage 
 execute if entity @s[tag=xem.mind.meditation.entity] on vehicle on passengers if entity @s[type=minecraft:marker,tag=xem.mind.meditation.entity] run data modify storage energy_manipulation:op target_out[-1].origin_uuid set from entity @s data.energy_manipulation.meditation.owner_uuid
 # other rerouth cases here...
 
+# TODO
+# ignore check: is origin_uuid one of the entities to ignore? if yes then fail 
+# i have to apply the check only if volume selections cause, as of now, ignore is only on weak selectors
+
 #==<Output>==#
 
 # confirm entity found
