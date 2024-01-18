@@ -1,3 +1,5 @@
+# -> {owner_uuid}
+
 scoreboard players set #xem.mind.meditation.from_body_check.player_found xem.op 0
 $execute as $(owner_uuid) if entity @s[tag=xem.mind.expand.is_expanding] store success score #xem.mind.meditation.from_body_check.player_found xem.op run scoreboard players operation #xem.mind.meditation.from_body_check.player_end_time xem.op = @s xem.mind.meditation.end_time
 

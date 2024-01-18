@@ -38,15 +38,6 @@ execute if entity @s[predicate=xylo_library:double_sneak,scores={xlib.player.on_
 # attack
 #execute if entity @s[tag=xem.mind.expand.is_expanding] at @s positioned ~-0.05 ~-0.05 ~-0.05 as @e[type=!#xylo_library:non_mob,tag=!xem.mind.expand.is_expanding,dx=0,dy=0,dz=0] positioned ~-0.9 ~-0.9 ~-0.9 if entity @s[dx=0,dy=0,dz=0] run damage @s 1 magic
 
-execute if score @s test_jump matches 0 run ride @e[type=horse,limit=1,sort=nearest,tag=test1] dismount
-execute if score @s test_jump matches 1.. run ride @e[type=horse,limit=1,sort=nearest,tag=test1] mount @e[type=marker,limit=1,sort=nearest,tag=test1]
-execute at @s as @e[type=item_display,limit=1,sort=nearest,tag=test2] positioned as @s run tp @s ~ ~ ~ ~ ~
-execute if score @s test_jump matches 1.. run data remove storage energy_manipulation:op macro_data
-execute if score @s test_jump matches 1.. store result storage energy_manipulation:op macro_data.initial_speed double 0.2 run scoreboard players get @s test_jump
-execute if score @s test_jump matches 1.. rotated as @s run function energy_manipulation:spell/run/shape/_movement/_motion with storage energy_manipulation:op macro_data
-execute if score @s test_jump matches 1.. run data modify entity @e[type=snowball,limit=1,sort=nearest,tag=test2] Motion set from storage energy_manipulation:op temp_motion
-scoreboard players set @s test_jump 0
-
 #==<Trinkets>==#
 
 # scrying ward

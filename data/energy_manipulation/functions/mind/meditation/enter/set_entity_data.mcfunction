@@ -1,11 +1,9 @@
 tag @s remove xem.mind.meditation.entity_new
 # aoe origin
 execute on vehicle run tp @s ~ ~ ~ ~ ~
-execute on vehicle run data modify entity @s Owner set from storage energy_manipulation:op temp_uuid
+execute on vehicle run data modify entity @s Owner set from storage energy_manipulation:op meditation_player_uuid
 # marker hex uuid
-data modify storage gu:main in set from storage energy_manipulation:op temp_uuid
-function xylo_library:utilities/uuid/generate_from_storage
-execute on vehicle on passengers if entity @s[type=minecraft:marker] run data modify entity @s data.energy_manipulation.meditation.owner_uuid set from storage gu:main out
+execute on vehicle on passengers if entity @s[type=minecraft:marker] run data modify entity @s data.energy_manipulation.meditation.owner_uuid set from storage energy_manipulation:op meditation_player_hex_uuid
 # save position in player storage
 data remove storage energy_manipulation:op macro_data.name
 function energy_manipulation:mind/meditation/enter/save_pos_in_storage with storage gu:main {}

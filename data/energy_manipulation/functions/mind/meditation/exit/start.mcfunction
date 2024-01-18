@@ -3,7 +3,7 @@ tag @s remove xem.mind.expand.is_expanding
 
 tag @s add xem.mind.meditation.player
 scoreboard players set #xem.mind.meditation.exit.found_body xem.op 0
-execute as @e[type=minecraft:area_effect_cloud,tag=xem.mind.meditation.entity] run function energy_manipulation:mind/meditation/exit/kill_entity
+execute as @e[type=minecraft:area_effect_cloud,tag=xem.mind.meditation.entity] run function energy_manipulation:mind/meditation/exit/pos_from_body
 tag @s remove xem.mind.meditation.player
 execute if score #xem.mind.meditation.exit.found_body xem.op matches 0 run function xylo_library:utilities/uuid/generate
 execute if score #xem.mind.meditation.exit.found_body xem.op matches 0 run function energy_manipulation:mind/meditation/exit/pos_from_storage with storage gu:main {}
