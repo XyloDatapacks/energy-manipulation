@@ -16,3 +16,5 @@ execute on vehicle on vehicle if entity @s[tag=xem.spell.run.shape._movement.see
 
 # projectile correction (for display)
 execute on vehicle run function xylo_projectiles:position_correction/tick/start
+# fix marker rotation too
+execute at @s on vehicle rotated as @s on passengers run tp @s[type=minecraft:marker,tag=xem.spell.projectile_type] ~ ~ ~ ~ ~

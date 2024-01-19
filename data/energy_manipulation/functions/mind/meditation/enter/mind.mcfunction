@@ -27,5 +27,13 @@ execute align xyz positioned ~0.5 8298 ~0.5 as @e[type=minecraft:shulker,distanc
 data modify storage energy_manipulation:op meditation_mind_all_uuids.shulker_uuid set from storage gu:main out
 # pass all uuids to mind marker
 execute as @e[type=minecraft:item_display,distance=..0.01,limit=1,tag=xem.mind.meditation.mind.mind_entity_new] on passengers run data modify entity @s data.energy_manipulation.meditation set from storage energy_manipulation:op meditation_mind_all_uuids
-tag @e[type=minecraft:item_display,distance=..0.01,limit=1] remove xem.mind.meditation.mind.mind_entity_new
 
+#==<Life Time>==#
+
+# body life time
+scoreboard players operation #xem.mind.meditation.end_time xem.op = #xlib.time xlib.op
+scoreboard players operation #xem.mind.meditation.end_time xem.op += #xem.mind.meditation.duration xem.op 
+execute as @e[type=minecraft:item_display,distance=..0.01,limit=1,tag=xem.mind.meditation.mind.mind_entity_new] on passengers run scoreboard players operation @s xem.mind.meditation.end_time = #xem.mind.meditation.end_time xem.op
+
+# remove tag
+tag @e[type=minecraft:item_display,distance=..0.01,limit=1] remove xem.mind.meditation.mind.mind_entity_new

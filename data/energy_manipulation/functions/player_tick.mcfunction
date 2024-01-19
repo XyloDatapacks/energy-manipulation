@@ -35,8 +35,6 @@ execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players 
 
 # start
 execute if entity @s[predicate=xylo_library:double_sneak,scores={xlib.player.on_ground=1,xlib.player.rotation_y=8000..9000}] at @s run function energy_manipulation:mind/meditation/enter/start
-# attack
-#execute if entity @s[tag=xem.mind.expand.is_expanding] at @s positioned ~-0.05 ~-0.05 ~-0.05 as @e[type=!#xylo_library:non_mob,tag=!xem.mind.expand.is_expanding,dx=0,dy=0,dz=0] positioned ~-0.9 ~-0.9 ~-0.9 if entity @s[dx=0,dy=0,dz=0] run damage @s 1 magic
 
 #==<Trinkets>==#
 

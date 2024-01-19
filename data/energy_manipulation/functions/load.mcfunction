@@ -100,6 +100,11 @@ execute unless score #xem.mind.meditation.duration xem.op = #xem.mind.meditation
 execute unless score #xem.mind.meditation.refractory_time xem.op = #xem.mind.meditation.refractory_time xem.op run scoreboard players set #xem.mind.meditation.refractory_time xem.op 15
 scoreboard objectives add xem.mind.meditation.previous_gamemode dummy
 
+scoreboard objectives add xem.mind.meditation.mind.action.sneak_time dummy
+scoreboard objectives add xem.mind.meditation.mind.action.sneaking dummy
+scoreboard objectives add xem.mind.meditation.mind.action.double_sneak dummy
+scoreboard objectives add xem.mind.meditation.mind.action.double_sneak_time dummy
+
 #triggers
 scoreboard objectives add xem.settings.shape_particles trigger
 scoreboard objectives add xem.settings.gui trigger

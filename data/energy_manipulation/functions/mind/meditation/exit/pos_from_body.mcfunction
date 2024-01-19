@@ -2,6 +2,6 @@ execute store success score #xem.mind.meditation.exit.right_owner xem.op on orig
 execute unless score #xem.mind.meditation.exit.right_owner xem.op matches 1 run return 0
 
 execute at @s run tp @a[tag=xem.mind.meditation.player,limit=1] ~ ~0.55 ~ ~ ~
-function energy_manipulation:mind/meditation/exit/kill
+function energy_manipulation:mind/meditation/from_body_check/kill_body
 
 scoreboard players set #xem.mind.meditation.exit.found_body xem.op 1

@@ -86,6 +86,11 @@ scoreboard objectives remove xem.mind.focus
 scoreboard objectives remove xem.mind.meditation.end_time 
 scoreboard objectives remove xem.mind.meditation.previous_gamemode 
 
+scoreboard objectives remove xem.mind.meditation.mind.action.sneak_time 
+scoreboard objectives remove xem.mind.meditation.mind.action.sneaking 
+scoreboard objectives remove xem.mind.meditation.mind.action.double_sneak 
+scoreboard objectives remove xem.mind.meditation.mind.action.double_sneak_time 
+
 #triggers
 scoreboard objectives remove xem.settings.shape_particles 
 scoreboard objectives remove xem.settings.gui

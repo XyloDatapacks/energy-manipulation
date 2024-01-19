@@ -22,7 +22,7 @@ data modify storage energy_manipulation:op macro_data.name set from storage xylo
 function energy_manipulation:mind/meditation/enter/body with storage energy_manipulation:op macro_data
 
 #to make you see your body
-execute rotated ~ 15 run tp @s ^ ^0.5 ^-1.5 ~ ~
+execute rotated ~ 10 run tp @s ^ ^0.8 ^-1.5 ~ ~
 
 
 #==<Mind>==#
