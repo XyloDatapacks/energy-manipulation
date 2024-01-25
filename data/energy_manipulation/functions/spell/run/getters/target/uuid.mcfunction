@@ -15,7 +15,7 @@ data modify storage energy_manipulation:op target_out[-1].uuid set from storage 
 #==<REROUTH>==#
 
 #if this is rerouth entity, add origin_uuid
-execute if entity @s[tag=xem.mind.meditation.entity] on vehicle on passengers if entity @s[type=minecraft:marker,tag=xem.mind.meditation.entity] run data modify storage energy_manipulation:op target_out[-1].origin_uuid set from entity @s data.energy_manipulation.meditation.owner_uuid
+execute if entity @s[tag=xem.mind.meditation.entity] on vehicle on passengers if entity @s[type=minecraft:marker,tag=xem.mind.meditation.entity] run data modify storage energy_manipulation:op target_out[-1].origin_uuid set from entity @s data.xylo_library.clone.owner_uuid
 # other rerouth cases here...
 
 # TODO

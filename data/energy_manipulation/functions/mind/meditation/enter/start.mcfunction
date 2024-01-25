@@ -1,29 +1,10 @@
-ride @s dismount
-
-#==<Player Uuid>==#
-
-# player uuid
-data modify storage energy_manipulation:op meditation_player_uuid set from entity @s UUID
-# player hex uuid
-data modify storage gu:main in set from storage energy_manipulation:op meditation_player_uuid
-function xylo_library:utilities/uuid/generate_from_storage
-data modify storage energy_manipulation:op meditation_player_hex_uuid set from storage gu:main out
-
-
 #==<Body>==#
-
-data remove storage energy_manipulation:op macro_data
-# get position
-execute summon minecraft:marker run function energy_manipulation:mind/meditation/enter/get_position
-# get name
-function xylo_library:utilities/player_name/get_name
-data modify storage energy_manipulation:op macro_data.name set from storage xylo_library:op player_name
-# generate body
-function energy_manipulation:mind/meditation/enter/body with storage energy_manipulation:op macro_data
+data modify storage xylo_library:op clone_input_data set value {tags:["xem.mind.meditation.entity"],hitbox:{tags:["xem.mind.meditation.entity"]},marker:{tags:["xem.spell.non_selectable","xem.mind.meditation.entity"]},aoe:{tags:["xem.spell.non_selectable","xem.mind.meditation.entity"]}}
+execute store result storage xylo_library:op clone_input_data.duration int 1 run scoreboard players get #xem.mind.meditation.duration xem.op
+function xylo_library:internal/clone/generate/start
 
 #to make you see your body
 execute rotated ~ 10 run tp @s ^ ^0.8 ^-1.5 ~ ~
-
 
 #==<Mind>==#
 
