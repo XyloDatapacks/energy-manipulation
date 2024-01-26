@@ -8,13 +8,14 @@ ride @s dismount
 tp @s ^ ^ ^ ~ ~
 
 
-# validate target uuid since it was get from external library (it might be a rerouth entity)
+# validate target uuid since it was get from external library (it might be a reroute entity)
 execute if score xproj.position_correction.hit_entity xproj.op matches 1 run data remove storage energy_manipulation:op target_in
 execute if score xproj.position_correction.hit_entity xproj.op matches 1 run data modify storage energy_manipulation:op target_out set value [{uuid:""}]
 execute if score xproj.position_correction.hit_entity xproj.op matches 1 run data modify storage energy_manipulation:op target_out[0].uuid set from storage xylo_projectiles:op entity_hit.uuid
 execute if score xproj.position_correction.hit_entity xproj.op matches 1 run scoreboard players set #xem.spell.run.getters.target.validate_uuid.skip_tags xem.op 1
 execute if score xproj.position_correction.hit_entity xproj.op matches 1 run function energy_manipulation:spell/run/getters/target/validate_uuid/start
 execute if score xproj.position_correction.hit_entity xproj.op matches 1 run scoreboard players reset #xem.spell.run.getters.target.validate_uuid.skip_tags xem.op
+execute if score xproj.position_correction.hit_entity xproj.op matches 0 run scoreboard players set xem.spell.run.getters.target.found xem.op 0
 
 # update objects
 execute if score xem.spell.run.getters.target.found xem.op matches 1 run data modify entity @s data.energy_manipulation.spell_data.objects set from storage energy_manipulation:op target_out

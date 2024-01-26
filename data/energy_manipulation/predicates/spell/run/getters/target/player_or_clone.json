@@ -23,7 +23,7 @@
       "entity": "this",
       "predicate": {
         "type": "#energy_manipulation:player",
-        "nbt": "{Tags:[\"xem.mind.meditation.entity\"]}"
+        "nbt": "{Tags:[\"xlib.internal.clone\"]}"
       }
     }
   ]

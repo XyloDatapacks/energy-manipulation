@@ -5,10 +5,6 @@
 # out: "energy_manipulation:op target_out" (cleanded from targets not verified)
 # out: "xem.spell.run.getters.target.found xem.op"
 
-#tellraw @a[tag=xem.debug.rerouth] ["uuid:          ",{"storage":"energy_manipulation:data","nbt":"players[0].marked_entities[{index:1}].uuid","color":"green"}]
-#tellraw @a[tag=xem.debug.rerouth] ["origin uuid:  ",{"storage":"energy_manipulation:data","nbt":"players[0].marked_entities[{index:1}].origin_uuid","color":"dark_green"}]
-#tellraw @a[tag=xem.debug.rerouth] ["target in:    ",{"storage":"energy_manipulation:op","nbt":"target_out[0].uuid","color":"yellow"}]
-
 scoreboard players set xem.spell.run.getters.target.found xem.op 0
 
 #==<Entries Number>==#
@@ -49,4 +45,3 @@ scoreboard players reset #xem.spell.run.getters.target.validate_uuid.distance_ch
 execute store success score xem.spell.run.getters.target.found xem.op run data get storage energy_manipulation:op target_out[0].uuid
 
 
-#tellraw @a[tag=xem.debug.rerouth] ["target out:  ",{"storage":"energy_manipulation:op","nbt":"target_out[0].uuid","color":"gold"}]

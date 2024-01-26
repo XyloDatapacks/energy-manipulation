@@ -12,11 +12,15 @@ function xylo_library:utilities/uuid/generate
 data modify storage energy_manipulation:op target_out append value {}
 data modify storage energy_manipulation:op target_out[-1].uuid set from storage gu:main out
 
-#==<REROUTH>==#
+#==<Reroute Check>==#
+# Check if entity is a valid target or if there is some rerouting to do
+# (if "#xem.spell.run.getters.target._reroute.reroute_state xem.op" = 1, then i cannot select this entity)
 
-#if this is rerouth entity, add origin_uuid
-execute if entity @s[tag=xem.mind.meditation.entity] on vehicle on passengers if entity @s[type=minecraft:marker,tag=xem.mind.meditation.entity] run data modify storage energy_manipulation:op target_out[-1].origin_uuid set from entity @s data.xylo_library.clone.owner_uuid
-# other rerouth cases here...
+scoreboard players set #xem.spell.run.getters.target._reroute.selector_type xem.op 1
+scoreboard players set #xem.spell.run.getters.target._reroute.max_iterations xem.op 3
+function energy_manipulation:spell/run/getters/target/_reroute/check with storage energy_manipulation:op target_out[-1]
+execute if score #xem.spell.run.getters.target._reroute.reroute_state xem.op matches 1 run data remove storage energy_manipulation:op target_out[-1]
+execute if score #xem.spell.run.getters.target._reroute.reroute_state xem.op matches 1 run return 0
 
 # TODO
 # ignore check: is origin_uuid one of the entities to ignore? if yes then fail 
