@@ -13,7 +13,7 @@ $execute at $(uuid) run playsound energy_manipulation:spell.effect.pull player @
 
 #==<Validation Exit>==#
 execute if score #xem.spell.run.effect.validate_target xem.op matches 1.. run return 0
-execute if score #xem.spell.run.effect.validate_target xem.op matches -2..-1 run return 0
+execute if score #xem.spell.run.effect.validate_target xem.op matches -3..-1 run return 0
 #=====================#
 
 scoreboard players set #xem.spell.run.effect.pull.was_riding xem.op 0

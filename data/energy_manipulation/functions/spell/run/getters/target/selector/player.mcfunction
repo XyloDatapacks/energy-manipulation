@@ -1,1 +1,1 @@
-data modify storage energy_manipulation:op target.selector set value "@e[type=#energy_manipulation:player,predicate=energy_manipulation:spell/run/getters/target/player_or_clone"
+data modify storage energy_manipulation:op target.selector set value "@e[type=#xylo_library:player_or_clone,predicate=xylo_library:player_or_clone"

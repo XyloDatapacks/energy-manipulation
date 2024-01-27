@@ -8,7 +8,7 @@ $execute as $(uuid) store result score #xem.spell.run.effect.validate_target xem
 $execute at $(uuid) run playsound energy_manipulation:spell.effect.release_potion player @a ~ ~ ~ 1 1
 
 #==<Validation Exit>==#
-execute unless score #xem.spell.run.effect.validate_target xem.op matches 0 run return 0
+execute unless score #xem.spell.run.effect.validate_target xem.op matches 0 unless score #xem.spell.run.effect.validate_target xem.op matches -3 run return 0
 #=====================#
 
 
