@@ -84,7 +84,7 @@ scoreboard objectives remove xem.mind.is_concealed
 scoreboard objectives remove xem.mind.is_vulnerable 
 scoreboard objectives remove xem.mind.focus 
 scoreboard objectives remove xem.mind.meditation.end_time 
-scoreboard objectives remove xem.mind.meditation.previous_gamemode 
+scoreboard objectives remove xem.mind.meditation.start_time
 
 scoreboard objectives remove xem.mind.meditation.mind.action.sneak_time 
 scoreboard objectives remove xem.mind.meditation.mind.action.sneaking 

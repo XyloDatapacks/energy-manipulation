@@ -33,7 +33,7 @@ execute unless score #xem.spell.run.getters.target._reroute.selector_type xem.op
 # (#xem.spell.run.getters.target._reroute.selector_type xem.op = 1)
 
 # meditation
-execute if score #xem.spell.run.getters.target._reroute.selector_type xem.op matches 1 if entity @s[tag=xem.mind.expand.is_expanding] store result score #xem.spell.run.getters.target._reroute.reroute_state xem.op run return 1
+execute if score #xem.spell.run.getters.target._reroute.selector_type xem.op matches 1 if entity @s[tag=xem.mind.meditation.is_meditating] store result score #xem.spell.run.getters.target._reroute.reroute_state xem.op run return 1
 
 # others
 #...
@@ -42,8 +42,8 @@ execute if score #xem.spell.run.getters.target._reroute.selector_type xem.op mat
 # (#xem.spell.run.getters.target._reroute.selector_type xem.op = 2)
 
 # meditation
-execute if score #xem.spell.run.getters.target._reroute.selector_type xem.op matches 2 if entity @s[tag=xem.mind.expand.is_expanding] run function energy_manipulation:spell/run/getters/target/_reroute/type/expanded_mind/is_expanding_override with storage energy_manipulation:op target_out[-1]
-execute if score #xem.spell.run.getters.target._reroute.selector_type xem.op matches 2 if entity @s[tag=xem.mind.expand.is_expanding] store result score #xem.spell.run.getters.target._reroute.reroute_state xem.op run return 2
+execute if score #xem.spell.run.getters.target._reroute.selector_type xem.op matches 2 if entity @s[tag=xem.mind.meditation.is_meditating] run function energy_manipulation:spell/run/getters/target/_reroute/type/expanded_mind/is_expanding_override with storage energy_manipulation:op target_out[-1]
+execute if score #xem.spell.run.getters.target._reroute.selector_type xem.op matches 2 if entity @s[tag=xem.mind.meditation.is_meditating] store result score #xem.spell.run.getters.target._reroute.reroute_state xem.op run return 2
 
 # others
 #...

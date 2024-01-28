@@ -1,13 +1,22 @@
-# -> {owner_uuid}
+# -> {player_hex_uuid}
 
 #==<DISPOSE>==#
-# if player not found use dispose/_kill instead of the usual clone kill procedure, cause i want the storage to remain intact.
-# if player found i use kill_from_marker, cause it is an old clone and i don't care about the storage
+# if player not found or not meditating, then kill clone
+# if player found and meditating, if end times do not match, kill cause it is an old clone 
+scoreboard players set #xem.mind.meditation.from_body_check.disposed xem.op 0
 
 # get player existance and end time
 scoreboard players set #xem.mind.meditation.from_body_check.player_found xem.op 0
-$execute as $(owner_uuid) if entity @s[gamemode=spectator,tag=xem.mind.expand.is_expanding] store success score #xem.mind.meditation.from_body_check.player_found xem.op run scoreboard players operation #xem.mind.meditation.from_body_check.player_end_time xem.op = @s xem.mind.meditation.end_time
+$execute as $(player_hex_uuid) if entity @s[tag=xem.mind.meditation.is_meditating] store success score #xem.mind.meditation.from_body_check.player_found xem.op run scoreboard players operation #xem.mind.meditation.from_body_check.player_end_time xem.op = @s xem.mind.meditation.end_time
 # kill if player not found or not expanding
-execute if score #xem.mind.meditation.from_body_check.player_found xem.op matches 0 on vehicle run function xylo_library:internal/clone/dispose/_kill
+execute if score #xem.mind.meditation.from_body_check.player_found xem.op matches 0 store success score #xem.mind.meditation.from_body_check.disposed xem.op run function xylo_library:internal/clone/dispose/kill_from_marker/remove_from_player_storage_and_kill with storage energy_manipulation:op macro_data
+execute if score #xem.mind.meditation.from_body_check.disposed xem.op matches 1 run return 1
 # kill if player is expanding and end time != player end time (is an old clone left behind in unloaded chunks)
-execute if score #xem.mind.meditation.from_body_check.player_found xem.op matches 1 unless score #xem.mind.meditation.from_body_check.player_end_time xem.op = @s xlib.internal.clone.generate.end_time on vehicle run function xylo_library:internal/clone/dispose/_kill
+execute if score #xem.mind.meditation.from_body_check.player_found xem.op matches 1 unless score #xem.mind.meditation.from_body_check.player_end_time xem.op = @s xlib.internal.clone.generate.end_time store success score #xem.mind.meditation.from_body_check.disposed xem.op run function xylo_library:internal/clone/dispose/kill_from_marker/remove_from_player_storage_and_kill with storage energy_manipulation:op macro_data
+execute if score #xem.mind.meditation.from_body_check.disposed xem.op matches 1 run return 1
+
+#kill if time passed
+execute if score #xlib.time xlib.op >= @s xlib.internal.clone.generate.end_time store success score #xem.mind.meditation.from_body_check.disposed xem.op run function xylo_library:internal/clone/dispose/kill_from_marker/remove_from_player_storage_and_kill with storage energy_manipulation:op macro_data
+execute if score #xem.mind.meditation.from_body_check.disposed xem.op matches 1 run return 1
+# check for hibox entity
+$execute unless entity @s[predicate=xylo_library:internal/clone/has_hitbox] as $(player_hex_uuid) run function energy_manipulation:mind/meditation/exit/start

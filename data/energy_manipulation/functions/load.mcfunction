@@ -96,9 +96,9 @@ scoreboard objectives add xem.mind.is_concealed dummy
 scoreboard objectives add xem.mind.is_vulnerable dummy
 scoreboard objectives add xem.mind.focus dummy
 scoreboard objectives add xem.mind.meditation.end_time dummy
+scoreboard objectives add xem.mind.meditation.start_time dummy
 execute unless score #xem.mind.meditation.duration xem.op = #xem.mind.meditation.duration xem.op run scoreboard players set #xem.mind.meditation.duration xem.op 200
 execute unless score #xem.mind.meditation.refractory_time xem.op = #xem.mind.meditation.refractory_time xem.op run scoreboard players set #xem.mind.meditation.refractory_time xem.op 15
-scoreboard objectives add xem.mind.meditation.previous_gamemode dummy
 
 scoreboard objectives add xem.mind.meditation.mind.action.sneak_time dummy
 scoreboard objectives add xem.mind.meditation.mind.action.sneaking dummy
