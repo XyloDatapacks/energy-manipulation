@@ -35,7 +35,7 @@ execute as @e[type=minecraft:interaction,tag=xem.jar_of_energy.block] at @s unle
 #==<MEDITATION>==#
 
 execute as @e[type=minecraft:marker,tag=xem.mind.meditation.entity] run function energy_manipulation:mind/meditation/from_body_check/start
-
+execute as @e[type=minecraft:marker,tag=xem.mind.meditation.mind_entity] run function energy_manipulation:mind/meditation/from_mind_check/start
 
 #==<TRINKETS>==#
 
