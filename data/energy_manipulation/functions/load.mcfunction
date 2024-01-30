@@ -100,14 +100,14 @@ scoreboard objectives add xem.mind.meditation.start_time dummy
 execute unless score #xem.mind.meditation.duration xem.op = #xem.mind.meditation.duration xem.op run scoreboard players set #xem.mind.meditation.duration xem.op 200
 execute unless score #xem.mind.meditation.refractory_time xem.op = #xem.mind.meditation.refractory_time xem.op run scoreboard players set #xem.mind.meditation.refractory_time xem.op 15
 
-scoreboard objectives add xem.mind.meditation.mind.action.sneak_time dummy
-scoreboard objectives add xem.mind.meditation.mind.action.sneaking dummy
-scoreboard objectives add xem.mind.meditation.mind.action.double_sneak dummy
-scoreboard objectives add xem.mind.meditation.mind.action.double_sneak_time dummy
+scoreboard objectives add xem.mind.meditation.action.change_mode dummy
+scoreboard objectives add xem.mind.meditation.action.propel dummy
+scoreboard objectives add xem.mind.meditation.action.propel_time dummy
 
 #triggers
 scoreboard objectives add xem.settings.shape_particles trigger
 scoreboard objectives add xem.settings.gui trigger
+scoreboard objectives add xem.settings.spell_settings trigger
 
 # init
 execute store result score #xem.maxCommandChainLength xem.op run gamerule maxCommandChainLength

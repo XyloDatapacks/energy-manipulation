@@ -86,14 +86,14 @@ scoreboard objectives remove xem.mind.focus
 scoreboard objectives remove xem.mind.meditation.end_time 
 scoreboard objectives remove xem.mind.meditation.start_time
 
-scoreboard objectives remove xem.mind.meditation.mind.action.sneak_time 
-scoreboard objectives remove xem.mind.meditation.mind.action.sneaking 
-scoreboard objectives remove xem.mind.meditation.mind.action.double_sneak 
-scoreboard objectives remove xem.mind.meditation.mind.action.double_sneak_time 
+scoreboard objectives remove xem.mind.meditation.action.change_mode
+scoreboard objectives remove xem.mind.meditation.action.propel
+scoreboard objectives remove xem.mind.meditation.action.propel_time
 
 #triggers
 scoreboard objectives remove xem.settings.shape_particles 
 scoreboard objectives remove xem.settings.gui
+scoreboard objectives remove xem.settings.spell_settings
 
 #==<Storages>==#
 data remove storage energy_manipulation:spell nodes_values

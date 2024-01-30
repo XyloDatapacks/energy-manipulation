@@ -53,3 +53,7 @@ scoreboard players enable @a xem.settings.shape_particles
 execute as @a[scores={xem.settings.gui=1..}] run function energy_manipulation:trigger/gui/show_menu
 execute as @a[scores={xem.settings.gui=..-1}] run function energy_manipulation:trigger/gui/set_values_and_refresh
 scoreboard players enable @a xem.settings.gui
+
+execute as @a[scores={xem.settings.spell_settings=1..}] run function energy_manipulation:trigger/spell_settings/show_menu
+execute as @a[scores={xem.settings.spell_settings=..-1}] run function energy_manipulation:trigger/spell_settings/set_values_and_refresh
+scoreboard players enable @a xem.settings.spell_settings

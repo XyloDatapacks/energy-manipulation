@@ -24,14 +24,17 @@ function energy_manipulation:spell/cost/discount/start with storage energy_manip
 
 # init
 scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 0
+
+# raw energy (if use first)
+execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 if score @s[tag=xem.settings.spell_settings.use_raw_energy_first] xem.spell.raw_energy matches 1.. run function energy_manipulation:spell/cost/raw_energy/check
 #placed jar 
 execute align x align y align z positioned ~-20 ~-20 ~-20 as @e[type=minecraft:interaction,dx=40,dy=40,dz=40,tag=xem.jar_of_energy.block,sort=nearest] on vehicle if score @s xem.jar_of_energy.energy_count matches 1.. run function energy_manipulation:spell/cost/jar_block/check with storage energy_manipulation:op energy_cost
 # jar 
 execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 if entity @s[type=minecraft:player] run function energy_manipulation:spell/cost/jar/check with storage energy_manipulation:op energy_cost
 # energy
 execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 if entity @s[type=minecraft:player] run function energy_manipulation:spell/cost/energy/check with storage energy_manipulation:op energy_cost
-# raw energy
-execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 if score @s xem.spell.raw_energy matches 1.. run function energy_manipulation:spell/cost/raw_energy/check
+# raw energy (if not use first)
+execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 if score @s[tag=!xem.settings.spell_settings.use_raw_energy_first] xem.spell.raw_energy matches 1.. run function energy_manipulation:spell/cost/raw_energy/check
 
 # returns if paid
 execute if score #xem.spell.cost.energy.cost_payed xem.op matches 1 run return 1

@@ -23,13 +23,12 @@ execute unless score @s[predicate=energy_manipulation:spell/cost/pay_cost] xem.s
 function energy_manipulation:spell/casting_fatigue/tick
 function energy_manipulation:spell/casting_fatigue/calc
 
-#==<Focus>==#
-function energy_manipulation:mind/focus/player_tick
-
 #==<Raw Energy>==#
 execute if score #xlib.timer.10tick xlib.op matches 0 unless score @s xlib.player.reapawn_status matches -1 unless score @s xem.spell.cost.withering.total_saturation_to_pay matches 1.. unless score @s xem.spell.cost.withering.total_damage_to_pay matches 1.. unless score @s xem.spell.raw_energy >= #xem.spell.raw_energy.max xem.op run scoreboard players add @s xem.spell.raw_energy 1
 execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players operation @s xem.spell.raw_energy = #xem.spell.raw_energy.max xem.op
 
+#==<Focus>==#
+function energy_manipulation:mind/focus/player_tick
 
 #==<Meditation>==#
 
@@ -40,6 +39,10 @@ tag @s[scores={xlib.player.died=1}] remove xem.mind.meditation.is_meditating
 execute if entity @s[scores={xlib.player.joining=1..},tag=xem.mind.meditation.is_meditating] run function energy_manipulation:mind/meditation/exit/start
 execute if entity @s[tag=xem.mind.meditation.is_meditating] if score @s xem.mind.meditation.end_time <= #xlib.time xlib.op run function energy_manipulation:mind/meditation/exit/start
 execute if entity @s[tag=xem.mind.meditation.is_meditating,predicate=xylo_library:double_sneak] unless score @s xem.mind.meditation.start_time = #xlib.time xlib.op run function energy_manipulation:mind/meditation/exit/start
+
+# actions
+execute if entity @s[tag=xem.mind.meditation.is_meditating,scores={xem.mind.meditation.action.propel=1..}] if score #xlib.time xlib.op >= @s xem.mind.meditation.action.propel_time at @s run function energy_manipulation:mind/meditation/action/propel/start
+
 
 #==<Trinkets>==#
 
