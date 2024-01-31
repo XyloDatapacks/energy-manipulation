@@ -1,17 +1,24 @@
+# clear effects
+effect clear @s minecraft:invisibility
+effect clear @s minecraft:resistance
+
+# clear sb and tags
 tag @s remove xem.mind.meditation.is_meditating
 scoreboard players operation @s xem.mind.meditation.end_time = #xlib.time xlib.op
 scoreboard players remove @s xem.mind.meditation.end_time 1
 
 scoreboard players set @s xem.mind.meditation.action.propel 0
 
+# remove clone and tp to original pos
+data remove storage energy_manipulation:op meditation_data
 function xylo_library:utilities/uuid/generate
 function energy_manipulation:mind/meditation/exit/get_clone with storage gu:main {}
 
+# give back items
+data modify storage xylo_library:op set_inventory_in set from storage energy_manipulation:op meditation_data.inventory
+function xylo_library:utilities/set_inventory/start
 
-effect clear @s minecraft:invisibility
 #TODO
-# restore previous invisibility
-# restore items
-
+# give back effects and set health through export from clone data (import is done on xlib clone creation)
 # remove scale down
 # remove negative interaction range attributes
