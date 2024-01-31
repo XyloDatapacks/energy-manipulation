@@ -1,1 +1,1 @@
-function energy_manipulation:spell/run/effect/none/particles/projectile/dark
+function energy_manipulation:spell/run/effect/none/particles/dart/dark

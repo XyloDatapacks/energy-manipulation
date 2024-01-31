@@ -1,2 +1,2 @@
-particle minecraft:end_rod ^ ^0.06 ^ 0.03 0.03 0.03 0.01 2 force @a[tag=!xem.spell.disable_particles.projectile]
-particle minecraft:end_rod ^ ^0.06 ^-0.5 0.03 0.03 0.03 0.02 2 force @a[tag=!xem.spell.disable_particles.projectile]
+particle minecraft:end_rod ^ ^0.06 ^ 0.03 0.03 0.03 0.01 2 force @a[tag=!xem.spell.disable_particles.dart]
+particle minecraft:end_rod ^ ^0.06 ^-0.5 0.03 0.03 0.03 0.02 2 force @a[tag=!xem.spell.disable_particles.dart]
