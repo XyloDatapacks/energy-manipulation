@@ -1,6 +1,5 @@
 # clear effects
-effect clear @s minecraft:invisibility
-effect clear @s minecraft:resistance
+effect clear @s 
 
 # clear sb and tags
 tag @s remove xem.mind.meditation.is_meditating
@@ -18,7 +17,10 @@ function energy_manipulation:mind/meditation/exit/get_clone with storage gu:main
 data modify storage xylo_library:op set_inventory_in set from storage energy_manipulation:op meditation_data.inventory
 function xylo_library:utilities/set_inventory/start
 
+# set effects
+data modify storage xylo_library:op set_effects_in set from storage energy_manipulation:op meditation_data.active_effects
+function xylo_library:utilities/set_effects/start
+
 #TODO
-# give back effects and set health through export from clone data (import is done on xlib clone creation)
 # remove scale down
 # remove negative interaction range attributes

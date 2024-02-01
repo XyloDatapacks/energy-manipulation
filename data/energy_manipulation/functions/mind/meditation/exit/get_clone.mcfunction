@@ -11,7 +11,7 @@ data modify storage energy_manipulation:op macro_data.marker_hex_uuid set from s
 function xylo_library:internal/clone/dispose/kill_from_marker/remove_from_player_storage_and_kill with storage energy_manipulation:op macro_data
 
 # update mind data
-data modify storage energy_manipulation:op meditation_data.clone merge from storage xylo_library:op clone_data
+data modify storage energy_manipulation:op meditation_data merge from storage xylo_library:op clone_output_data
 
 # tp
 function energy_manipulation:mind/meditation/exit/tp with storage energy_manipulation:op meditation_data.clone

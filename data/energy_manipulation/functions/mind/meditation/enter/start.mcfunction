@@ -2,6 +2,7 @@
 
 # generate clone
 data modify storage xylo_library:op clone_input_data set value {tags:["xem.mind.meditation.entity"],hitbox:{tags:["xem.mind.meditation.entity","xem.spell.run.getters.target._reroute.entity"]},marker:{tags:["xem.spell.non_selectable","xem.mind.meditation.entity"]},aoe:{tags:["xem.spell.non_selectable","xem.mind.meditation.entity"]}}
+data modify storage xylo_library:op clone_input_data.active_effects set from storage xylo_library:op player_data.active_effects
 execute store result storage xylo_library:op clone_input_data.duration int 1 run scoreboard players get #xem.mind.meditation.duration xem.op
 function xylo_library:internal/clone/generate/start
 
@@ -10,6 +11,7 @@ data modify storage energy_manipulation:op meditation_data set value {}
 data modify storage energy_manipulation:op meditation_data.clone set from storage xylo_library:op clone_data
 data modify storage energy_manipulation:op meditation_data.inventory set from storage xylo_library:op player_data.Inventory
 data modify storage energy_manipulation:op meditation_data.active_effects set from storage xylo_library:op player_data.active_effects
+execute store result storage energy_manipulation:op meditation_data.start_time int 1 run scoreboard players get #xlib.time xlib.op
 function energy_manipulation:mind/meditation/enter/save_in_storage with storage xylo_library:op clone_owner_hex_uuid
 
 #to make you see your body
@@ -44,6 +46,7 @@ execute on vehicle on passengers run data modify entity @s[type=minecraft:marker
 #==<Setup Player>==#
 
 tag @s remove xem.mind.meditation.enter.notification
+effect clear @s
 effect give @s minecraft:invisibility infinite 100 true
 effect give @s minecraft:resistance infinite 100 true
 function xylo_library:utilities/lock_inventory/start
