@@ -51,6 +51,10 @@ effect clear @s
 effect give @s minecraft:invisibility infinite 100 true
 effect give @s minecraft:resistance infinite 100 true
 function xylo_library:utilities/lock_inventory/start
+item replace entity @s armor.head with minecraft:air
+item replace entity @s armor.chest with minecraft:air
+item replace entity @s armor.legs with minecraft:air
+item replace entity @s armor.feet with minecraft:air 
 
 #TODO 1.21
 # scale down player
