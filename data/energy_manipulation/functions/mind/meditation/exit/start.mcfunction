@@ -21,6 +21,6 @@ function xylo_library:utilities/set_inventory/start
 data modify storage xylo_library:op set_effects_in set from storage energy_manipulation:op meditation_data.active_effects
 function xylo_library:utilities/set_effects/start
 
-#TODO
+#TODO 1.21
 # remove scale down
 # remove negative interaction range attributes
