@@ -1,5 +1,5 @@
 # fill
-execute store result score #xem.jar_of_energy.fill.last_count xem.op run random value 1..4 minecraft:entities/player
+execute store result score #xem.jar_of_energy.fill.last_count xem.op run random value 4..16 minecraft:entities/player
 execute store result storage energy_manipulation:op temp_data int 1 run scoreboard players get #xem.jar_of_energy.fill.last_count xem.op
 
 # calc percentage

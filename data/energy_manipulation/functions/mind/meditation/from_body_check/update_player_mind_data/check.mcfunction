@@ -1,4 +1,5 @@
 # -> {player_hex_uuid}
+# in: "xylo_library:op clone_output_data"
 
 # get mind data
 data remove storage energy_manipulation:op meditation_data

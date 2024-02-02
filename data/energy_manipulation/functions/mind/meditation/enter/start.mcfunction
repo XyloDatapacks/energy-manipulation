@@ -7,11 +7,8 @@ execute store result storage xylo_library:op clone_input_data.duration int 1 run
 function xylo_library:internal/clone/generate/start
 
 # save clone data in energy_manipulation:data player's storage
-data modify storage energy_manipulation:op meditation_data set value {}
-data modify storage energy_manipulation:op meditation_data.clone set from storage xylo_library:op clone_data
+data modify storage energy_manipulation:op meditation_data set from storage xylo_library:op clone_output_data
 data modify storage energy_manipulation:op meditation_data.inventory set from storage xylo_library:op player_data.Inventory
-data modify storage energy_manipulation:op meditation_data.active_effects set from storage xylo_library:op player_data.active_effects
-execute store result storage energy_manipulation:op meditation_data.start_time int 1 run scoreboard players get #xlib.time xlib.op
 function energy_manipulation:mind/meditation/enter/save_in_storage with storage xylo_library:op clone_owner_hex_uuid
 
 #to make you see your body
