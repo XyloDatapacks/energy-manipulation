@@ -1,3 +1,7 @@
+# <@> player
+
+execute at @s run function energy_manipulation:mind/meditation/fx/enter/start
+
 #==<Body>==#
 
 # generate clone
