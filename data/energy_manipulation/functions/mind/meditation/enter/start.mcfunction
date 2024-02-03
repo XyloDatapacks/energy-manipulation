@@ -46,7 +46,7 @@ execute on vehicle on passengers run data modify entity @s[type=minecraft:marker
 
 #==<Setup Player>==#
 
-execute unless score @s xem.mind.meditation.action.change_mode = @s xem.mind.meditation.action.change_mode run scoreboard players set @s xem.mind.meditation.action.change_mode 0
+execute unless score @s xem.mind.meditation.action.attack_mode = @s xem.mind.meditation.action.attack_mode run scoreboard players set @s xem.mind.meditation.action.attack_mode 0
 tag @s remove xem.mind.meditation.enter.notification
 effect clear @s
 effect give @s minecraft:invisibility infinite 100 true

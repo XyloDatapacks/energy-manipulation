@@ -86,7 +86,7 @@ scoreboard objectives remove xem.mind.focus
 scoreboard objectives remove xem.mind.meditation.end_time 
 scoreboard objectives remove xem.mind.meditation.start_time
 
-scoreboard objectives remove xem.mind.meditation.action.change_mode
+scoreboard objectives remove xem.mind.meditation.action.attack_mode
 scoreboard objectives remove xem.mind.meditation.action.propel
 scoreboard objectives remove xem.mind.meditation.action.propel_time
 

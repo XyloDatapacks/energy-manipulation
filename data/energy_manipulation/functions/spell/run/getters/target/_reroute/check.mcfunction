@@ -1,5 +1,26 @@
 # -> {uuid}
 
+# checks whether this entity can be selected or not, or if a reroute entity should be chosen instead
+# has to be run in both volume check and validate_uuid (since they are the two ways a target can be chosen)
+
+# in: "#xem.spell.run.getters.target._reroute.max_iterations xem.op"
+
+# in: "#xem.spell.run.getters.target._reroute.selector_type xem.op"
+#   context running the function
+#   1 -> volume check
+#   2 -> validate uuid
+
+# in: "energy_manipulation:op target_out[-1]"
+
+# return:
+#   0 -> should get selected as normal
+#   1 -> should not get selected
+#   2 -> should select reroute entity
+# out:
+#   adjusted "energy_manipulation:op target_out[-1]" (only if selector_type = 2)
+#   
+
+
 #execute if score #xem.spell.run.getters.target._reroute.max_iterations xem.op matches 3 run tellraw @a[tag=xem.debug.reroute] "\n\n\n" 
 #tellraw @a[tag=xem.debug.reroute] "---------------------------------------------" 
 #tellraw @a[tag=xem.debug.reroute] ["target in:\n",{"storage":"energy_manipulation:op","nbt":"target_out[-1].uuid","color":"yellow"}]
