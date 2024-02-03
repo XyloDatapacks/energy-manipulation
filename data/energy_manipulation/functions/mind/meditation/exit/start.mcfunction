@@ -17,6 +17,8 @@ data remove storage energy_manipulation:op meditation_data
 function xylo_library:utilities/uuid/generate
 function energy_manipulation:mind/meditation/exit/get_clone with storage gu:main {}
 
+
+
 # give back items
 data modify storage xylo_library:op set_inventory_in set from storage energy_manipulation:op meditation_data.inventory
 function xylo_library:utilities/set_inventory/start

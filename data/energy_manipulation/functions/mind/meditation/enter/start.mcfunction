@@ -27,6 +27,8 @@ scoreboard players operation #xem.mind.meditation.end_time xem.op += #xem.mind.m
 scoreboard players operation @s xem.mind.meditation.end_time = #xem.mind.meditation.end_time xem.op
 tag @s add xem.mind.meditation.is_meditating
 
+
+
 #==<Mind Stack>==#
 
 # mind stack
