@@ -10,6 +10,11 @@ execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0] run return 1
 tag @e[distance=..65] add retina.executing
 tag @s remove retina.executing
 
+#TargetEntities:true,OverrideExecutingEntity:true
+# xylo_retina:traverse
+
+# TODO override running enitity, limit distance
+
 # try raycast eyes
 data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:64,TargetEntities:true,OverrideExecutingEntity:true}
 execute facing entity @s eyes run function xylo_retina:traverse/setup_no_entity

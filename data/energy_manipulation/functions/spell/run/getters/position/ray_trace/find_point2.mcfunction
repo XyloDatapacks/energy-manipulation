@@ -1,5 +1,10 @@
 $execute if score #xem.spell.run.getters.position.ray_trace.blocks xem.op matches 0 if score #xem.spell.run.getters.position.ray_trace.entities xem.op matches 0 positioned ^ ^ ^$(max_distance_int) summon minecraft:marker run function energy_manipulation:spell/run/getters/position/ray_trace/xlm.get_position
 
+#TargetEntities:true,ExpandEntityHitboxes:0.2,IgnoreBlocks
+# xylo_retina:traverse
+
+# TODO: limit distance, expand hitbox 0.2, exclude running entity
+
 #retina cast
 data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:50,TargetEntities:true,ExpandEntityHitboxes:0.2}
 execute if score #xem.spell.run.getters.position.ray_trace.entities xem.op matches 0 run data modify storage xylo_retina:input TargetEntities set value false
