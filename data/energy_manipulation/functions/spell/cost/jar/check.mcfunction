@@ -15,7 +15,7 @@ data remove storage energy_manipulation:op jars_in_inventory[{tag:{energy_manipu
 
 # prepare to loop
 execute store result score #xem.spell.cost.jar.jar_count xem.op run data get storage energy_manipulation:op jars_in_inventory
-execute unless score #xem.spell.cost.jar.jar_count xem.op matches 1.. run return 0
+execute unless score #xem.spell.cost.jar.jar_count xem.op matches 1.. run return fail
 # loop
 scoreboard players set #xem.spell.cost.energy.cost_actually_paid xem.op 0
 execute if score #xem.spell.cost.jar.jar_count xem.op matches 1.. run function energy_manipulation:spell/cost/jar/loop
@@ -30,5 +30,4 @@ execute store result storage energy_manipulation:op energy_cost.cost int 1 run s
 # if remaining cost is > 1 then i did not pay. so return 0
 execute if score #xem.spell.cost.remaining_cost xem.op matches 1.. run return 0
 # if energy was enough return cost_payed 1 (and return 1)
-scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1
-return 1
+return run scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1

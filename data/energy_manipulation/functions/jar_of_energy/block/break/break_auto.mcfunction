@@ -1,6 +1,5 @@
 execute store result score #xem.jar_of_energy.block.break.auto.invalid_block xem.op if block ~ ~ ~ #minecraft:fire
-execute if score #xem.jar_of_energy.block.break.auto.invalid_block xem.op matches 1 run setblock ~ ~ ~ minecraft:air
-execute if score #xem.jar_of_energy.block.break.auto.invalid_block xem.op matches 1 run return 0
+execute if score #xem.jar_of_energy.block.break.auto.invalid_block xem.op matches 1 run return run setblock ~ ~ ~ minecraft:air
 
 #apply modifier to update description (sets "energy_manipulation:op jar")
 execute on vehicle run function energy_manipulation:jar_of_energy/block/break/calc_fill

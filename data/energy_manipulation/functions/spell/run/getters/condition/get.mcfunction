@@ -16,3 +16,5 @@ function energy_manipulation:spell/run/getters/condition/sort with storage energ
 execute if data storage energy_manipulation:op condition_in{inverted:"true_boolean"} run scoreboard players remove xem.spell.run.getters.condition.passed xem.op 1
 execute if score xem.spell.run.getters.condition.passed xem.op matches -1 run scoreboard players set xem.spell.run.getters.condition.passed xem.op 1
 
+# return value
+return run scoreboard players get xem.spell.run.getters.condition.passed xem.op

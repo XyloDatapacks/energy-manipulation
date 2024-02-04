@@ -4,13 +4,11 @@
 
 # kill and return + particles for cost not paid if caster died
 execute if score #xem.spell.run.caster_still_alive xem.op matches 0 at @s run function energy_manipulation:spell/cost/fx_spell_cost_not_paid
-execute if score #xem.spell.run.caster_still_alive xem.op matches 0 run kill @s
-execute if score #xem.spell.run.caster_still_alive xem.op matches 0 run return 1
+execute if score #xem.spell.run.caster_still_alive xem.op matches 0 run return run kill @s
 
 # kill and return if done 
 execute store success score #xem.spell.run.elaborate.excede_max_index xem.op if score @s xem.spell.run.elaborate.concatenate_index >= @s xem.spell.run.elaborate.concatenate_index_max
-execute if score #xem.spell.run.elaborate.excede_max_index xem.op matches 1 run kill @s
-execute if score #xem.spell.run.elaborate.excede_max_index xem.op matches 1 run return 1
+execute if score #xem.spell.run.elaborate.excede_max_index xem.op matches 1 run return run kill @s
 
 # get data
 data modify storage energy_manipulation:op running_spell_marker set from entity @s {}

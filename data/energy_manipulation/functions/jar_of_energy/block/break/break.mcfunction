@@ -1,7 +1,7 @@
-execute on attacker if entity @s[tag=!xem.jar_of_energy.block.break] run return 0
+execute on attacker if entity @s[tag=!xem.jar_of_energy.block.break] run return fail
 
 #end loop
-execute unless score xem.jar_of_energy.block.break.loop xem.op matches 1.. run return 0
+execute unless score xem.jar_of_energy.block.break.loop xem.op matches 1.. run return fail
 scoreboard players set xem.jar_of_energy.block.break.loop xem.op 0
 
 #apply modifier to update description (sets "energy_manipulation:op jar")

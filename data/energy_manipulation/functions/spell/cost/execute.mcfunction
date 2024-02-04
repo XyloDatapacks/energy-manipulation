@@ -1,15 +1,16 @@
 # in: "energy_manipulation:op energy_cost" {cost,type}
 # out: #xem.spell.cost.energy.cost_payed xem.op
+# return: same value of cost_payed
 
 # tellraw @a[tag=xem.debug] ["",{"storage":"energy_manipulation:op","nbt":"energy_cost.cost","color":"aqua"}]
 
 #==<EXIT CONDITIONS>==#
 
 # return (fail) if dead
-execute if score @s xem.spell.cost.died matches 1 store result score #xem.spell.cost.energy.cost_payed xem.op run return 0
+execute if score @s xem.spell.cost.died matches 1 run return run scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 0
 # creative
-execute if entity @s[gamemode=creative] store result score #xem.spell.cost.energy.cost_payed xem.op run return 1
-execute if entity @s[tag=xem.spell.unlimited_energy] store result score #xem.spell.cost.energy.cost_payed xem.op run return 1
+execute if entity @s[gamemode=creative] run return run scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1
+execute if entity @s[tag=xem.spell.unlimited_energy] run return run scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1
 
 #==<ARMOR DISCOUNT>==#
 
@@ -45,3 +46,4 @@ execute if score #xem.spell.cost.energy.cost_payed xem.op matches 1 run return 1
 execute store result score #xem.spell.cost.remaining_cost xem.op run data get storage energy_manipulation:op energy_cost.cost
 # withering (in: #xem.spell.cost.remaining_cost xem.op)
 execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 run function energy_manipulation:spell/cost/withering/calc
+return run scoreboard players get #xem.spell.cost.energy.cost_payed xem.op

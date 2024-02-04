@@ -10,7 +10,7 @@ scoreboard players operation #xem.spell.cost.remaining_cost xem.op -= #xem.spell
 function energy_manipulation:spell/cost/jar/remove_energy
 
 # if all cost paid, return
-execute unless score #xem.spell.cost.remaining_cost xem.op matches 1.. run return 0
+execute unless score #xem.spell.cost.remaining_cost xem.op matches 1.. run return 1
 
 # loop
 data remove storage energy_manipulation:op jars_in_inventory[0]

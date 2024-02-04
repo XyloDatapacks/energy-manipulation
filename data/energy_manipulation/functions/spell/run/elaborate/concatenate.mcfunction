@@ -17,9 +17,8 @@
 data modify storage energy_manipulation:op energy_cost set from storage energy_manipulation:op selected_concatenate.concatenate.cost
 data modify storage energy_manipulation:op energy_cost.caster set from storage energy_manipulation:op running_spell_marker.data.energy_manipulation.spell_data.caster
 function energy_manipulation:spell/cost/pay with storage energy_manipulation:op energy_cost
-execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 run kill @s
 execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 at @s run function energy_manipulation:spell/cost/fx_spell_cost_not_paid
-execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 run return 1
+execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 run return run kill @s
 
 # get data
 data modify storage energy_manipulation:op initial_position set from storage energy_manipulation:op running_spell_marker.Pos
@@ -43,15 +42,13 @@ execute if score xem.spell.run.elaborate.instructions_count xem.op matches 1.. r
 scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1
 execute unless score xem.spell.run.elaborate.instructions_count xem.op matches ..-1 run function energy_manipulation:spell/run/elaborate/run_shape
 # kill if failed to pay for extra shape costs
-execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 run kill @s
 execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 at @s run function energy_manipulation:spell/cost/fx_spell_cost_not_paid
-execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 run return 1
+execute unless score #xem.spell.cost.energy.cost_payed xem.op matches 1 run return run kill @s
 
 #===================#
 
 # kill and return if done and not in shape form
-execute if score #xem.spell.run.elaborate.concatenate_index xem.op >= #xem.spell.run.elaborate.concatenate_index_max xem.op unless data storage energy_manipulation:op running_spell_marker_update{Tags:[xem.spell.inactive]} run kill @s
-execute if score #xem.spell.run.elaborate.concatenate_index xem.op >= #xem.spell.run.elaborate.concatenate_index_max xem.op unless data storage energy_manipulation:op running_spell_marker_update{Tags:[xem.spell.inactive]} run return 1
+execute if score #xem.spell.run.elaborate.concatenate_index xem.op >= #xem.spell.run.elaborate.concatenate_index_max xem.op unless data storage energy_manipulation:op running_spell_marker_update{Tags:[xem.spell.inactive]} run return run kill @s
 
 # update data
 data modify storage energy_manipulation:op running_spell_marker_update.Pos set from storage energy_manipulation:op initial_position

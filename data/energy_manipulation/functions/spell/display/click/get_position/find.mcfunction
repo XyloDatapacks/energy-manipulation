@@ -1,3 +1,5 @@
+# return: position index
+
 # find position based on the distance of the point from the player (since i moved twice by one, i can consider the start and end point as points on a circonference, centered in the ending point of the first movement)
 # i can use the cosine theorem to get the distance between start and end point based on an angle = (2r^2 * (1 - cos(angle)))^(1/2)
 # distance x or y = (2r^2 * (1 - cos(angle)))^(1/2) * cos(pi/2 - angle/2)

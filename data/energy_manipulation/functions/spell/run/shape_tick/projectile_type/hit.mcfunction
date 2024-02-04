@@ -10,5 +10,3 @@ execute on passengers run kill @s[tag=xproj.position_correction]
 execute at @s on passengers if entity @s[tag=xem.spell.shape_marker] run function energy_manipulation:spell/run/shape_tick/projectile_type/hit_action
 kill @s
 
-# set hit to block parent function
-scoreboard players set #xem.spell.run.shape_tick.projectile_type.hit xem.op 1

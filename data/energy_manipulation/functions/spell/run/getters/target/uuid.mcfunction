@@ -1,9 +1,7 @@
 #==<Can Select Target Check>==#
 
 #extra check for concealed targets
-scoreboard players set #xem.spell.run.getters.target._is_in_sight xem.op 1
-execute if score #xem.spell.run.getters.target.get.ignore_focus xem.op matches 0 if score @s xem.mind.is_concealed matches 1 run function energy_manipulation:spell/run/getters/target/_is_in_sight
-execute if score #xem.spell.run.getters.target._is_in_sight xem.op matches 0 run return 0
+execute if score #xem.spell.run.getters.target.get.ignore_focus xem.op matches 0 if score @s xem.mind.is_concealed matches 1 unless function energy_manipulation:spell/run/getters/target/_is_in_sight run return 0
 
 #==<Get UUID>==#
 
@@ -19,8 +17,7 @@ data modify storage energy_manipulation:op target_out[-1].uuid set from storage 
 scoreboard players set #xem.spell.run.getters.target._reroute.selector_type xem.op 1
 scoreboard players set #xem.spell.run.getters.target._reroute.max_iterations xem.op 3
 function energy_manipulation:spell/run/getters/target/_reroute/check with storage energy_manipulation:op target_out[-1]
-execute if score #xem.spell.run.getters.target._reroute.reroute_state xem.op matches 1 run data remove storage energy_manipulation:op target_out[-1]
-execute if score #xem.spell.run.getters.target._reroute.reroute_state xem.op matches 1 run return 0
+execute if score #xem.spell.run.getters.target._reroute.reroute_state xem.op matches 1 run return run data remove storage energy_manipulation:op target_out[-1]
 
 # TODO
 # ignore check: is origin_uuid one of the entities to ignore? if yes then fail 

@@ -24,8 +24,7 @@ function energy_manipulation:spell/casting_fatigue/find_caster with storage ener
 
 # kill and return + particles for excess number
 execute unless score #xem.spell.casting_fatigue.check_passed xem.op matches 1 at @s run function energy_manipulation:spell/cost/fx_spell_cost_not_paid
-execute unless score #xem.spell.casting_fatigue.check_passed xem.op matches 1 run kill @s
-execute unless score #xem.spell.casting_fatigue.check_passed xem.op matches 1 run return 0
+execute unless score #xem.spell.casting_fatigue.check_passed xem.op matches 1 run return run kill @s
 
 #init split counter
 scoreboard players set #xem.spell.run.elaborate.split.split_number xem.op 0 

@@ -1,8 +1,3 @@
-# out: #xem.spell.cost.energy.concatenate_cost_paid_generic xem.op (-1 not payed, 1 payed)
-# *out: #xem.spell.cost.energy.cost_payed xem.op (1 if payed, else keep value)
-
-# init
-scoreboard players set #xem.spell.cost.energy.concatenate_cost_paid_generic xem.op -1
-# check
-function energy_manipulation:spell/cost/energy/generic_check with storage energy_manipulation:op energy_cost
-execute if score #xem.spell.cost.energy.concatenate_cost_paid_generic xem.op matches 1 run scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1
+# check energy amount (same as for other energy types)
+$execute store result score #xem.spell.cost.energy.cost_actually_paid xem.op run clear @s minecraft:charcoal{xylo:{id_tags:["energy_manipulation:energy"]}} $(cost)
+scoreboard players operation #xem.spell.cost.remaining_cost xem.op -= #xem.spell.cost.energy.cost_actually_paid xem.op 

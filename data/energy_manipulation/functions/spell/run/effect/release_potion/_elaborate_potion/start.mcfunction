@@ -1,4 +1,7 @@
 # <@> caster
+# return:
+#   1: success
+#   0: fail
 
 function energy_manipulation:spell/run/effect/release_potion/_get_potion/start
 execute unless data storage energy_manipulation:op spell_effect.potion{id:"minecraft:potion"} run return 0

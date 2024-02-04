@@ -1,3 +1,6 @@
-$execute as $(uuid) if entity @s[distance=..32] store success score #xem.trinket.translocation_ward.still_in_range xem.op run return 1
-scoreboard players set #xem.trinket.translocation_ward.still_in_range xem.op 0
-return 0
+# return:
+#   1: found entity in range
+#   fail: entity not found
+
+$execute as $(uuid) if entity @s[distance=..32] run return 1
+return fail

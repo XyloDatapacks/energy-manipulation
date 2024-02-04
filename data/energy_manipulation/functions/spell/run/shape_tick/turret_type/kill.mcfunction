@@ -12,9 +12,7 @@ tag @s remove xem.spell.turret_type.terminate.condition
 # check for terminate instruction (if none, kill and return)
 data modify storage energy_manipulation:op turret_type_instruction_data set from entity @s {}
 execute store success score #xem.spell.run.shape_tick.turret_type.kill.has_instruction xem.op if data storage energy_manipulation:op turret_type_instruction_data.data.energy_manipulation.shape.terminate.instruction
-execute if score #xem.spell.run.shape_tick.turret_type.kill.has_instruction xem.op matches 0 run kill @s
-execute if score #xem.spell.run.shape_tick.turret_type.kill.has_instruction xem.op matches 0 run return 1
-
+execute if score #xem.spell.run.shape_tick.turret_type.kill.has_instruction xem.op matches 0 run return run kill @s
 
 #get rest of the data needed for concatenate context
 scoreboard players operation #xem.spell.run.elaborate.concatenate_index xem.op = @s xem.spell.run.elaborate.concatenate_index 

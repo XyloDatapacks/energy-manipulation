@@ -6,8 +6,7 @@ data modify storage energy_manipulation:op running_spell_data set from storage e
 
 # test condition
 data modify storage energy_manipulation:op condition_in set from storage energy_manipulation:op turret_type_condition_data.data.energy_manipulation.shape.terminate.condition
-function energy_manipulation:spell/run/getters/condition/get
-execute unless score xem.spell.run.getters.condition.passed xem.op matches 1 run return 0
+execute unless function energy_manipulation:spell/run/getters/condition/get run return 0
 
 function energy_manipulation:spell/run/shape_tick/turret_type/kill
 return 1
