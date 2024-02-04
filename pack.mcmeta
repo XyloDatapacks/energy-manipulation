@@ -2,15 +2,7 @@
     "id": "xylo.energy_manipulation",
     "pack": {
         "description": "Energy Manipulation. By Xylo_Datapacks",
-        "pack_format": 26,
-        "supported_formats": [18, 26]
-    },
-    "overlays": {
-        "entries": [
-            {
-                "formats": 18,
-                "directory": "overlay_1-20-2"
-            }
-        ]
+        "pack_format": 30,
+        "supported_formats": [26, 30]
     }
 }

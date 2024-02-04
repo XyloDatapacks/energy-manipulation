@@ -4,6 +4,7 @@
 
 $execute in minecraft:overworld positioned 0.0 0.0 0.0 rotated $(yawn) $(pitch) run tp @s ^ ^ ^1
 data modify storage energy_manipulation:op temp_pos set from entity @s Pos
+# reset to 0.0 0 0.0 cause i need pos for step 2
 execute in minecraft:overworld run tp @s 0.0 0.0 0.0
 
 data remove storage energy_manipulation:op macro_data
