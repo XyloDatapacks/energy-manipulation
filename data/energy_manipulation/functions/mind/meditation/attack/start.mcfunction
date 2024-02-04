@@ -3,12 +3,12 @@
 # removes focus from origin_uuid
 # executes action on uuid
 
-execute at @s run function energy_manipulation:mind/meditation/fx/attack/start
-
 # remove focus and quit if focus not broken
 scoreboard players set #xem.mind.meditation.attack.focus_broken xem.op 0
 $execute as $(origin_uuid) run function energy_manipulation:mind/meditation/attack/remove_focus
-execute if score #xem.mind.meditation.attack.focus_broken xem.op matches 0 run return 0
+execute if score #xem.mind.meditation.attack.focus_broken xem.op matches 0 at @s run return run function energy_manipulation:mind/meditation/fx/attack/start
+
+function energy_manipulation:mind/meditation/fx/apply_order/start
 
 # get attack mode
 scoreboard players set #xem.mind.meditation.attack.attack_mode xem.op 0
