@@ -1,5 +1,5 @@
 {
-  "parent": "energy_manipulation:tutorial/spell/armor/craft/void",
+  "parent": "energy_manipulation:tutorial/trinket/translocation_ward/craft/craft",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:tick"

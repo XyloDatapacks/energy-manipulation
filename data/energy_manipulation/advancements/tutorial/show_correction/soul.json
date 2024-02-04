@@ -1,5 +1,5 @@
 {
-  "parent": "energy_manipulation:tutorial/spell/armor/craft/soul",
+  "parent": "energy_manipulation:tutorial/trinket/scrying_ward/craft/craft",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:tick"

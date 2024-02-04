@@ -1,6 +1,7 @@
 # <@> player
 
 execute at @s run function energy_manipulation:mind/meditation/fx/enter/start
+advancement grant @s only energy_manipulation:tutorial/mind/meditation/meditate
 
 #==<Body>==#
 
