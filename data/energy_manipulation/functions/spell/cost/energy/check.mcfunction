@@ -6,7 +6,7 @@
 execute store result score #xem.spell.cost.remaining_cost xem.op run data get storage energy_manipulation:op energy_cost.cost
 
 # generic energy (if function result is -1 or 1 i return that value. 0 means that the function did not run: type=!generic)
-$execute store result score #xem.spell.cost.energy.concatenate_cost_paid_generic xem.op function energy_manipulation:spell/cost/energy/$(type) with storage energy_manipulation:op energy_cost
+$execute store result score #xem.spell.cost.energy.concatenate_cost_paid_generic xem.op run function energy_manipulation:spell/cost/energy/$(type) with storage energy_manipulation:op energy_cost
 execute unless score #xem.spell.cost.remaining_cost xem.op matches 1.. run return run scoreboard players set #xem.spell.cost.energy.cost_payed xem.op 1
 
 # find the cost that got paied
