@@ -1,6 +1,4 @@
-# xylo_retina:traverse
-
-data merge storage iris:settings {MaxRecursionDepth:50,MaxDistance:6,TargetEntities:1b,Blacklist:"#iris:shape_groups/air"}
+data merge storage iris:settings {MaxRecursionDepth:50,MaxDistance:5,TargetEntities:1b,Blacklist:"#iris:shape_groups/air"}
 data remove storage iris:settings Whitelist
 execute at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
 

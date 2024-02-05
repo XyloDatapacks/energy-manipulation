@@ -1,9 +1,7 @@
 #-> {uuid}
 
-# xylo_retina:traverse
 #TODO: expand hitbox 0.2
-
-data merge storage iris:settings {MaxRecursionDepth:50,TargetEntities:1b,Blacklist:"#iris:shape_groups/air"}
+data merge storage iris:settings {MaxRecursionDepth:100,TargetEntities:1b,Blacklist:"#iris:shape_groups/air"}
 data remove storage iris:settings Whitelist
 $execute as $(uuid) at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
 
