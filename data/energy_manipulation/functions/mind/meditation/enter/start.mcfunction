@@ -33,13 +33,16 @@ tag @s add xem.mind.meditation.is_meditating
 #==<Mind Stack>==#
 
 # mind stack
-execute at @s run summon minecraft:snowball ~ ~ ~ {Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}},Silent:1b,NoGravity:1b,Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity"],Passengers:[{id:"minecraft:item_display",Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity_new"],Passengers:[{id:"minecraft:marker",Tags:["smithed.entity","smithed.strict","xproj.position_correction","xem.mind.meditation.mind_entity"]},{id:"minecraft:interaction",width:0.8,height:1.5,Tags:["smithed.entity","smithed.strict","retina.ignore","xlib.non_interactive","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity.click_detection"]}]}]}
+execute at @s run summon minecraft:snowball ~ ~ ~ {Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}},Silent:1b,NoGravity:1b,Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity"],Passengers:[{id:"minecraft:item_display",Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity_new"],Passengers:[{id:"minecraft:marker",Tags:["smithed.entity","smithed.strict","xproj.position_correction","xem.mind.meditation.mind_entity"]},{id:"minecraft:interaction",width:0.8,height:1.5,Tags:["smithed.entity","smithed.strict","iris.ignore","xlib.non_interactive","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity.click_detection"]}]}]}
 execute at @s run ride @s mount @e[type=minecraft:item_display,distance=..0.001,limit=1,tag=xem.mind.meditation.mind_entity_new]
 execute on vehicle run tag @s remove xem.mind.meditation.mind_entity_new
 
+execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.xylo_projectiles.position_correction.shooter set from storage xylo_library:op clone_owner_hex_uuid.player_hex_uuid
 execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.energy_manipulation.mind.meditation.player_hex_uuid set from storage xylo_library:op clone_owner_hex_uuid.player_hex_uuid
+execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.energy_manipulation.mind.meditation.clone_hitbox_uuid set from storage xylo_library:op clone_data.hitbox_uuid
 execute on vehicle on passengers run scoreboard players operation @s[type=minecraft:marker] xem.mind.meditation.start_time = #xlib.time xlib.op
 execute on vehicle on passengers run scoreboard players operation @s[type=minecraft:marker] xem.mind.meditation.end_time = #xem.mind.meditation.end_time xem.op
+execute on vehicle on vehicle run data modify entity @s Owner set from storage xylo_library:op clone_data.hitbox_uuid
 
 # for proj correction
 data modify storage xylo_projectiles:op projectile_correction_setup set value {motion:[0.0d,0.0d,0.0d]}
@@ -60,6 +63,7 @@ item replace entity @s armor.head with minecraft:air
 item replace entity @s armor.chest with minecraft:air
 item replace entity @s armor.legs with minecraft:air
 item replace entity @s armor.feet with minecraft:air 
+function xylo_library:utilities/un_agro/start
 
 #TODO 1.21
 # scale down player
