@@ -1,7 +1,6 @@
 #-> {uuid}
 
-#TODO: expand hitbox 0.2
-data merge storage iris:settings {MaxRecursionDepth:100,TargetEntities:1b,Blacklist:"#iris:shape_groups/air"}
+data merge storage iris:settings {MaxRecursionDepth:100,TargetEntities:1b,Blacklist:"#iris:shape_groups/air",EntityHitboxTollerance:0.2}
 data remove storage iris:settings Whitelist
 $execute as $(uuid) at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
 

@@ -13,10 +13,6 @@ execute as @e[type=minecraft:item_display,distance=..0.1,tag=xem.jar_of_energy.b
 
 item modify entity @s[gamemode=!creative] weapon.mainhand xylo_library:remove_count/1
 
-
-#jar_of_energy: temp before retina fix
-scoreboard players set #xem.jar_of_energy.place.temp.loop xem.op 0
-
 #sound
 playsound energy_manipulation:jar_of_energy.block.place block @a ~ ~ ~ 1 0.9
 

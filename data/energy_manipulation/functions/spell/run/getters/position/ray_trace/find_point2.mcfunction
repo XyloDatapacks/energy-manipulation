@@ -1,9 +1,8 @@
 # no block or entity check
 $execute if score #xem.spell.run.getters.position.ray_trace.blocks xem.op matches 0 if score #xem.spell.run.getters.position.ray_trace.entities xem.op matches 0 run return run execute positioned ^ ^ ^$(max_distance_int) summon minecraft:marker run function energy_manipulation:spell/run/getters/position/ray_trace/xlm.get_position
 
-# TODO: expand hitbox 0.2
 #raycast to find block or entity (excludes entities in a box 0.1 side)
-data merge storage iris:settings {MaxRecursionDepth:50,Blacklist:"#iris:shape_groups/air",OverrideExecutingEntity:1b}
+data merge storage iris:settings {MaxRecursionDepth:50,Blacklist:"#iris:shape_groups/air",OverrideExecutingEntity:1b,EntityHitboxTollerance:0.2}
 execute store result storage iris:settings TargetEntities byte 1 run scoreboard players get #xem.spell.run.getters.position.ray_trace.entities xem.op
 execute if score #xem.spell.run.getters.position.ray_trace.blocks xem.op matches 0 run data modify storage iris:settings Whitelist set value "#xylo_library:empty"
 execute if score #xem.spell.run.getters.position.ray_trace.blocks xem.op matches 1 run data remove storage iris:settings Whitelist

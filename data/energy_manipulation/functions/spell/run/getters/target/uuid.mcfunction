@@ -19,8 +19,8 @@ scoreboard players set #xem.spell.run.getters.target._reroute.max_iterations xem
 function energy_manipulation:spell/run/getters/target/_reroute/check with storage energy_manipulation:op target_out[-1]
 execute if score #xem.spell.run.getters.target._reroute.reroute_state xem.op matches 1 run return run data remove storage energy_manipulation:op target_out[-1]
 
-# TODO
-# ignore check: is origin_uuid one of the entities to ignore? if yes then fail 
+# TODO: ignore check
+# is origin_uuid one of the entities to ignore? if yes then fail 
 # i have to apply the check only if volume selections cause, as of now, ignore is only on weak selectors
 
 #==<Output>==#

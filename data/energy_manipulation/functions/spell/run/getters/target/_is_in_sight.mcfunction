@@ -7,38 +7,43 @@ execute unless entity @s[distance=..64] run return 0
 #is in view for sure
 execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0] run return 1
 
-tag @e[distance=..65] add retina.executing
-tag @s remove retina.executing
-
-#TargetEntities:true,OverrideExecutingEntity:true
-# xylo_retina:traverse
-
-# TODO override running enitity, limit distance
+# override executing
+tag @e[distance=..65] add iris.executing
+tag @s remove iris.executing
 
 # try raycast eyes
-data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:64,TargetEntities:true,OverrideExecutingEntity:true}
-execute facing entity @s eyes run function xylo_retina:traverse/setup_no_entity
-execute if entity @s[tag=retina.target] run tag @e[distance=..65] remove retina.executing
-execute if entity @s[tag=retina.target] run return 1
-scoreboard players operation #xem.spell.run.getters.target._is_in_sight.angle_1 xem.op = $input_pitch retina.__variable__
+data merge storage iris:settings {MaxRecursionDepth:100,MaxDistance:64,Blacklist:"#iris:shape_groups/air",TargetEntities:1b,OverrideExecutingEntity:1b}
+execute facing entity @s eyes run function iris:get_target
+execute if entity @s[tag=iris.targeted_entity] run tag @e[distance=..65] remove iris.executing
+execute if entity @s[tag=iris.targeted_entity] run return 1
+scoreboard players operation #xem.spell.run.getters.target.dx xem.op = $dx iris
+scoreboard players operation #xem.spell.run.getters.target.dy xem.op = $dy iris
+scoreboard players operation #xem.spell.run.getters.target.dz xem.op = $dz iris
 
 # try raycast feet
-data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:64,TargetEntities:true,OverrideExecutingEntity:true}
-execute facing entity @s feet run function xylo_retina:traverse/setup_no_entity
-execute if entity @s[tag=retina.target] run tag @e[distance=..65] remove retina.executing
-execute if entity @s[tag=retina.target] run return 1
-scoreboard players operation #xem.spell.run.getters.target._is_in_sight.angle_2 xem.op = $input_pitch retina.__variable__
+data merge storage iris:settings {MaxRecursionDepth:100,MaxDistance:64,Blacklist:"#iris:shape_groups/air",TargetEntities:1b,OverrideExecutingEntity:1b}
+execute facing entity @s feet run function iris:get_target
+execute if entity @s[tag=iris.targeted_entity] run tag @e[distance=..65] remove iris.executing
+execute if entity @s[tag=iris.targeted_entity] run return 1
+scoreboard players operation #xem.spell.run.getters.target.dx1 xem.op = $dx iris
+scoreboard players operation #xem.spell.run.getters.target.dy1 xem.op = $dy iris
+scoreboard players operation #xem.spell.run.getters.target.dz1 xem.op = $dz iris
 
 # try raycast middle body
-scoreboard players operation #xem.spell.run.getters.target._is_in_sight.center_body_pitch xem.op = #xem.spell.run.getters.target._is_in_sight.angle_1 xem.op
-scoreboard players operation #xem.spell.run.getters.target._is_in_sight.center_body_pitch xem.op -= #xem.spell.run.getters.target._is_in_sight.angle_2 xem.op
-scoreboard players operation #xem.spell.run.getters.target._is_in_sight.center_body_pitch xem.op /= #2 xconst
-scoreboard players operation #xem.spell.run.getters.target._is_in_sight.center_body_pitch xem.op += #xem.spell.run.getters.target._is_in_sight.angle_2 xem.op
-scoreboard players operation $override_pitch retina.__variable__ = #xem.spell.run.getters.target._is_in_sight.center_body_pitch xem.op
-data merge storage xylo_retina:input {HorizontalCount:1b,VerticalCount:1b,CenteredCount:0b,SpreadFactor:[100,100],EndpointEntity:0b,MaxRecursionDepth:64,TargetEntities:true,OverrideExecutingEntity:true}
-execute facing entity @s feet run function xylo_retina:traverse/setup_no_entity
-execute if entity @s[tag=retina.target] run tag @e[distance=..65] remove retina.executing
-execute if entity @s[tag=retina.target] run return 1
+scoreboard players operation $override_dx iris = #xem.spell.run.getters.target.dx xem.op
+scoreboard players operation $override_dy iris = #xem.spell.run.getters.target.dy xem.op
+scoreboard players operation $override_dz iris = #xem.spell.run.getters.target.dz xem.op
+scoreboard players operation $override_dx iris += #xem.spell.run.getters.target.dx1 xem.op
+scoreboard players operation $override_dy iris += #xem.spell.run.getters.target.dy1 xem.op
+scoreboard players operation $override_dz iris += #xem.spell.run.getters.target.dz1 xem.op
+scoreboard players operation $override_dx iris /= #2 xconst
+scoreboard players operation $override_dy iris /= #2 xconst
+scoreboard players operation $override_dz iris /= #2 xconst
+data merge storage iris:settings {MaxRecursionDepth:100,MaxDistance:64,Blacklist:"#iris:shape_groups/air",TargetEntities:1b,OverrideExecutingEntity:1b,OverrideRotation:1b}
+execute facing entity @s feet run function iris:get_target
+execute if entity @s[tag=iris.targeted_entity] run tag @e[distance=..65] remove iris.executing
+execute if entity @s[tag=iris.targeted_entity] run return 1
 
 # failed
+tag @e[distance=..65] remove iris.executing
 return 0
