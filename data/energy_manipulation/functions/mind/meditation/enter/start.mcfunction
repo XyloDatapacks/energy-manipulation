@@ -33,7 +33,7 @@ tag @s add xem.mind.meditation.is_meditating
 #==<Mind Stack>==#
 
 # mind stack
-execute at @s run summon minecraft:snowball ~ ~ ~ {Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}},Silent:1b,NoGravity:1b,Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity"],Passengers:[{id:"minecraft:item_display",Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity_new"],Passengers:[{id:"minecraft:marker",Tags:["smithed.entity","smithed.strict","xproj.position_correction","xem.mind.meditation.mind_entity"]},{id:"minecraft:interaction",width:0.8,height:1.5,Tags:["smithed.entity","smithed.strict","iris.ignore","xlib.non_interactive","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity.click_detection"]}]}]}
+execute at @s run summon minecraft:snowball ~ ~ ~ {Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}},Silent:1b,NoGravity:1b,Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity"],Passengers:[{id:"minecraft:item_display",Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity_new"],Passengers:[{id:"minecraft:marker",Tags:["smithed.entity","smithed.strict","xproj.position_correction","xem.mind.meditation.mind_entity"]},{id:"minecraft:interaction",width:0.8,height:1.5,Tags:["smithed.entity","smithed.strict","xylo_iris.ignore","xlib.non_interactive","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity.click_detection"]}]}]}
 execute at @s run ride @s mount @e[type=minecraft:item_display,distance=..0.001,limit=1,tag=xem.mind.meditation.mind_entity_new]
 execute on vehicle run tag @s remove xem.mind.meditation.mind_entity_new
 
