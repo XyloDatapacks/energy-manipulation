@@ -3,7 +3,7 @@ execute if score #xem.spell.run.caster_still_alive xem.op matches 0 run return r
 
 # conditions and expire time
 execute if score @s xem.spell.shape.expire_time <= #xlib.time xlib.op on vehicle at @s run return run function energy_manipulation:spell/run/shape_tick/projectile_type/hit
-execute on vehicle if predicate energy_manipulation:spell/shape/projectile_type/hit at @s run return run function energy_manipulation:spell/run/shape_tick/projectile_type/hit
+execute on vehicle if predicate xylo_projectiles:hit at @s run return run function energy_manipulation:spell/run/shape_tick/projectile_type/hit
 
 # movement mode (on projectile)
 execute on vehicle on vehicle if entity @s[tag=xem.spell.run.shape._movement.seek] run function energy_manipulation:spell/run/shape/_movement/seek/tick 

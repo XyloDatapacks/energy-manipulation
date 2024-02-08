@@ -1,3 +1,5 @@
+# <@> item display
+
 # particles
 function energy_manipulation:trinket/translocation_ward/fx/start
 
