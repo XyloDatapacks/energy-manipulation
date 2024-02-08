@@ -55,5 +55,5 @@ execute if score @s xitm.wfoas_used matches 1 if data storage xylo_library:op pl
 
 #==<GUI>==#
 
-execute if entity @s[tag=!xem.settings.hide_gui] unless entity @s[gamemode=spectator,tag=!xem.mind.meditation.is_meditating] run function energy_manipulation:gui/start
+execute if entity @s[tag=!xem.settings.hide_gui,gamemode=!spectator] run function energy_manipulation:gui/start
 
