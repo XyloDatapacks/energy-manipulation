@@ -29,7 +29,7 @@ function xylo_library:utilities/set_inventory/start
 data modify storage xylo_library:op set_effects_in set from storage energy_manipulation:op meditation_data.active_effects
 function xylo_library:utilities/set_effects/start
 
-#TODO 1.21
+# Attributes
 attribute @s minecraft:generic.scale modifier remove 1234-1234-1234-1-1
 attribute @s minecraft:player.entity_interaction_range modifier remove 1234-1234-1234-1-1
 attribute @s minecraft:player.block_interaction_range modifier remove 1234-1234-1234-1-1

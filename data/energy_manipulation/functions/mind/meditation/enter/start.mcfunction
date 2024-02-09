@@ -66,7 +66,7 @@ item replace entity @s armor.legs with minecraft:air
 item replace entity @s armor.feet with minecraft:air 
 function xylo_library:utilities/un_agro/start
 
-#TODO 1.21
+# Attributes
 attribute @s minecraft:generic.scale modifier add 1234-1234-1234-1-1 "energy_manipulation:mind.meditation.scale" -1000 add
 attribute @s minecraft:player.entity_interaction_range modifier add 1234-1234-1234-1-1 "energy_manipulation:mind.meditation.entity_interaction_range" -0.99999999 multiply
 attribute @s minecraft:player.block_interaction_range modifier add 1234-1234-1234-1-1 "energy_manipulation:mind.meditation.block_interaction_range" -0.99999999 multiply
