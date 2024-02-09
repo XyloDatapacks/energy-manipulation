@@ -20,6 +20,3 @@ item modify entity @s weapon.mainhand energy_manipulation:spell/book/open_book
 # sound
 playsound energy_manipulation:spell.book.open player @a ~ ~ ~
 
-# interaction range
-attribute @s minecraft:player.entity_interaction_range modifier add 1234-1234-1234-1-2 "energy_manipulation:spell.book.open.entity_interaction_range" -0.99999999 multiply
-attribute @s minecraft:player.block_interaction_range modifier add 1234-1234-1234-1-2 "energy_manipulation:spell.book.open.block_interaction_range" -0.99999999 multiply

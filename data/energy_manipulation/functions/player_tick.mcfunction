@@ -36,7 +36,8 @@ function energy_manipulation:mind/focus/player_tick
 execute if entity @s[tag=xem.mind.meditation.is_meditating,tag=!xem.mind.meditation.enter.notification] run function energy_manipulation:mind/meditation/enter/notification_print
 execute unless score #xem.settings.mind.meditation.disabled xem.op matches 1 if entity @s[tag=!xem.mind.meditation.is_meditating,predicate=xylo_library:double_sneak,scores={xlib.player.on_ground=1,xlib.player.rotation_y=8000..9000}] at @s run function energy_manipulation:mind/meditation/enter/start
 # exit
-tag @s[scores={xlib.player.died=1}] remove xem.mind.meditation.is_meditating
+#tag @s[scores={xlib.player.died=1}] remove xem.mind.meditation.is_meditating
+execute if entity @s[scores={xlib.player.reapawn_status=1},tag=xem.mind.meditation.is_meditating] run function energy_manipulation:mind/meditation/exit/start
 execute if entity @s[scores={xlib.player.joining=1..},tag=xem.mind.meditation.is_meditating] run function energy_manipulation:mind/meditation/exit/start
 execute if entity @s[tag=xem.mind.meditation.is_meditating] if score @s xem.mind.meditation.end_time <= #xlib.time xlib.op run function energy_manipulation:mind/meditation/exit/start
 execute if entity @s[tag=xem.mind.meditation.is_meditating,predicate=xylo_library:double_sneak] unless score @s xem.mind.meditation.start_time = #xlib.time xlib.op run function energy_manipulation:mind/meditation/exit/start

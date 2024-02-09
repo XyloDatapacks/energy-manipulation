@@ -10,4 +10,4 @@ execute if score @s xem.spell.book.open_books_count matches 2.. run function ene
 # 1 book open + not has_display -> close books
 execute if score @s xem.spell.book.open_books_count matches 1 unless score @s xem.spell.display.has_display matches 1 run function energy_manipulation:spell/book/close_books/start
 # no books open + has_display -> dispose interface
-execute if score @s xem.spell.book.open_books_count matches 0 if score @s xem.spell.display.has_display matches 1 run function energy_manipulation:spell/display/dispose_and_kill
+execute if score @s xem.spell.book.open_books_count matches 0 if score @s xem.spell.display.has_display matches 1 run function energy_manipulation:spell/book/close_books/start

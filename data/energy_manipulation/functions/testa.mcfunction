@@ -1,2 +1,2 @@
-$return run function energy_manipulation:test$(aa)
-
+say hi
+advancement revoke @s only energy_manipulation:test

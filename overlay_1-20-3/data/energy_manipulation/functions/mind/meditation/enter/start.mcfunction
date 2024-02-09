@@ -18,7 +18,7 @@ data modify storage energy_manipulation:op meditation_data.inventory set from st
 function energy_manipulation:mind/meditation/enter/save_in_storage with storage xylo_library:op clone_owner_hex_uuid
 
 #to make you see your body
-execute at @s anchored eyes rotated ~ 10 run tp @s ^ ^ ^0.5 ~ ~
+execute rotated ~ 10 run tp @s ^ ^0.8 ^0.5 ~ ~
 
 #==<Timer>==#
 
@@ -34,7 +34,7 @@ tag @s add xem.mind.meditation.is_meditating
 #==<Mind Stack>==#
 
 # mind stack
-execute at @s run summon minecraft:snowball ~ ~ ~ {Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}},Silent:1b,NoGravity:1b,Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity"],Passengers:[{id:"minecraft:item_display",Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity_new"],Passengers:[{id:"minecraft:marker",Tags:["smithed.entity","smithed.strict","xproj.position_correction","xem.mind.meditation.mind_entity"]},{id:"minecraft:interaction",width:0.08,height:0.09,Tags:["smithed.entity","smithed.strict","xylo_iris.ignore","xlib.non_interactive","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity.click_detection"]}]}]}
+execute at @s run summon minecraft:snowball ~ ~ ~ {Item:{id:"minecraft:paper",Count:1b,tag:{CustomModelData:12340000}},Silent:1b,NoGravity:1b,Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity"],Passengers:[{id:"minecraft:item_display",Tags:["smithed.entity","smithed.strict","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity_new"],Passengers:[{id:"minecraft:marker",Tags:["smithed.entity","smithed.strict","xproj.position_correction","xem.mind.meditation.mind_entity"]},{id:"minecraft:interaction",width:0.8,height:1.5,Tags:["smithed.entity","smithed.strict","xylo_iris.ignore","xlib.non_interactive","xem.mind.meditation.mind_entity","xem.mind.meditation.mind_entity.click_detection"]}]}]}
 execute at @s run ride @s mount @e[type=minecraft:item_display,distance=..0.001,limit=1,tag=xem.mind.meditation.mind_entity_new]
 execute on vehicle run tag @s remove xem.mind.meditation.mind_entity_new
 
@@ -66,7 +66,3 @@ item replace entity @s armor.legs with minecraft:air
 item replace entity @s armor.feet with minecraft:air 
 function xylo_library:utilities/un_agro/start
 
-#TODO 1.21
-attribute @s minecraft:generic.scale modifier add 1234-1234-1234-1-1 "energy_manipulation:mind.meditation.scale" -1000 add
-attribute @s minecraft:player.entity_interaction_range modifier add 1234-1234-1234-1-1 "energy_manipulation:mind.meditation.entity_interaction_range" -0.99999999 multiply
-attribute @s minecraft:player.block_interaction_range modifier add 1234-1234-1234-1-1 "energy_manipulation:mind.meditation.block_interaction_range" -0.99999999 multiply

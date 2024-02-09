@@ -9,7 +9,3 @@ execute if score #xem.spell.book.close_books.open_books_count xem.op matches 1..
 # sound
 playsound energy_manipulation:spell.book.close player @a ~ ~ ~
 
-# interaction range
-attribute @s minecraft:player.entity_interaction_range modifier remove 1234-1234-1234-1-2 
-attribute @s minecraft:player.block_interaction_range modifier remove 1234-1234-1234-1-2 
-
