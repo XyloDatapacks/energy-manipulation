@@ -2,6 +2,10 @@
 execute if score $energy_manipulation xvc.load_status matches 0 run return 0
 #---------------------------
 
+# UPDATE VERSION
+execute unless score @s xem.player_version = #xem.pack_version xem.op run function energy_manipulation:player_init
+
+
 # on respawn reset sb used to mark cost as not paid when dead
 scoreboard players reset @s[scores={xlib.player.reapawn_status=1}] xem.spell.cost.died
 
@@ -24,8 +28,8 @@ function energy_manipulation:spell/casting_fatigue/tick
 function energy_manipulation:spell/casting_fatigue/calc
 
 #==<Raw Energy>==#
-execute if score #xlib.timer.10tick xlib.op matches 0 unless score @s xlib.player.reapawn_status matches -1 unless score @s xem.spell.cost.withering.total_saturation_to_pay matches 1.. unless score @s xem.spell.cost.withering.total_damage_to_pay matches 1.. unless score @s xem.spell.raw_energy >= #xem.spell.raw_energy.max xem.op run scoreboard players add @s xem.spell.raw_energy 1
-execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players operation @s xem.spell.raw_energy = #xem.spell.raw_energy.max xem.op
+execute if score #xlib.timer.10tick xlib.op matches 0 unless score @s xlib.player.reapawn_status matches -1 unless score @s xem.spell.cost.withering.total_saturation_to_pay matches 1.. unless score @s xem.spell.cost.withering.total_damage_to_pay matches 1.. unless score @s xem.spell.raw_energy >= @s xem.spell.raw_energy.max run scoreboard players add @s xem.spell.raw_energy 1
+execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players operation @s xem.spell.raw_energy = @s xem.spell.raw_energy.max
 
 #==<Focus>==#
 function energy_manipulation:mind/focus/player_tick

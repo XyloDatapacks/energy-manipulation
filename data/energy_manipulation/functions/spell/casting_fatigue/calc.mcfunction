@@ -41,5 +41,5 @@ scoreboard players operation #xem.spell.casting_fatigue.fatigue xem.op += @s xem
 scoreboard players operation @s xem.spell.casting_fatigue.fatigue = #xem.spell.casting_fatigue.fatigue xem.op
 scoreboard players operation @s xem.spell.casting_fatigue.percentage = #xem.spell.casting_fatigue.fatigue xem.op
 scoreboard players operation @s xem.spell.casting_fatigue.percentage *= #100 xconst
-scoreboard players operation @s xem.spell.casting_fatigue.percentage /= #xem.spell.casting_fatigue.max xem.op
+scoreboard players operation @s xem.spell.casting_fatigue.percentage /= @s xem.spell.casting_fatigue.max
 

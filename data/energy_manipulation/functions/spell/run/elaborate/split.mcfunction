@@ -19,7 +19,7 @@ scoreboard players remove #xem.spell.run.elaborate.split_count xem.op 2
 
 # add count to shape per sec (and prevent extra casts)
 scoreboard players set #xem.spell.casting_fatigue.check_passed xem.op 0
-scoreboard players operation #xem.spell.run.spells_per_sec.mult xem.op = #xem.spell.run.elaborate.split_count xem.op
+scoreboard players operation #xem.spell.casting_fatigue.spells_per_sec.mult xem.op = #xem.spell.run.elaborate.split_count xem.op
 function energy_manipulation:spell/casting_fatigue/find_caster with storage energy_manipulation:op running_spell_marker.data.energy_manipulation.spell_data
 
 # kill and return + particles for excess number

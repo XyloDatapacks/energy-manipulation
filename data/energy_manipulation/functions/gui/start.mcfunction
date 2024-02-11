@@ -9,13 +9,12 @@ execute store result storage energy_manipulation:op gui.casting_fatigue int 1 ru
 #get raw energy
 scoreboard players operation #xem.gui.raw_energy xem.op = @s xem.spell.raw_energy
 scoreboard players operation #xem.gui.raw_energy xem.op *= #90 xconst
-scoreboard players operation #xem.gui.raw_energy xem.op /= #xem.spell.raw_energy.max xem.op
+scoreboard players operation #xem.gui.raw_energy xem.op /= @s xem.spell.raw_energy.max
 execute store result storage energy_manipulation:op gui.raw_energy int 1 run scoreboard players operation #xem.gui.raw_energy xem.op < #90 xconst
 #get focus
 scoreboard players operation #xem.gui.focus xem.op = @s xem.mind.focus
-scoreboard players operation #xem.gui.focus xem.op /= #20 xconst
 scoreboard players operation #xem.gui.focus xem.op *= #90 xconst
-scoreboard players operation #xem.gui.focus xem.op /= #100 xconst
+scoreboard players operation #xem.gui.focus xem.op /= @s xem.mind.focus.max
 execute store result storage energy_manipulation:op gui.focus int 1 run scoreboard players operation #xem.gui.focus xem.op < #90 xconst
 
 function energy_manipulation:gui/print with storage energy_manipulation:op gui

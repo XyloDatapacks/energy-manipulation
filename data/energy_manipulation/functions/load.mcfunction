@@ -9,6 +9,9 @@ scoreboard players set xem.energy_manipulation load.status 1
 scoreboard objectives add xem.op dummy
 scoreboard objectives add xem.test dummy
 scoreboard objectives add xem.debug.cost_since_last_spell dummy
+# version
+execute store result score #xem.pack_version xem.op run data get storage xvc_version:op packs[{namespace:"energy_manipulation"}].version
+scoreboard objectives add xem.player_version dummy
 
 # objectives
 scoreboard objectives add xem.spell.display.has_display dummy
@@ -24,6 +27,7 @@ scoreboard objectives add xem.spell.casting_fatigue.spell_rate dummy
 scoreboard objectives add xem.spell.casting_fatigue.last_spell_time dummy
 scoreboard objectives add xem.spell.casting_fatigue.percentage dummy
 execute unless score #xem.spell.casting_fatigue.max xem.op = #xem.spell.casting_fatigue.max xem.op run scoreboard players set #xem.spell.casting_fatigue.max xem.op 2000
+scoreboard objectives add xem.spell.casting_fatigue.max dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_casted_in_tick dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick_old dummy
@@ -57,6 +61,7 @@ scoreboard objectives add xem.spell.armor.mastery.void dummy
 #spells
 scoreboard objectives add xem.spell.raw_energy dummy
 execute unless score #xem.spell.raw_energy.max xem.op = #xem.spell.raw_energy.max xem.op run scoreboard players set #xem.spell.raw_energy.max xem.op 10
+scoreboard objectives add xem.spell.raw_energy.max dummy
 
 scoreboard objectives add xem.spell.cost.withering.total_saturation_to_pay dummy
 scoreboard objectives add xem.spell.cost.withering.total_damage_to_pay dummy
@@ -95,6 +100,8 @@ execute unless score #xem.const.jar_of_energy.fill.limit xem.op = #xem.const.jar
 scoreboard objectives add xem.mind.is_concealed dummy
 scoreboard objectives add xem.mind.is_vulnerable dummy
 scoreboard objectives add xem.mind.focus dummy
+execute unless score #xem.mind.focus.max xem.op = #xem.mind.focus.max xem.op run scoreboard players set #xem.mind.focus.max xem.op 2000
+scoreboard objectives add xem.mind.focus.max dummy
 scoreboard objectives add xem.mind.meditation.end_time dummy
 scoreboard objectives add xem.mind.meditation.start_time dummy
 execute unless score #xem.mind.meditation.duration xem.op = #xem.mind.meditation.duration xem.op run scoreboard players set #xem.mind.meditation.duration xem.op 400

@@ -1,6 +1,6 @@
-execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players set @s xem.mind.focus 2000
+execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players operation @s xem.mind.focus = @s xem.mind.focus.max
 
-#focus max = 100*20 = 2000
+# calc value
 execute unless score @s xlib.player.reapawn_status matches -1 run scoreboard players add @s[tag=!xem.mind.meditation.is_meditating] xem.mind.focus 1
 execute unless score @s xlib.player.reapawn_status matches -1 run scoreboard players add @s[predicate=xylo_library:is_sneaking] xem.mind.focus 3
 scoreboard players remove @s[predicate=xylo_library:is_sprinting] xem.mind.focus 1
@@ -10,7 +10,7 @@ scoreboard players remove @s[scores={xlib.player.taken_damage=1..}] xem.mind.foc
 scoreboard players remove @s[scores={xlib.player.dealth_damage=1..}] xem.mind.focus 40
 scoreboard players remove @s[tag=xem.mind.meditation.is_meditating] xem.mind.focus 1
 scoreboard players operation @s xem.mind.focus > #0 xconst
-scoreboard players operation @s xem.mind.focus < #2000 xconst
+scoreboard players operation @s xem.mind.focus < @s xem.mind.focus.max
 
 #mind status
 execute store success score @s xem.mind.is_concealed if score @s[tag=!xem.mind.meditation.is_meditating] xem.mind.focus matches 66..

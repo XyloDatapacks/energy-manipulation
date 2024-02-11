@@ -11,10 +11,12 @@ to toggle the gui
 
 ==<Raw Energy>==
 /scoreboard players set #xem.spell.raw_energy.max xem.op <value>
+/scoreboard players set @s xem.spell.raw_energy.max <value>
 Default value is set to 10
 
 ==<CASTING FATIGUE>==
 /scoreboard players set #xem.spell.casting_fatigue.max xem.op <value>
+/scoreboard players set @s xem.spell.casting_fatigue.max <value>
 Default value is set to 2000
 
 ==<TRANSLOCATION EFFECT SETTINGS>==

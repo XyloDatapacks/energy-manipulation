@@ -2,6 +2,8 @@
 scoreboard objectives remove xem.op 
 scoreboard objectives remove xem.test 
 scoreboard objectives remove xem.debug.cost_since_last_spell 
+# version
+scoreboard objectives remove xem.player_version 
 
 # objectives
 scoreboard objectives remove xem.spell.display.has_display 
@@ -16,6 +18,7 @@ scoreboard objectives remove xem.spell.run.elaborate.concatenate_index_max
 scoreboard objectives remove xem.spell.casting_fatigue.spell_rate 
 scoreboard objectives remove xem.spell.casting_fatigue.last_spell_time 
 scoreboard objectives remove xem.spell.casting_fatigue.percentage 
+scoreboard objectives remove xem.spell.casting_fatigue.max 
 scoreboard objectives remove xem.spell.casting_fatigue.projectiles_in_shape_tick 
 scoreboard objectives remove xem.spell.casting_fatigue.projectiles_casted_in_tick 
 scoreboard objectives remove xem.spell.casting_fatigue.projectiles_in_shape_tick_old 
@@ -48,6 +51,7 @@ scoreboard objectives remove xem.spell.armor.mastery.void
 
 #spells
 scoreboard objectives remove xem.spell.raw_energy
+scoreboard objectives remove xem.spell.raw_energy.max
 
 scoreboard objectives remove xem.spell.cost.withering.total_saturation_to_pay 
 scoreboard objectives remove xem.spell.cost.withering.total_damage_to_pay 
@@ -83,6 +87,7 @@ scoreboard objectives remove xem.jar_of_energy.energy_count
 scoreboard objectives remove xem.mind.is_concealed 
 scoreboard objectives remove xem.mind.is_vulnerable 
 scoreboard objectives remove xem.mind.focus 
+scoreboard objectives remove xem.mind.focus.max
 scoreboard objectives remove xem.mind.meditation.end_time 
 scoreboard objectives remove xem.mind.meditation.start_time
 

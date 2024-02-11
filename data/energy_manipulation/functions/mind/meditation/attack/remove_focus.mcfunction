@@ -1,5 +1,5 @@
 # init focus
-execute unless score @s xem.mind.focus = @s xem.mind.focus run scoreboard players set @s xem.mind.focus 2000
+execute unless score @s xem.mind.focus = @s xem.mind.focus run scoreboard players operation @s xem.mind.focus = @s xem.mind.focus.max
 # get strength from motion absolute value (since this function is called right after the position correction, the storage distance_out still has the motion value)
 execute store result score #xem.mind.meditation.attack.attack_strength xem.op run data get storage xylo_library:op distance_out 200
 # remove focus
