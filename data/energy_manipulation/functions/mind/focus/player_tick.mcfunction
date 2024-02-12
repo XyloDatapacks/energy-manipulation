@@ -7,7 +7,7 @@ scoreboard players remove @s[predicate=xylo_library:is_sprinting] xem.mind.focus
 scoreboard players remove @s[predicate=xylo_library:is_swimming] xem.mind.focus 1
 scoreboard players remove @s[scores={xlib.player.jumped=1..}] xem.mind.focus 10
 scoreboard players remove @s[scores={xlib.player.taken_damage=1..}] xem.mind.focus 60
-scoreboard players remove @s[scores={xlib.player.dealth_damage=1..}] xem.mind.focus 40
+scoreboard players remove @s[scores={xlib.player.dealt_damage=1..}] xem.mind.focus 40
 scoreboard players remove @s[tag=xem.mind.meditation.is_meditating] xem.mind.focus 1
 scoreboard players operation @s xem.mind.focus > #0 xconst
 scoreboard players operation @s xem.mind.focus < @s xem.mind.focus.max

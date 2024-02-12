@@ -52,10 +52,10 @@ execute if entity @s[tag=xem.mind.meditation.is_meditating,scores={xem.mind.medi
 #==<Trinkets>==#
 
 # scrying ward
-execute if score @s xitm.wfoas_used matches 1 if data storage xylo_library:op player_data.SelectedItem{tag:{xylo:{id:"energy_manipulation:scrying_ward"},energy_manipulation:{active:1b}}} at @s run function energy_manipulation:trinket/scrying_ward/status/deactivate_mh
-execute if score @s xitm.wfoas_used matches 1 if data storage xylo_library:op player_data.SelectedItem{tag:{xylo:{id:"energy_manipulation:scrying_ward"},energy_manipulation:{active:0b}}} at @s run function energy_manipulation:trinket/scrying_ward/status/activate_mh
-execute if score @s xitm.wfoas_used matches 1 if data storage xylo_library:op player_data.Inventory[{Slot:-106b,tag:{xylo:{id:"energy_manipulation:scrying_ward"},energy_manipulation:{active:1b}}}] at @s run function energy_manipulation:trinket/scrying_ward/status/deactivate_oh
-execute if score @s xitm.wfoas_used matches 1 if data storage xylo_library:op player_data.Inventory[{Slot:-106b,tag:{xylo:{id:"energy_manipulation:scrying_ward"},energy_manipulation:{active:0b}}}] at @s run function energy_manipulation:trinket/scrying_ward/status/activate_oh
+execute if score @s xitm.wfoas.used matches 1 if data storage xylo_library:op player_data.SelectedItem{tag:{xylo:{id:"energy_manipulation:scrying_ward"},energy_manipulation:{active:1b}}} at @s run function energy_manipulation:trinket/scrying_ward/status/deactivate_mh
+execute if score @s xitm.wfoas.used matches 1 if data storage xylo_library:op player_data.SelectedItem{tag:{xylo:{id:"energy_manipulation:scrying_ward"},energy_manipulation:{active:0b}}} at @s run function energy_manipulation:trinket/scrying_ward/status/activate_mh
+execute if score @s xitm.wfoas.used matches 1 if data storage xylo_library:op player_data.Inventory[{Slot:-106b,tag:{xylo:{id:"energy_manipulation:scrying_ward"},energy_manipulation:{active:1b}}}] at @s run function energy_manipulation:trinket/scrying_ward/status/deactivate_oh
+execute if score @s xitm.wfoas.used matches 1 if data storage xylo_library:op player_data.Inventory[{Slot:-106b,tag:{xylo:{id:"energy_manipulation:scrying_ward"},energy_manipulation:{active:0b}}}] at @s run function energy_manipulation:trinket/scrying_ward/status/activate_oh
 
 
 #==<GUI>==#
