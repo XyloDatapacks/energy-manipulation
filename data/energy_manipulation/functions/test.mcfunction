@@ -1,3 +1,3 @@
-scoreboard players set #xem.test xem.op 1
-execute store result score #xem.test xem.op run function energy_manipulation:testa {aa:3}
-tellraw @a {"score":{"objective":"xem.op","name":"#xem.test"}}
+tag @s add xem.spell.casting_fatigue.has_to_tick
+scoreboard players set #xem.spell.book.casting_power xem.op 100
+execute at @s anchored eyes positioned ^ ^ ^ run function energy_manipulation:spell/run/new

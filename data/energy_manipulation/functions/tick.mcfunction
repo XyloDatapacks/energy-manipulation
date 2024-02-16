@@ -4,6 +4,9 @@ execute if score $energy_manipulation xvc.load_status matches 0 run return 0
 
 #==<SPELLS>==#
 
+# casting fatigue tick for non player entities
+execute as @e[type=#energy_manipulation:caster_entities,tag=xem.spell.casting_fatigue.has_to_tick] run function energy_manipulation:spell/casting_fatigue/tick
+
 # execute spells (before spell casting cause it executes already the first tick of the spell)
 execute as @e[type=minecraft:marker,tag=xem.spell.run] run function energy_manipulation:spell/run/tick
 
