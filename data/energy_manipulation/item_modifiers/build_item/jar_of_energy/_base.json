@@ -1,6 +1,6 @@
 [
   {
     "function": "minecraft:set_nbt",
-    "tag": "{smithed:{ignore:{functionality:1b,crafting:1b}},xylo:{id_tags:[\"energy_manipulation:jar_of_energy\"]},energy_manipulation:{energy_count:0}}"
+    "tag": "{smithed:{ignore:{functionality:1b,crafting:1b}},xylo:{id_tags:[\"energy_manipulation:jar_of_energy\"]},xylo_library:{block:{place_callback:\"energy_manipulation:jar_of_energy/block/place/place\",consume_on_use:1b}},energy_manipulation:{energy_count:0}}"
   }
 ]

@@ -32,8 +32,6 @@ execute as @a[tag=xem.spell.run.effect.pull,predicate=!energy_manipulation:spell
 
 #==<JARS>==#
 
-# place
-execute as @a[predicate=energy_manipulation:jar_of_energy/place/click] run function energy_manipulation:jar_of_energy/place/start
 #break placed jar
 execute as @e[type=minecraft:interaction,tag=xem.jar_of_energy.block] at @s unless block ~ ~ ~ #xylo_library:air_like run function energy_manipulation:jar_of_energy/block/break/break_auto
 
