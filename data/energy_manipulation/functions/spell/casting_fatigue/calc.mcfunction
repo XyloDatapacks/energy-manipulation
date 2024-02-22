@@ -1,3 +1,6 @@
+# update max
+scoreboard players operation @s xem.spell.casting_fatigue.max = @s xem.spell.casting_fatigue.max_base
+
 #remove
 scoreboard players operation @s xem.spell.casting_fatigue.last_spell_time < #xlib.time xlib.op
 scoreboard players operation #xem.spell.casting_fatigue.delta_time xem.op = #xlib.time xlib.op

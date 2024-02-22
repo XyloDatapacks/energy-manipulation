@@ -27,6 +27,7 @@ scoreboard objectives add xem.spell.casting_fatigue.last_spell_time dummy
 scoreboard objectives add xem.spell.casting_fatigue.percentage dummy
 execute unless score #xem.spell.casting_fatigue.max xem.op = #xem.spell.casting_fatigue.max xem.op run scoreboard players set #xem.spell.casting_fatigue.max xem.op 2000
 scoreboard objectives add xem.spell.casting_fatigue.max dummy
+scoreboard objectives add xem.spell.casting_fatigue.max_base dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_casted_in_tick dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick_old dummy
@@ -61,6 +62,7 @@ scoreboard objectives add xem.spell.armor.mastery.void dummy
 scoreboard objectives add xem.spell.raw_energy dummy
 execute unless score #xem.spell.raw_energy.max xem.op = #xem.spell.raw_energy.max xem.op run scoreboard players set #xem.spell.raw_energy.max xem.op 10
 scoreboard objectives add xem.spell.raw_energy.max dummy
+scoreboard objectives add xem.spell.raw_energy.max_base dummy
 
 scoreboard objectives add xem.spell.cost.withering.total_saturation_to_pay dummy
 scoreboard objectives add xem.spell.cost.withering.total_damage_to_pay dummy
@@ -101,6 +103,7 @@ scoreboard objectives add xem.mind.is_vulnerable dummy
 scoreboard objectives add xem.mind.focus dummy
 execute unless score #xem.mind.focus.max xem.op = #xem.mind.focus.max xem.op run scoreboard players set #xem.mind.focus.max xem.op 2000
 scoreboard objectives add xem.mind.focus.max dummy
+scoreboard objectives add xem.mind.focus.max_base dummy
 scoreboard objectives add xem.mind.meditation.end_time dummy
 scoreboard objectives add xem.mind.meditation.start_time dummy
 execute unless score #xem.mind.meditation.duration xem.op = #xem.mind.meditation.duration xem.op run scoreboard players set #xem.mind.meditation.duration xem.op 400

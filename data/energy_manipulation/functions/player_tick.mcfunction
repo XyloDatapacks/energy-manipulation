@@ -28,6 +28,7 @@ function energy_manipulation:spell/casting_fatigue/tick
 function energy_manipulation:spell/casting_fatigue/calc
 
 #==<Raw Energy>==#
+scoreboard players operation @s xem.spell.raw_energy.max = @s xem.spell.raw_energy.max_base
 execute if score #xlib.timer.10tick xlib.op matches 0 unless score @s xlib.player.reapawn_status matches -1 unless score @s xem.spell.cost.withering.total_saturation_to_pay matches 1.. unless score @s xem.spell.cost.withering.total_damage_to_pay matches 1.. unless score @s xem.spell.raw_energy >= @s xem.spell.raw_energy.max run scoreboard players add @s xem.spell.raw_energy 1
 execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players operation @s xem.spell.raw_energy = @s xem.spell.raw_energy.max
 

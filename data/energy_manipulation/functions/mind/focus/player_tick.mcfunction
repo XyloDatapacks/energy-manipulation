@@ -1,3 +1,7 @@
+# update max
+scoreboard players operation @s xem.mind.focus.max = @s xem.mind.focus.max_base
+
+# reset on death
 execute if score @s xlib.player.reapawn_status matches 1 run scoreboard players operation @s xem.mind.focus = @s xem.mind.focus.max
 
 # calc value
