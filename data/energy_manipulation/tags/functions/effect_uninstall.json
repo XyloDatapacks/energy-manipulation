@@ -1,0 +1,6 @@
+{
+    "values": [
+        "energy_manipulation:spell/run/effect/translocation/uninstall",
+        "energy_manipulation:spell/run/effect/pull/uninstall"
+    ]
+}

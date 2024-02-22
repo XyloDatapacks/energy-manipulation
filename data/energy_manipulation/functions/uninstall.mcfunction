@@ -67,21 +67,11 @@ scoreboard objectives remove xem.spell.shape.activation_time
 scoreboard objectives remove xem.spell.shape.cooldown_time 
 scoreboard objectives remove xem.spell.shape.fire_rate 
 
-scoreboard objectives remove xem.spell.run.shape.aoe.size 
-scoreboard objectives remove xem.spell.run.shape.aoe.expand_time 
-
-scoreboard objectives remove xem.spell.run.effect.translocation.scoarch_cooldown 
-scoreboard objectives remove xem.spell.run.effect.pull.ride.end_point.x 
-scoreboard objectives remove xem.spell.run.effect.pull.ride.end_point.y 
-scoreboard objectives remove xem.spell.run.effect.pull.ride.end_point.z 
-scoreboard objectives remove xem.grapple_max_length 
-scoreboard objectives remove xem.spell.run.effect.pull.motion.x 
-scoreboard objectives remove xem.spell.run.effect.pull.motion.y 
-scoreboard objectives remove xem.spell.run.effect.pull.motion.z 
-scoreboard objectives remove xem.spell.run.effect.pull.entity.expire_time 
-
 scoreboard objectives remove xem.sort_raycast.jar_of_energy.place 
 scoreboard objectives remove xem.jar_of_energy.energy_count 
+
+function #energy_manipulation:shape_uninstall
+function #energy_manipulation:effect_uninstall
 
 #mind
 scoreboard objectives remove xem.mind.is_concealed 

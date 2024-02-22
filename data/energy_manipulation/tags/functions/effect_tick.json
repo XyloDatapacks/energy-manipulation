@@ -1,0 +1,6 @@
+{
+    "values": [
+        "energy_manipulation:spell/run/effect/translocation/tick",
+        "energy_manipulation:spell/run/effect/pull/tick"
+    ]
+}

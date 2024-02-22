@@ -41,14 +41,14 @@ execute if score #xem.grapple_dist xem.op matches ..60 on passengers run functio
 execute if score #xem.grapple_dist xem.op matches ..60 run return 0
 
 #max distance
-execute unless score @s xem.grapple_max_length = @s xem.grapple_max_length run scoreboard players operation @s xem.grapple_max_length = #xem.grapple_dist xem.op
+execute unless score @s xem.spell.run.effect.pull.max_length = @s xem.spell.run.effect.pull.max_length run scoreboard players operation @s xem.spell.run.effect.pull.max_length = #xem.grapple_dist xem.op
 scoreboard players operation #xem.grapple_dist_limited xem.op = #xem.grapple_dist xem.op
-scoreboard players operation #xem.grapple_dist_limited xem.op < @s xem.grapple_max_length
+scoreboard players operation #xem.grapple_dist_limited xem.op < @s xem.spell.run.effect.pull.max_length
 
 #coefficient
 scoreboard players operation #xem.grapple_accell_coeff xem.op = #xem.grapple_dist_limited xem.op
 scoreboard players operation #xem.grapple_accell_coeff xem.op *= #100 xconst
-scoreboard players operation #xem.grapple_accell_coeff xem.op /= @s xem.grapple_max_length
+scoreboard players operation #xem.grapple_accell_coeff xem.op /= @s xem.spell.run.effect.pull.max_length
 scoreboard players operation #xem.grapple_accell_coeff xem.op *= #xem.grapple_dist_limited xem.op
 scoreboard players operation #xem.grapple_accell_coeff xem.op *= #100 xconst
 scoreboard players operation #xem.grapple_accell_coeff xem.op /= #xem.grapple_dist xem.op

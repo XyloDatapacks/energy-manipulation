@@ -23,12 +23,7 @@ kill @e[type=minecraft:item_display,tag=xem.energy_globe,predicate=xylo_library:
 
 #==<EFFECTS>==#
 
-# translocation scoarch
-execute as @e[type=minecraft:marker,tag=xem.spell.run.effect.translocation.scoarch] at @s run function energy_manipulation:spell/run/effect/translocation/scoarch/tick
-
-#pull
-execute as @e[type=minecraft:armor_stand,tag=xem.spell.run.effect.pull.entity] at @s run function energy_manipulation:spell/run/effect/pull/physics/tick
-execute as @a[tag=xem.spell.run.effect.pull,predicate=!energy_manipulation:spell/run/effect/pull/is_being_pulled] run function energy_manipulation:spell/run/effect/pull/physics/push
+function #energy_manipulation:effect_tick
 
 #==<JARS>==#
 

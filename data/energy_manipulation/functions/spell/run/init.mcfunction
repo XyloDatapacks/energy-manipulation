@@ -27,7 +27,7 @@ execute if score #xem.spell.run.override_spell_data xem.op matches 1 run data mo
 data modify entity @s {} merge from storage energy_manipulation:op new_spell_data
 
 #reset overrides
-function energy_manipulation:spell/run/reset_overrides
+function energy_manipulation:spell/run/_reset_overrides
 
 # run
 scoreboard players set #xem.spell.run.caster_still_alive xem.op 1

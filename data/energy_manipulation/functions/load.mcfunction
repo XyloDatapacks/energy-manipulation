@@ -78,24 +78,12 @@ scoreboard objectives add xem.spell.shape.activation_time dummy
 scoreboard objectives add xem.spell.shape.cooldown_time dummy
 scoreboard objectives add xem.spell.shape.fire_rate dummy
 
-scoreboard objectives add xem.spell.run.shape.aoe.size dummy
-scoreboard objectives add xem.spell.run.shape.aoe.expand_time dummy
-
-scoreboard objectives add xem.spell.run.effect.translocation.scoarch_cooldown dummy
-execute unless score #xem.spell.run.effect.translocation.max_range xem.op = #xem.spell.run.effect.translocation.max_range xem.op run scoreboard players set #xem.spell.run.effect.translocation.max_range xem.op -1
-execute unless score #xem.spell.run.effect.translocation.inter_dimensional_tp xem.op = #xem.spell.run.effect.translocation.inter_dimensional_tp xem.op run scoreboard players set #xem.spell.run.effect.translocation.inter_dimensional_tp xem.op 1
-scoreboard objectives add xem.spell.run.effect.pull.ride.end_point.x dummy
-scoreboard objectives add xem.spell.run.effect.pull.ride.end_point.y dummy
-scoreboard objectives add xem.spell.run.effect.pull.ride.end_point.z dummy
-scoreboard objectives add xem.grapple_max_length dummy
-scoreboard objectives add xem.spell.run.effect.pull.motion.x dummy
-scoreboard objectives add xem.spell.run.effect.pull.motion.y dummy
-scoreboard objectives add xem.spell.run.effect.pull.motion.z dummy
-scoreboard objectives add xem.spell.run.effect.pull.entity.expire_time dummy
-
 scoreboard objectives add xem.sort_raycast.jar_of_energy.place dummy
 scoreboard objectives add xem.jar_of_energy.energy_count dummy
 execute unless score #xem.const.jar_of_energy.fill.limit xem.op = #xem.const.jar_of_energy.fill.limit xem.op run scoreboard players set #xem.const.jar_of_energy.fill.limit xem.op 1000
+
+function #energy_manipulation:shape_load
+function #energy_manipulation:effect_load
 
 #mind
 scoreboard objectives add xem.mind.is_concealed dummy
