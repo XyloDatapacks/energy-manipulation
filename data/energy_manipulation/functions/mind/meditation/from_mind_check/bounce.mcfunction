@@ -1,4 +1,6 @@
-# <@> item_display
+#> energy_manipulation:mind/meditation/from_mind_check/bounce
+# @context: item_display
+# @within: energy_manipulation:mind/meditation/from_mind_check/start
 
 # grab hit entity
 scoreboard players operation @s xproj.position_correction.creation_time = #xlib.time xlib.op

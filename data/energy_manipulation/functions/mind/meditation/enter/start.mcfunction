@@ -38,6 +38,8 @@ execute at @s run summon minecraft:snowball ~ ~ ~ {Item:{id:"minecraft:paper",Co
 execute at @s run ride @s mount @e[type=minecraft:item_display,distance=..0.001,limit=1,tag=xem.mind.meditation.mind_entity_new]
 execute on vehicle run tag @s remove xem.mind.meditation.mind_entity_new
 
+scoreboard players operation #xem.mind.meditation.enter.player_power_multiplier xem.op = @s xem.mind.meditation.power_multiplier 
+execute on vehicle run scoreboard players operation @s xem.mind.meditation.power_multiplier = #xem.mind.meditation.enter.player_power_multiplier xem.op 
 execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.xylo_projectiles.position_correction.shooter set from storage xylo_library:op clone_owner_hex_uuid.player_hex_uuid
 execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.energy_manipulation.mind.meditation.player_hex_uuid set from storage xylo_library:op clone_owner_hex_uuid.player_hex_uuid
 execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.energy_manipulation.mind.meditation.clone_hitbox_uuid set from storage xylo_library:op clone_data.hitbox_uuid

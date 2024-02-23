@@ -37,6 +37,9 @@ function energy_manipulation:mind/focus/player_tick
 
 #==<Meditation>==#
 
+# mind attack power
+scoreboard players operation @s xem.mind.meditation.power_multiplier = @s xem.mind.meditation.power_multiplier_base
+
 # start
 execute if entity @s[tag=xem.mind.meditation.is_meditating,tag=!xem.mind.meditation.enter.notification] run function energy_manipulation:mind/meditation/enter/notification_print
 execute unless score #xem.settings.mind.meditation.disabled xem.op matches 1 if entity @s[tag=!xem.mind.meditation.is_meditating,predicate=xylo_library:double_sneak,scores={xlib.player.on_ground=1,xlib.player.rotation_y=8000..9000}] at @s run function energy_manipulation:mind/meditation/enter/start

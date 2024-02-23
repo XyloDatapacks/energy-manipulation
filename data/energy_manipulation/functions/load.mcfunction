@@ -96,6 +96,10 @@ scoreboard objectives add xem.mind.meditation.end_time dummy
 scoreboard objectives add xem.mind.meditation.start_time dummy
 execute unless score #xem.mind.meditation.duration xem.op = #xem.mind.meditation.duration xem.op run scoreboard players set #xem.mind.meditation.duration xem.op 400
 
+execute unless score #xem.mind.meditation.power_multiplier_default xem.op = #xem.mind.meditation.power_multiplier_default xem.op run scoreboard players set #xem.mind.meditation.power_multiplier_default xem.op 100
+scoreboard objectives add xem.mind.meditation.power_multiplier dummy
+scoreboard objectives add xem.mind.meditation.power_multiplier_base dummy
+
 scoreboard objectives add xem.mind.meditation.action.attack_mode dummy
 scoreboard objectives add xem.mind.meditation.action.propel dummy
 scoreboard objectives add xem.mind.meditation.action.propel_time dummy

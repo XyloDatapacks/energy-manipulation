@@ -14,3 +14,4 @@ execute unless score @s xem.last_death_time = @s xem.last_death_time run scorebo
 execute unless score @s xem.spell.raw_energy.max_base = @s xem.spell.raw_energy.max_base run scoreboard players operation @s xem.spell.raw_energy.max_base = #xem.spell.raw_energy.max xem.op
 execute unless score @s xem.spell.casting_fatigue.max_base = @s xem.spell.casting_fatigue.max_base run scoreboard players operation @s xem.spell.casting_fatigue.max_base = #xem.spell.casting_fatigue.max xem.op
 execute unless score @s xem.mind.focus.max_base = @s xem.mind.focus.max_base run scoreboard players operation @s xem.mind.focus.max_base = #xem.mind.focus.max xem.op
+execute unless score @s xem.mind.meditation.power_multiplier_base = @s xem.mind.meditation.power_multiplier_base run scoreboard players operation @s xem.mind.meditation.power_multiplier_base = #xem.mind.meditation.power_multiplier_default xem.op
