@@ -1,6 +1,7 @@
 # pass shape to spell_marker
 data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape set from storage energy_manipulation:op selected_concatenate.concatenate.shape
 data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape.effect.intensity set from storage energy_manipulation:op shape_data.intensity
+data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape.effect.energy_type set from storage energy_manipulation:op selected_concatenate.concatenate.cost.type
 
 #==<Run Effect>==#
 

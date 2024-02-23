@@ -15,6 +15,7 @@ scoreboard players operation @s xem.spell.run.shape.aoe.expand_time = #xem.spell
 # pass shape to spell_marker
 data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape set from storage energy_manipulation:op selected_concatenate.concatenate.shape
 data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape.effect.intensity set from storage energy_manipulation:op shape_data.intensity
+data modify storage energy_manipulation:op running_spell_marker_update.data.energy_manipulation.shape.effect.energy_type set from storage energy_manipulation:op selected_concatenate.concatenate.cost.type
 
 # deactivate spell marker and add tags
 data modify storage energy_manipulation:op temp_array set value ["xem.spell.inactive","xem.spell.shape_marker","xem.spell.aoe_type","xem.spell.run.shape.aoe.expand","xem.spell.run.shape.aoe.first_run"]
