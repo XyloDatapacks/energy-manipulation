@@ -12,6 +12,6 @@ tellraw @a[tag=xem.debug.mind.meditation.attack] ["focus removed: ",{"score":{"o
 
 # remove focus
 scoreboard players operation @s xem.mind.focus -= #xem.mind.meditation.attack.attack_strength xem.op
-execute if score @s xem.mind.focus matches ..0 run scoreboard players set #xem.mind.meditation.attack.focus_broken xem.op 1
+execute if score @s xem.mind.focus matches 1.. run scoreboard players set #xem.mind.meditation.attack.focus_broken xem.op 0
 scoreboard players operation @s xem.mind.focus > #0 xconst
 

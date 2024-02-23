@@ -16,8 +16,8 @@ tellraw @a[tag=xem.debug.mind.meditation.attack] ["attack power: ",{"score":{"ob
 #==<Remove Focus>==#
 
 # remove focus and quit if focus not broken
-scoreboard players set #xem.mind.meditation.attack.focus_broken xem.op 0
-$execute as $(origin_uuid) run function energy_manipulation:mind/meditation/attack/remove_focus
+scoreboard players set #xem.mind.meditation.attack.focus_broken xem.op 1
+$execute as $(origin_uuid) if score @s xem.mind.focus matches 1.. run function energy_manipulation:mind/meditation/attack/remove_focus
 execute if score #xem.mind.meditation.attack.focus_broken xem.op matches 0 run return run function energy_manipulation:mind/meditation/fx/attack/start
 
 #==<Apply Order>==#
