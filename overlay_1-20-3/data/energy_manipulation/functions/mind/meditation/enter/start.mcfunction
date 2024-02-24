@@ -9,7 +9,7 @@ advancement grant @s only energy_manipulation:tutorial/mind/meditation/meditate
 # generate clone
 data modify storage xylo_library:op clone_input_data set value {tags:["xem.mind.meditation.entity"],hitbox:{tags:["xem.mind.meditation.entity","xem.spell.run.getters.target._reroute.entity"]},marker:{tags:["xem.spell.non_selectable","xem.mind.meditation.entity"]},aoe:{tags:["xem.spell.non_selectable","xem.mind.meditation.entity"]}}
 data modify storage xylo_library:op clone_input_data.active_effects set from storage xylo_library:op player_data.active_effects
-execute store result storage xylo_library:op clone_input_data.duration int 1 run scoreboard players get #xem.mind.meditation.duration xem.op
+execute store result storage xylo_library:op clone_input_data.duration int 1 run scoreboard players get #xem.mind.meditation.duration xem.const
 function xylo_library:internal/clone/generate/start
 
 # save clone data in energy_manipulation:data player's storage
@@ -25,7 +25,7 @@ execute rotated ~ 10 run tp @s ^ ^0.8 ^0.5 ~ ~
 #timer
 scoreboard players operation @s xem.mind.meditation.start_time = #xlib.time xlib.op
 scoreboard players operation #xem.mind.meditation.end_time xem.op = #xlib.time xlib.op
-scoreboard players operation #xem.mind.meditation.end_time xem.op += #xem.mind.meditation.duration xem.op
+scoreboard players operation #xem.mind.meditation.end_time xem.op += #xem.mind.meditation.duration xem.const
 scoreboard players operation @s xem.mind.meditation.end_time = #xem.mind.meditation.end_time xem.op
 tag @s add xem.mind.meditation.is_meditating
 

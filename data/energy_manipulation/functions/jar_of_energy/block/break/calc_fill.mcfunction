@@ -3,7 +3,7 @@ scoreboard players operation #xem.jar_of_energy.fill.last_count xem.op = @s xem.
 # calc percentage
 scoreboard players operation #xem.jar_of_energy.fill.percentage xem.op = #xem.jar_of_energy.fill.last_count xem.op
 scoreboard players operation #xem.jar_of_energy.fill.percentage xem.op *= #100 xconst
-scoreboard players operation #xem.jar_of_energy.fill.percentage xem.op /= #xem.const.jar_of_energy.fill.limit xem.op
+scoreboard players operation #xem.jar_of_energy.fill.percentage xem.op /= #xem.const.jar_of_energy.fill.limit xem.const
 #apply
 item modify entity @s container.0 energy_manipulation:jar_of_energy/lore
 

@@ -35,7 +35,7 @@
           {
             "score": {
               "name": "#xem.const.jar_of_energy.fill.limit",
-              "objective": "xem.op"
+              "objective": "xem.const"
             }
           }
         ]

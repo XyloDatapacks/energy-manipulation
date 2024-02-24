@@ -11,7 +11,7 @@ execute store result storage energy_manipulation:op temp_data int 1 run scoreboa
 # calc percentage
 scoreboard players operation #xem.jar_of_energy.fill.percentage xem.op = #xem.spell.cost.energy.jar.energy_post_remove xem.op
 scoreboard players operation #xem.jar_of_energy.fill.percentage xem.op *= #100 xconst
-scoreboard players operation #xem.jar_of_energy.fill.percentage xem.op /= #xem.const.jar_of_energy.fill.limit xem.op
+scoreboard players operation #xem.jar_of_energy.fill.percentage xem.op /= #xem.const.jar_of_energy.fill.limit xem.const
 
 # modify item
 execute store result score #xem.spell.cost.jar.slot xem.op store result storage energy_manipulation:op jar_slot.Slot byte 1 run data get storage energy_manipulation:op jars_in_inventory[0].Slot

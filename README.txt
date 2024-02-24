@@ -10,12 +10,12 @@ to toggle particles for each shape (it is a player specific setting)
 to toggle the gui
 
 ==<Raw Energy>==
-/scoreboard players set #xem.spell.raw_energy.max xem.op <value>
+/scoreboard players set #xem.spell.raw_energy.max xem.const <value>
 /scoreboard players set @s xem.spell.raw_energy.max <value>
 Default value is set to 10
 
 ==<CASTING FATIGUE>==
-/scoreboard players set #xem.spell.casting_fatigue.max xem.op <value>
+/scoreboard players set #xem.spell.casting_fatigue.max xem.const <value>
 /scoreboard players set @s xem.spell.casting_fatigue.max <value>
 Default value is set to 2000
 
@@ -31,5 +31,5 @@ If a teleport can go between dimensions
 Default is 1
 
 ==<JAR OF ENERGY SETTINGS>==
-/scoreboard players set #xem.const.jar_of_energy.fill.limit xem.op <value>
+/scoreboard players set #xem.const.jar_of_energy.fill.limit xem.const <value>
 Max amount of energy that jars can hold

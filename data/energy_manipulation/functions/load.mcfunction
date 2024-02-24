@@ -6,6 +6,7 @@ scoreboard players set xem.energy_manipulation load.status 1
 
 # op
 scoreboard objectives add xem.op dummy
+scoreboard objectives add xem.const dummy
 scoreboard objectives add xem.test dummy
 scoreboard objectives add xem.debug.cost_since_last_spell dummy
 # version
@@ -25,7 +26,7 @@ scoreboard objectives add xem.spell.run.elaborate.concatenate_index_max dummy
 scoreboard objectives add xem.spell.casting_fatigue.spell_rate dummy
 scoreboard objectives add xem.spell.casting_fatigue.last_spell_time dummy
 scoreboard objectives add xem.spell.casting_fatigue.percentage dummy
-execute unless score #xem.spell.casting_fatigue.max xem.op = #xem.spell.casting_fatigue.max xem.op run scoreboard players set #xem.spell.casting_fatigue.max xem.op 2000
+execute unless score #xem.spell.casting_fatigue.max xem.const = #xem.spell.casting_fatigue.max xem.const run scoreboard players set #xem.spell.casting_fatigue.max xem.const 2000
 scoreboard objectives add xem.spell.casting_fatigue.max dummy
 scoreboard objectives add xem.spell.casting_fatigue.max_base dummy
 scoreboard objectives add xem.spell.casting_fatigue.projectiles_in_shape_tick dummy
@@ -60,7 +61,7 @@ scoreboard objectives add xem.spell.armor.mastery.void dummy
 
 #spells
 scoreboard objectives add xem.spell.raw_energy dummy
-execute unless score #xem.spell.raw_energy.max xem.op = #xem.spell.raw_energy.max xem.op run scoreboard players set #xem.spell.raw_energy.max xem.op 10
+execute unless score #xem.spell.raw_energy.max xem.const = #xem.spell.raw_energy.max xem.const run scoreboard players set #xem.spell.raw_energy.max xem.const 10
 scoreboard objectives add xem.spell.raw_energy.max dummy
 scoreboard objectives add xem.spell.raw_energy.max_base dummy
 
@@ -80,7 +81,7 @@ scoreboard objectives add xem.spell.shape.fire_rate dummy
 
 scoreboard objectives add xem.sort_raycast.jar_of_energy.place dummy
 scoreboard objectives add xem.jar_of_energy.energy_count dummy
-execute unless score #xem.const.jar_of_energy.fill.limit xem.op = #xem.const.jar_of_energy.fill.limit xem.op run scoreboard players set #xem.const.jar_of_energy.fill.limit xem.op 1000
+execute unless score #xem.const.jar_of_energy.fill.limit xem.const = #xem.const.jar_of_energy.fill.limit xem.const run scoreboard players set #xem.const.jar_of_energy.fill.limit xem.const 1000
 
 function #energy_manipulation:shape_load
 function #energy_manipulation:effect_load
@@ -89,16 +90,21 @@ function #energy_manipulation:effect_load
 scoreboard objectives add xem.mind.is_concealed dummy
 scoreboard objectives add xem.mind.is_vulnerable dummy
 scoreboard objectives add xem.mind.focus dummy
-execute unless score #xem.mind.focus.max xem.op = #xem.mind.focus.max xem.op run scoreboard players set #xem.mind.focus.max xem.op 2000
+execute unless score #xem.mind.focus.max xem.const = #xem.mind.focus.max xem.const run scoreboard players set #xem.mind.focus.max xem.const 2000
 scoreboard objectives add xem.mind.focus.max dummy
 scoreboard objectives add xem.mind.focus.max_base dummy
 scoreboard objectives add xem.mind.meditation.end_time dummy
 scoreboard objectives add xem.mind.meditation.start_time dummy
-execute unless score #xem.mind.meditation.duration xem.op = #xem.mind.meditation.duration xem.op run scoreboard players set #xem.mind.meditation.duration xem.op 400
+execute unless score #xem.mind.meditation.duration xem.const = #xem.mind.meditation.duration xem.const run scoreboard players set #xem.mind.meditation.duration xem.const 400
 
-execute unless score #xem.mind.meditation.power_multiplier_default xem.op = #xem.mind.meditation.power_multiplier_default xem.op run scoreboard players set #xem.mind.meditation.power_multiplier_default xem.op 100
+execute unless score #xem.mind.meditation.propel.strength xem.const = #xem.mind.meditation.propel.strength xem.const run scoreboard players set #xem.mind.meditation.propel.strength xem.const 2
+execute unless score #xem.mind.meditation.power.multiplier_default xem.const = #xem.mind.meditation.power.multiplier_default xem.const run scoreboard players set #xem.mind.meditation.power.multiplier_default xem.const 100
+execute unless score #xem.mind.meditation.power.to_focus.numerator xem.const = #xem.mind.meditation.power.to_focus.numerator xem.const run scoreboard players set #xem.mind.meditation.power.to_focus.numerator xem.const 1
+execute unless score #xem.mind.meditation.power.to_focus.denominator xem.const = #xem.mind.meditation.power.to_focus.denominator xem.const run scoreboard players set #xem.mind.meditation.power.to_focus.denominator xem.const 2
 scoreboard objectives add xem.mind.meditation.power_multiplier dummy
 scoreboard objectives add xem.mind.meditation.power_multiplier_base dummy
+execute unless score #xem.mind.meditation.power.attack_mode_multiplier.0.numerator xem.const = #xem.mind.meditation.power.attack_mode_multiplier.0.numerator xem.const run scoreboard players set #xem.mind.meditation.power.attack_mode_multiplier.0.numerator xem.const 2
+execute unless score #xem.mind.meditation.power.attack_mode_multiplier.0.denominator xem.const = #xem.mind.meditation.power.attack_mode_multiplier.0.denominator xem.const run scoreboard players set #xem.mind.meditation.power.attack_mode_multiplier.0.denominator xem.const 1
 
 scoreboard objectives add xem.mind.meditation.action.attack_mode dummy
 scoreboard objectives add xem.mind.meditation.action.propel dummy

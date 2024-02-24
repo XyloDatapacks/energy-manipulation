@@ -9,7 +9,7 @@ advancement grant @s only energy_manipulation:tutorial/mind/meditation/meditate
 # generate clone
 data modify storage xylo_library:op clone_input_data set value {tags:["xem.mind.meditation.entity"],hitbox:{tags:["xem.mind.meditation.entity","xem.spell.run.getters.target._reroute.entity"]},marker:{tags:["xem.spell.non_selectable","xem.mind.meditation.entity"]},aoe:{tags:["xem.spell.non_selectable","xem.mind.meditation.entity"]}}
 data modify storage xylo_library:op clone_input_data.active_effects set from storage xylo_library:op player_data.active_effects
-execute store result storage xylo_library:op clone_input_data.duration int 1 run scoreboard players get #xem.mind.meditation.duration xem.op
+execute store result storage xylo_library:op clone_input_data.duration int 1 run scoreboard players get #xem.mind.meditation.duration xem.const
 function xylo_library:internal/clone/generate/start
 
 # save clone data in energy_manipulation:data player's storage
@@ -25,7 +25,7 @@ execute at @s anchored eyes rotated ~ 10 run tp @s ^ ^ ^0.5 ~ ~
 #timer
 scoreboard players operation @s xem.mind.meditation.start_time = #xlib.time xlib.op
 scoreboard players operation #xem.mind.meditation.end_time xem.op = #xlib.time xlib.op
-scoreboard players operation #xem.mind.meditation.end_time xem.op += #xem.mind.meditation.duration xem.op
+scoreboard players operation #xem.mind.meditation.end_time xem.op += #xem.mind.meditation.duration xem.const
 scoreboard players operation @s xem.mind.meditation.end_time = #xem.mind.meditation.end_time xem.op
 tag @s add xem.mind.meditation.is_meditating
 
@@ -38,8 +38,6 @@ execute at @s run summon minecraft:snowball ~ ~ ~ {Item:{id:"minecraft:paper",Co
 execute at @s run ride @s mount @e[type=minecraft:item_display,distance=..0.001,limit=1,tag=xem.mind.meditation.mind_entity_new]
 execute on vehicle run tag @s remove xem.mind.meditation.mind_entity_new
 
-scoreboard players operation #xem.mind.meditation.enter.player_power_multiplier xem.op = @s xem.mind.meditation.power_multiplier 
-execute on vehicle run scoreboard players operation @s xem.mind.meditation.power_multiplier = #xem.mind.meditation.enter.player_power_multiplier xem.op 
 execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.xylo_projectiles.position_correction.shooter set from storage xylo_library:op clone_owner_hex_uuid.player_hex_uuid
 execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.energy_manipulation.mind.meditation.player_hex_uuid set from storage xylo_library:op clone_owner_hex_uuid.player_hex_uuid
 execute on vehicle on passengers run data modify entity @s[type=minecraft:marker] data.energy_manipulation.mind.meditation.clone_hitbox_uuid set from storage xylo_library:op clone_data.hitbox_uuid

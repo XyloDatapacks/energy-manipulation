@@ -15,9 +15,9 @@ execute store result score #xem.jar_of_energy.block.fill.count xem.op run data g
 scoreboard players operation @s xem.jar_of_energy.energy_count += #xem.jar_of_energy.block.fill.count xem.op
 #get overfolw
 scoreboard players operation #xem.jar_of_energy.block.fill.overflow xem.op = @s xem.jar_of_energy.energy_count
-scoreboard players operation #xem.jar_of_energy.block.fill.overflow xem.op -= #xem.const.jar_of_energy.fill.limit xem.op
+scoreboard players operation #xem.jar_of_energy.block.fill.overflow xem.op -= #xem.const.jar_of_energy.fill.limit xem.const
 #limit jar energy
-scoreboard players operation @s xem.jar_of_energy.energy_count < #xem.const.jar_of_energy.fill.limit xem.op
+scoreboard players operation @s xem.jar_of_energy.energy_count < #xem.const.jar_of_energy.fill.limit xem.const
 #get the number of items actually inserted
 execute if score #xem.jar_of_energy.block.fill.overflow xem.op matches 1.. run scoreboard players operation #xem.jar_of_energy.block.fill.count xem.op -= #xem.jar_of_energy.block.fill.overflow xem.op
 
