@@ -7,10 +7,10 @@ data modify storage energy_manipulation:spell nodes_values.concatenate[] merge v
 data modify storage energy_manipulation:spell nodes_values.instruction set value [{value:"none"},{value:"direction",incompatible_parent:["terminate"]},{value:"position",incompatible_parent:["terminate"]},{value:"save_location"},{value:"mark_entity"},{value:"skip_to"},{value:"counter",incompatible_parent:["terminate"]}]
 data modify storage energy_manipulation:spell nodes_values.instruction[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.position set value [{value:"current"},{value:"offset"},{value:"target"},{value:"ray_trace"},{value:"location"}]
+data modify storage energy_manipulation:spell nodes_values.position set value [{value:"current"},{value:"offset"},{value:"target"},{value:"ray_trace"},{value:"location"},{value:"align"}]
 data modify storage energy_manipulation:spell nodes_values.position[] merge value {final:0b,cost:0}
 
-data modify storage energy_manipulation:spell nodes_values.direction set value [{value:"current"},{value:"rotated"},{value:"facing"},{value:"facing_away"},{value:"rotated_as"},{value:"opposite_as"},{value:"random"},{value:"aim_point"},{value:"location"}]
+data modify storage energy_manipulation:spell nodes_values.direction set value [{value:"current"},{value:"rotated"},{value:"facing"},{value:"facing_away"},{value:"rotated_as"},{value:"opposite_as"},{value:"random"},{value:"aim_point"},{value:"location"},{value:"align"}]
 data modify storage energy_manipulation:spell nodes_values.direction[] merge value {final:0b,cost:0}
 
 
@@ -96,6 +96,9 @@ data modify storage energy_manipulation:spell nodes_values.offset_format[] merge
 data modify storage energy_manipulation:spell nodes_values.angle_format set value [{value:"absolute"},{value:"delta"}]
 data modify storage energy_manipulation:spell nodes_values.angle_format[] merge value {final:1b,cost:0}
 
+
+data modify storage energy_manipulation:spell nodes_values.axis set value [{value:"xyz"},{value:"x"},{value:"y"},{value:"z"},{value:"xy"},{value:"xz"},{value:"yz"}]
+data modify storage energy_manipulation:spell nodes_values.axis[] merge value {final:1b,cost:0}
 
 data modify storage energy_manipulation:spell nodes_values.anchor set value [{value:"feet"},{value:"eyes"}]
 data modify storage energy_manipulation:spell nodes_values.anchor[] merge value {final:1b,cost:0}

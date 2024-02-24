@@ -1,3 +1,5 @@
+#> energy_manipulation:spell/run/getters/target/selector/caster
+
 scoreboard players set #xem.spell.run.getters.target.got_from_uuid xem.op 1
 execute unless data storage energy_manipulation:op running_spell_data.caster run return 0
 

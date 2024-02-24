@@ -18,6 +18,7 @@ execute if data storage energy_manipulation:op target_in{value:"subject"} run fu
 execute if data storage energy_manipulation:op target_in{value:"caster"} run function energy_manipulation:spell/run/getters/target/selector/caster
 execute if data storage energy_manipulation:op target_in{value:"objects"} run function energy_manipulation:spell/run/getters/target/selector/objects
 execute if data storage energy_manipulation:op target_in{value:"marked_entity"} run function energy_manipulation:spell/run/getters/target/selector/marked_entity
+execute if data storage energy_manipulation:op target_in{value:"attacker"} run function energy_manipulation:spell/run/getters/target/selector/attacker
 execute if score #xem.spell.run.getters.target.got_from_uuid xem.op matches 1 run return run scoreboard players get xem.spell.run.getters.target.found xem.op
 
 #==<Init Target Data>==#
