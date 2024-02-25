@@ -1,0 +1,7 @@
+{
+  "condition": "minecraft:entity_scores",
+  "entity": "this",
+  "scores": {
+    "xlib.player.dealt_damage_direct": 1
+  }
+}
